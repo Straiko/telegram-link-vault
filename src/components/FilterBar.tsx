@@ -10,16 +10,16 @@ interface FilterBarProps {
   totalCount: number;
 }
 
-const CATEGORY_LABELS: Record<Category, string> = {
-  'ai-models': '🤖 AI & Models',
-  'dev-tools': '💻 Dev & GitHub',
-  'articles': '📖 Articles & News',
-  'gaming': '🎮 Gaming & Steam',
-  'media': '🎬 Video & Streams',
-  'apps': '📱 Apps & Extensions',
-  'telegram': '💬 Telegram',
-  'social': '🌐 Social',
-  'utilities': '🛠 Tools & Web'
+const CATEGORY_NAMES: Record<Category, string> = {
+  'ai-models': 'AI Models',
+  'dev-tools': 'Dev Tools',
+  'articles': 'Articles',
+  'gaming': 'Gaming',
+  'media': 'Media',
+  'apps': 'Apps',
+  'telegram': 'Telegram',
+  'social': 'Social',
+  'utilities': 'Utilities'
 };
 
 export function FilterBar({ categoryCounts, totalCount }: FilterBarProps): React.JSX.Element {
@@ -46,18 +46,18 @@ export function FilterBar({ categoryCounts, totalCount }: FilterBarProps): React
 
   return (
     <div className={styles.filterSection}>
-      <div className={styles.categoryTabs}>
+      <nav className={styles.categoryTabs}>
         <button
           type="button"
           className={`${styles.tabButton} ${selectedCategory === 'all' ? styles.activeTab : ''}`}
           onClick={() => setFilter('category', 'all')}
         >
-          All Categories <span className={styles.tabCount}>({totalCount.toLocaleString()})</span>
+          All <span className={styles.tabCount}>({totalCount.toLocaleString()})</span>
         </button>
 
         {categoryCounts.map((cat) => {
           const isActive = selectedCategory === cat.category;
-          const label = CATEGORY_LABELS[cat.category] || cat.category;
+          const label = CATEGORY_NAMES[cat.category] || cat.category;
           return (
             <button
               key={cat.category}
@@ -69,11 +69,10 @@ export function FilterBar({ categoryCounts, totalCount }: FilterBarProps): React
             </button>
           );
         })}
-      </div>
+      </nav>
 
-      <div className={styles.statusFilter}>
-        <span style={{ fontSize: '12px', color: 'var(--text-muted)' }}>Status:</span>
-        <div className={styles.statusGroup}>
+      <div className={styles.subBar}>
+        <div className={styles.segmentedStatus}>
           {(['all', 'unread', 'read'] as const).map((status) => (
             <button
               key={status}

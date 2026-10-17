@@ -1,69 +1,37 @@
 .card {
-  background-color: var(--bg-secondary);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+  background-color: var(--bg-panel);
   border: 1px solid var(--border-color);
   border-radius: var(--radius-md);
-  padding: 22px 26px;
+  padding: 16px 20px;
   display: flex;
   align-items: flex-start;
-  gap: 18px;
-  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-  box-shadow: var(--shadow-sm);
-  margin-bottom: 14px;
+  gap: 16px;
+  transition: border-color 0.15s, background-color 0.15s;
+  margin-bottom: 12px;
 }
 
 .card:hover {
-  border-color: rgba(99, 102, 241, 0.4);
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-md), 0 0 20px -2px rgba(99, 102, 241, 0.15);
-  background: rgba(20, 28, 46, 0.82);
+  border-color: #2e3540;
+  background-color: #11141a;
 }
 
 .isRead {
-  opacity: 0.62;
-  filter: grayscale(0.2);
+  opacity: 0.6;
 }
 
-.isRead .postTitle,
-.isRead .linkUrl {
-  text-decoration: line-through;
+.isRead .postTitle {
   color: var(--text-muted);
 }
 
 .checkboxContainer {
-  padding-top: 4px;
+  margin-top: 3px;
 }
 
 .checkbox {
-  appearance: none;
-  -webkit-appearance: none;
-  width: 22px;
-  height: 22px;
-  border: 2px solid rgba(255, 255, 255, 0.2);
-  border-radius: 6px;
-  background: rgba(10, 15, 28, 0.8);
+  width: 16px;
+  height: 16px;
+  accent-color: var(--success-color);
   cursor: pointer;
-  display: grid;
-  place-content: center;
-  transition: all 0.2s ease;
-}
-
-.checkbox:hover {
-  border-color: var(--success-color);
-}
-
-.checkbox:checked {
-  background: var(--success-color);
-  border-color: var(--success-color);
-  box-shadow: 0 0 12px rgba(16, 185, 129, 0.3);
-}
-
-.checkbox:checked::before {
-  content: "✓";
-  color: #0b0f19;
-  font-size: 13px;
-  font-weight: 900;
 }
 
 .body {
@@ -75,170 +43,148 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  margin-bottom: 10px;
+  margin-bottom: 6px;
   flex-wrap: wrap;
 }
 
 .categoryBadge {
   font-size: 11px;
-  font-weight: 700;
+  font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.6px;
-  padding: 3px 10px;
-  border-radius: 6px;
-  background-color: rgba(99, 102, 241, 0.15);
-  color: #c4b5fd;
-  border: 1px solid rgba(99, 102, 241, 0.3);
+  letter-spacing: 0.4px;
+  padding: 2px 7px;
+  background-color: var(--tag-bg);
+  border: 1px solid var(--tag-border);
+  color: var(--tag-text);
+  border-radius: 4px;
 }
 
-.tagBadge {
+.domainText {
   font-size: 11px;
   font-family: var(--font-mono);
-  color: var(--text-muted);
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  padding: 2px 7px;
-  border-radius: 6px;
+  color: var(--text-dim);
 }
 
 .dateText {
-  font-size: 12px;
-  color: var(--text-muted);
+  font-size: 11px;
+  color: var(--text-dim);
   margin-left: auto;
-  font-feature-settings: "tnum";
 }
 
 .postTitle {
-  font-size: 18px;
-  font-weight: 700;
-  color: #ffffff;
-  margin-bottom: 8px;
-  line-height: 1.45;
-  letter-spacing: -0.2px;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-main);
+  line-height: 1.4;
+  margin-bottom: 4px;
 }
 
 .linkUrl {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  color: var(--accent-cyan);
-  font-size: 14px;
-  font-weight: 500;
+  font-size: 13px;
+  color: var(--accent-text);
   word-break: break-all;
-  margin-bottom: 12px;
-  transition: color 0.15s;
+  display: inline-block;
+  margin-bottom: 8px;
 }
 
 .linkUrl:hover {
-  color: #7dd3fc;
   text-decoration: underline;
 }
 
 .fullContent {
-  background: rgba(8, 12, 22, 0.75);
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  border-left: 4px solid var(--accent-color);
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
   border-radius: var(--radius-sm);
-  padding: 14px 18px;
-  font-size: 14.5px;
-  color: var(--text-secondary);
-  line-height: 1.7;
+  padding: 10px 14px;
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--text-muted);
   white-space: pre-wrap;
   word-break: break-word;
-  margin-top: 8px;
+  margin-top: 6px;
 }
 
 .expandBtn {
   background: none;
   border: none;
-  color: var(--accent-cyan);
-  font-size: 13px;
-  font-weight: 600;
+  color: var(--accent-text);
+  font-size: 12px;
+  font-weight: 500;
   font-family: inherit;
   cursor: pointer;
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  margin-top: 8px;
-  padding: 0;
-  transition: color 0.2s;
+  padding: 4px 0 0 0;
+  display: inline-block;
 }
 
 .expandBtn:hover {
-  color: #ffffff;
   text-decoration: underline;
 }
 
 .actions {
   display: flex;
-  flex-direction: column;
   gap: 8px;
   align-self: flex-start;
-  padding-top: 2px;
 }
 
 .actionBtn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 6px;
-  padding: 7px 14px;
-  border-radius: var(--radius-sm);
+  background: transparent;
   border: 1px solid var(--border-color);
-  background: rgba(16, 23, 38, 0.8);
-  color: var(--text-main);
-  font-size: 12.5px;
-  font-weight: 600;
+  color: var(--text-muted);
+  font-size: 12px;
+  font-weight: 500;
+  padding: 5px 10px;
+  border-radius: var(--radius-sm);
   cursor: pointer;
   text-decoration: none;
   white-space: nowrap;
-  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  transition: all 0.15s;
 }
 
 .actionBtn:hover {
-  background: var(--bg-tertiary);
-  border-color: rgba(255, 255, 255, 0.2);
-  transform: translateY(-1px);
+  color: var(--text-main);
+  border-color: #3b4250;
+  background: var(--bg-surface);
 }
 
 .primaryBtn {
-  background: var(--accent-gradient);
-  color: #ffffff;
-  border-color: transparent;
-  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+  background: var(--bg-surface);
+  color: var(--text-main);
+  border-color: #2b3340;
 }
 
 .primaryBtn:hover {
-  box-shadow: 0 6px 18px rgba(99, 102, 241, 0.5);
+  border-color: var(--border-focus);
+  color: #ffffff;
 }
 
 .deleteBtn {
-  background: transparent;
-  border-color: transparent;
-  color: var(--text-muted);
+  color: var(--text-dim);
 }
 
 .deleteBtn:hover {
   color: var(--danger-color);
-  border-color: rgba(239, 68, 68, 0.3);
+  border-color: rgba(218, 54, 51, 0.4);
 }
 
 @media (max-width: 768px) {
   .card {
     flex-direction: column;
-    padding: 16px;
+    padding: 14px;
   }
   .actions {
-    flex-direction: row;
     width: 100%;
     margin-top: 8px;
   }
   .actionBtn {
     flex: 1;
+    justify-content: center;
   }
   .dateText {
     margin-left: 0;
     width: 100%;
-    margin-top: 4px;
+    margin-top: 2px;
   }
 }

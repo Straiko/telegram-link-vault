@@ -13,10 +13,19 @@ interface LinkItemRecord {
 }
 
 async function main(): Promise<void> {
-  let items: { id: number; u: string; t: string; s: string; c: string; tags: string[]; d: string }[] = [];
+  let items: { id: number; u: string; t: string; s: string; c: string; tags: string[]; d: string; host: string }[] = [];
 
   const dbPath = path.resolve(process.cwd(), 'data/vault.db');
   const jsonPath = path.resolve(process.cwd(), 'data/seed-links.json');
+
+  const extractHost = (u: string): string => {
+    try {
+      const h = new URL(u).hostname.replace(/^www\./, '');
+      return h;
+    } catch {
+      return '';
+    }
+  };
 
   if (fs.existsSync(dbPath)) {
     try {
@@ -36,7 +45,8 @@ async function main(): Promise<void> {
           s: r.snippet,
           c: r.category,
           tags,
-          d: r.original_date ? r.original_date.slice(0, 10) : ''
+          d: r.original_date ? r.original_date.slice(0, 10) : '',
+          host: extractHost(r.url)
         };
       });
       console.log(`Loaded ${items.length} links from SQLite database.`);
@@ -55,12 +65,13 @@ async function main(): Promise<void> {
       s: r.snippet,
       c: r.category,
       tags: r.tags || [],
-      d: r.original_date ? r.original_date.slice(0, 10) : ''
+      d: r.original_date ? r.original_date.slice(0, 10) : '',
+      host: extractHost(r.url)
     }));
     console.log(`Loaded ${items.length} links from seed-links.json.`);
   }
 
-  console.log(`Building refined GitHub Pages release with ${items.length} total links...`);
+  console.log(`Building professional minimalist release with ${items.length} total links...`);
 
   const distDir = path.resolve(process.cwd(), 'dist');
   if (!fs.existsSync(distDir)) {
@@ -74,31 +85,30 @@ async function main(): Promise<void> {
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Telegram Link Vault — Умный архив каналов и ссылок</title>
+<title>Telegram Link Vault</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 :root {
-  --bg: #080c15;
-  --surface: #101726;
-  --surface-hover: #162035;
-  --surface-card: rgba(16, 23, 38, 0.78);
-  --border: rgba(255, 255, 255, 0.08);
-  --border-focus: #6366f1;
-  --text-main: #f8fafc;
-  --text-secondary: #cbd5e1;
-  --text-muted: #8492a6;
-  --accent: #6366f1;
-  --accent-cyan: #38bdf8;
-  --accent-gradient: linear-gradient(135deg, #6366f1 0%, #38bdf8 100%);
-  --success: #10b981;
-  --success-glow: rgba(16, 185, 129, 0.2);
-  --radius-sm: 8px;
-  --radius-md: 14px;
-  --radius-lg: 20px;
-  --shadow-card: 0 4px 20px -2px rgba(0, 0, 0, 0.4);
-  --shadow-hover: 0 14px 34px -4px rgba(0, 0, 0, 0.6), 0 0 20px -2px rgba(99, 102, 241, 0.15);
+  --bg: #090a0d;
+  --panel: #0f1115;
+  --surface: #14171d;
+  --surface-hover: #1a1e26;
+  --border: #1e222b;
+  --border-focus: #3b82f6;
+  --text: #ededed;
+  --text-muted: #848d97;
+  --text-dim: #545d68;
+  --accent: #2563eb;
+  --accent-text: #60a5fa;
+  --tag-bg: #141820;
+  --tag-border: #232936;
+  --tag-text: #9da7b3;
+  --success: #238636;
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
 }
 
 * {
@@ -108,811 +118,644 @@ async function main(): Promise<void> {
 }
 
 body {
-  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   background-color: var(--bg);
-  background-image: 
-    radial-gradient(circle at 10% 10%, rgba(99, 102, 241, 0.12) 0%, transparent 45%),
-    radial-gradient(circle at 90% 70%, rgba(56, 189, 248, 0.08) 0%, transparent 50%),
-    linear-gradient(180deg, #090e18 0%, #060911 100%);
-  background-attachment: fixed;
-  color: var(--text-main);
-  line-height: 1.6;
+  color: var(--text);
+  line-height: 1.5;
   min-height: 100vh;
-  padding: 32px 20px 80px;
   -webkit-font-smoothing: antialiased;
 }
 
-.app-wrapper {
-  max-width: 1160px;
+.shell {
+  max-width: 1280px;
   margin: 0 auto;
+  padding: 24px 24px 80px;
 }
 
-/* Glassmorphic Header */
-.vault-header {
-  background: var(--surface-card);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-lg);
-  padding: 24px 32px;
-  margin-bottom: 24px;
-  box-shadow: var(--shadow-card);
+/* Minimalist Top Bar */
+.topbar {
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  align-items: center;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 24px;
   flex-wrap: wrap;
-  gap: 24px;
+  gap: 16px;
 }
 
-.brand-section {
-  display: flex;
-  align-items: center;
-  gap: 18px;
-}
-
-.brand-icon-box {
-  width: 52px;
-  height: 52px;
-  border-radius: 14px;
-  background: var(--accent-gradient);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 26px;
-  box-shadow: 0 8px 24px rgba(99, 102, 241, 0.35);
-  flex-shrink: 0;
-}
-
-.brand-text h1 {
-  font-size: 24px;
-  font-weight: 800;
-  letter-spacing: -0.5px;
-  color: #ffffff;
+.brand {
   display: flex;
   align-items: center;
   gap: 12px;
 }
 
-.live-indicator {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  font-size: 12px;
-  font-weight: 600;
-  color: #34d399;
-  background: rgba(16, 185, 129, 0.12);
-  border: 1px solid rgba(16, 185, 129, 0.25);
-  padding: 3px 10px;
-  border-radius: 20px;
-}
-
-.live-dot {
-  width: 7px;
-  height: 7px;
-  background: #10b981;
-  border-radius: 50%;
-  box-shadow: 0 0 10px #10b981;
-  animation: pulse-live 2s infinite ease-in-out;
-}
-
-@keyframes pulse-live {
-  0%, 100% { opacity: 1; transform: scale(1); }
-  50% { opacity: 0.4; transform: scale(0.85); }
-}
-
-.brand-subtitle {
-  font-size: 13px;
-  color: var(--text-muted);
-  margin-top: 2px;
-}
-
-/* Stats Progress Widget */
-.stats-widget {
-  display: flex;
-  align-items: center;
-  gap: 24px;
-  background: rgba(10, 15, 28, 0.65);
-  border: 1px solid var(--border);
-  padding: 12px 22px;
-  border-radius: var(--radius-md);
-}
-
-.stat-pill {
-  display: flex;
-  flex-direction: column;
-}
-
-.stat-num {
+.brand-title {
   font-size: 18px;
   font-weight: 700;
   color: #ffffff;
-  font-feature-settings: "tnum";
+  letter-spacing: -0.3px;
 }
 
-.stat-label {
+.status-badge {
   font-size: 11px;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
+  font-weight: 600;
+  color: #3fb950;
+  background: rgba(35, 134, 54, 0.15);
+  border: 1px solid rgba(35, 134, 54, 0.3);
+  padding: 2px 8px;
+  border-radius: 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.status-dot {
+  width: 6px;
+  height: 6px;
+  background: #3fb950;
+  border-radius: 50%;
+}
+
+.meta-stats {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 13px;
   color: var(--text-muted);
+}
+
+.meta-stats strong {
+  color: var(--text);
   font-weight: 600;
 }
 
-.progress-track {
-  width: 110px;
-  height: 8px;
-  background: rgba(255, 255, 255, 0.08);
-  border-radius: 4px;
+.progress-strip {
+  width: 90px;
+  height: 4px;
+  background: var(--surface);
+  border-radius: 2px;
   overflow: hidden;
-  margin-top: 6px;
+  margin-left: 8px;
+  display: inline-block;
+  vertical-align: middle;
 }
 
-.progress-fill {
+.progress-strip-fill {
   height: 100%;
-  background: var(--accent-gradient);
-  border-radius: 4px;
+  background: var(--accent);
   width: 0%;
-  transition: width 0.4s ease;
+  transition: width 0.3s;
 }
 
-/* Sticky Filter & Search Control Center */
-.control-center {
-  position: sticky;
-  top: 16px;
-  z-index: 100;
-  background: rgba(8, 12, 21, 0.88);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-lg);
-  padding: 16px 20px;
-  margin-bottom: 24px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+/* Search & Filter Toolbar */
+.toolbar {
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 16px;
+  margin-bottom: 20px;
 }
 
-.search-bar-row {
+.search-row {
   display: flex;
   gap: 12px;
   align-items: center;
 }
 
-.search-box {
+.search-field {
   position: relative;
   flex: 1;
 }
 
-.search-icon {
+.search-field input {
+  width: 100%;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 10px 40px 10px 38px;
+  color: var(--text);
+  font-size: 14px;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.15s;
+}
+
+.search-field input:focus {
+  border-color: var(--border-focus);
+}
+
+.search-icon-svg {
   position: absolute;
-  left: 18px;
+  left: 12px;
   top: 50%;
   transform: translateY(-50%);
-  color: var(--text-muted);
-  font-size: 16px;
+  color: var(--text-dim);
   pointer-events: none;
 }
 
-.search-input {
-  width: 100%;
-  padding: 14px 44px 14px 48px;
-  background: rgba(16, 23, 38, 0.85);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-md);
-  color: #ffffff;
-  font-size: 15px;
-  font-family: inherit;
-  outline: none;
-  transition: all 0.25s ease;
-}
-
-.search-input:focus {
-  border-color: var(--accent-cyan);
-  background: rgba(20, 29, 48, 0.95);
-  box-shadow: 0 0 20px rgba(56, 189, 248, 0.25);
-}
-
-.search-input::placeholder {
-  color: var(--text-muted);
-}
-
-.search-clear-btn {
+.kbd-shortcut {
   position: absolute;
-  right: 16px;
+  right: 12px;
   top: 50%;
   transform: translateY(-50%);
-  background: none;
-  border: none;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  font-size: 11px;
+  font-family: 'JetBrains Mono', monospace;
   color: var(--text-muted);
-  font-size: 14px;
-  cursor: pointer;
-  display: none;
-  padding: 4px;
+  padding: 2px 6px;
 }
 
-.search-clear-btn:hover {
-  color: #ffffff;
-}
-
-/* Category Filter Chips */
-.category-strip {
+/* Category Filter Bar */
+.category-nav {
   display: flex;
-  gap: 8px;
+  align-items: center;
+  gap: 6px;
   overflow-x: auto;
   padding-bottom: 4px;
   scrollbar-width: thin;
-  scrollbar-color: rgba(255, 255, 255, 0.1) transparent;
 }
 
-.category-strip::-webkit-scrollbar {
-  height: 5px;
+.category-nav::-webkit-scrollbar {
+  height: 4px;
 }
-.category-strip::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.12);
-  border-radius: 4px;
+.category-nav::-webkit-scrollbar-thumb {
+  background: var(--border);
 }
 
-.chip-btn {
-  background: rgba(16, 23, 38, 0.7);
-  border: 1px solid var(--border);
-  color: var(--text-secondary);
-  padding: 8px 16px;
-  border-radius: 24px;
+.nav-pill {
+  background: transparent;
+  border: 1px solid transparent;
+  color: var(--text-muted);
   font-size: 13px;
-  font-weight: 600;
+  font-weight: 500;
+  padding: 6px 12px;
+  border-radius: var(--radius-sm);
   cursor: pointer;
   white-space: nowrap;
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  transition: all 0.2s ease;
+  gap: 6px;
+  transition: all 0.15s;
 }
 
-.chip-btn:hover {
-  background: var(--surface-hover);
+.nav-pill:hover {
+  background: var(--surface);
+  color: var(--text);
+}
+
+.nav-pill.active {
+  background: var(--surface);
   color: #ffffff;
-  border-color: rgba(255, 255, 255, 0.2);
+  border-color: var(--border);
+  font-weight: 600;
 }
 
-.chip-btn.active {
-  background: var(--accent-gradient);
-  color: #ffffff;
-  border-color: transparent;
-  box-shadow: 0 4px 16px rgba(99, 102, 241, 0.35);
-}
-
-.chip-count {
+.pill-count {
   font-size: 11px;
-  opacity: 0.8;
-  font-weight: 700;
-  background: rgba(0, 0, 0, 0.25);
-  padding: 2px 7px;
-  border-radius: 12px;
+  font-feature-settings: "tnum";
+  color: var(--text-dim);
 }
 
-/* Secondary Filter / Action Bar */
-.filter-subbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 12px;
-  margin-bottom: 16px;
-  padding: 0 4px;
-  font-size: 13px;
+.nav-pill.active .pill-count {
   color: var(--text-muted);
 }
 
-.status-pill-group {
+/* Status & Count Sub-bar */
+.sub-bar {
   display: flex;
-  background: rgba(16, 23, 38, 0.6);
-  border: 1px solid var(--border);
-  border-radius: 10px;
-  padding: 3px;
-  gap: 4px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+  font-size: 13px;
+  color: var(--text-muted);
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 16px;
 }
 
-.status-btn {
+.segmented-status {
+  display: flex;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 2px;
+  gap: 2px;
+}
+
+.seg-btn {
   background: transparent;
   border: none;
   color: var(--text-muted);
-  padding: 5px 12px;
-  border-radius: 7px;
+  padding: 4px 10px;
+  border-radius: 4px;
   font-size: 12px;
-  font-weight: 600;
+  font-weight: 500;
   cursor: pointer;
-  transition: all 0.2s;
 }
 
-.status-btn:hover {
+.seg-btn:hover {
+  color: var(--text);
+}
+
+.seg-btn.active {
+  background: var(--surface);
   color: #ffffff;
+  font-weight: 600;
 }
 
-.status-btn.active {
-  background: rgba(255, 255, 255, 0.1);
-  color: #ffffff;
-}
-
-/* Link Cards List */
-.cards-stream {
+/* Feed / Card List */
+.feed {
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 12px;
 }
 
-.vault-card {
-  background: var(--surface-card);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+.entry-card {
+  background: var(--panel);
   border: 1px solid var(--border);
   border-radius: var(--radius-md);
-  padding: 22px 26px;
+  padding: 16px 20px;
   display: flex;
   align-items: flex-start;
-  gap: 18px;
-  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-  box-shadow: var(--shadow-card);
+  gap: 16px;
+  transition: border-color 0.15s, background-color 0.15s;
 }
 
-.vault-card:hover {
-  border-color: rgba(99, 102, 241, 0.4);
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-hover);
-  background: rgba(20, 28, 46, 0.82);
+.entry-card:hover {
+  border-color: #2e3540;
+  background: #11141a;
 }
 
-.vault-card.is-read {
-  opacity: 0.62;
-  filter: grayscale(0.2);
+.entry-card.is-read {
+  opacity: 0.6;
 }
 
-.vault-card.is-read .card-title,
-.vault-card.is-read .card-url-link {
-  text-decoration: line-through;
+.entry-card.is-read .entry-title {
   color: var(--text-muted);
 }
 
-.check-col {
-  padding-top: 4px;
-}
-
-.custom-checkbox {
-  appearance: none;
-  -webkit-appearance: none;
-  width: 22px;
-  height: 22px;
-  border: 2px solid rgba(255, 255, 255, 0.2);
-  border-radius: 6px;
-  background: rgba(10, 15, 28, 0.8);
+.entry-checkbox {
+  margin-top: 3px;
+  accent-color: var(--success);
+  width: 16px;
+  height: 16px;
   cursor: pointer;
-  display: grid;
-  place-content: center;
-  transition: all 0.2s ease;
 }
 
-.custom-checkbox:hover {
-  border-color: var(--success);
-}
-
-.custom-checkbox:checked {
-  background: var(--success);
-  border-color: var(--success);
-  box-shadow: 0 0 12px var(--success-glow);
-}
-
-.custom-checkbox:checked::before {
-  content: "✓";
-  color: #0b0f19;
-  font-size: 13px;
-  font-weight: 900;
-}
-
-.card-main {
+.entry-body {
   flex: 1;
   min-width: 0;
 }
 
-.card-meta-row {
+.entry-meta-top {
   display: flex;
   align-items: center;
   gap: 8px;
+  margin-bottom: 6px;
   flex-wrap: wrap;
-  margin-bottom: 10px;
 }
 
-.cat-badge {
+.cat-tag {
   font-size: 11px;
-  font-weight: 700;
+  font-weight: 600;
+  color: var(--tag-text);
+  background: var(--tag-bg);
+  border: 1px solid var(--tag-border);
+  padding: 2px 7px;
+  border-radius: 4px;
   text-transform: uppercase;
-  letter-spacing: 0.6px;
-  padding: 3px 10px;
-  border-radius: 6px;
+  letter-spacing: 0.4px;
 }
 
-/* Category specific hues */
-.cat-ai-models { background: rgba(139, 92, 246, 0.15); color: #c4b5fd; border: 1px solid rgba(139, 92, 246, 0.3); }
-.cat-dev-tools { background: rgba(6, 182, 212, 0.15); color: #67e8f9; border: 1px solid rgba(6, 182, 212, 0.3); }
-.cat-gaming    { background: rgba(16, 185, 129, 0.15); color: #6ee7b7; border: 1px solid rgba(16, 185, 129, 0.3); }
-.cat-media     { background: rgba(244, 63, 94, 0.15); color: #fda4af; border: 1px solid rgba(244, 63, 94, 0.3); }
-.cat-articles  { background: rgba(245, 158, 11, 0.15); color: #fde68a; border: 1px solid rgba(245, 158, 11, 0.3); }
-.cat-apps      { background: rgba(59, 130, 246, 0.15); color: #93c5fd; border: 1px solid rgba(59, 130, 246, 0.3); }
-.cat-telegram  { background: rgba(34, 197, 94, 0.15); color: #86efac; border: 1px solid rgba(34, 197, 94, 0.3); }
-.cat-social    { background: rgba(236, 72, 153, 0.15); color: #f9a8d4; border: 1px solid rgba(236, 72, 153, 0.3); }
-.cat-utilities { background: rgba(148, 163, 184, 0.15); color: #cbd5e1; border: 1px solid rgba(148, 163, 184, 0.3); }
-
-.tag-pill {
+.domain-tag {
   font-size: 11px;
   font-family: 'JetBrains Mono', monospace;
-  color: var(--text-muted);
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  padding: 2px 7px;
-  border-radius: 6px;
+  color: var(--text-dim);
 }
 
-.date-text {
-  font-size: 12px;
-  color: var(--text-muted);
+.date-tag {
+  font-size: 11px;
+  color: var(--text-dim);
   margin-left: auto;
-  font-feature-settings: "tnum";
 }
 
-.card-title {
-  font-size: 18px;
-  font-weight: 700;
-  color: #ffffff;
-  line-height: 1.45;
-  margin-bottom: 8px;
-  letter-spacing: -0.2px;
+.entry-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text);
+  line-height: 1.4;
+  margin-bottom: 4px;
 }
 
-.card-url-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  color: var(--accent-cyan);
+.entry-url {
+  font-size: 13px;
+  color: var(--accent-text);
   text-decoration: none;
-  font-size: 14px;
-  font-weight: 500;
   word-break: break-all;
-  margin-bottom: 12px;
-  transition: color 0.15s;
+  display: inline-block;
+  margin-bottom: 8px;
 }
 
-.card-url-link:hover {
-  color: #7dd3fc;
+.entry-url:hover {
   text-decoration: underline;
 }
 
-/* Full Post Reading Accordion */
-.full-post-body {
-  background: rgba(8, 12, 22, 0.75);
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  border-left: 4px solid var(--accent);
+.entry-snippet {
+  background: var(--surface);
+  border: 1px solid var(--border);
   border-radius: var(--radius-sm);
-  padding: 14px 18px;
-  font-size: 14.5px;
-  color: var(--text-secondary);
-  line-height: 1.7;
+  padding: 10px 14px;
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--text-muted);
   white-space: pre-wrap;
   word-break: break-word;
-  margin-top: 8px;
+  margin-top: 6px;
 }
 
-.expand-toggle-btn {
+.expand-btn {
   background: none;
   border: none;
-  color: var(--accent-cyan);
-  font-size: 13px;
-  font-weight: 600;
+  color: var(--accent-text);
+  font-size: 12px;
+  font-weight: 500;
   font-family: inherit;
   cursor: pointer;
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  margin-top: 8px;
-  padding: 0;
-  transition: color 0.2s;
+  padding: 4px 0 0 0;
+  display: inline-block;
 }
 
-.expand-toggle-btn:hover {
-  color: #ffffff;
+.expand-btn:hover {
   text-decoration: underline;
 }
 
-/* Card Actions */
-.card-actions-col {
+.entry-actions {
   display: flex;
-  flex-direction: column;
   gap: 8px;
-  padding-top: 2px;
+  align-self: flex-start;
 }
 
-.action-btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 6px;
-  padding: 7px 14px;
-  border-radius: var(--radius-sm);
+.btn-quiet {
+  background: transparent;
   border: 1px solid var(--border);
-  background: rgba(16, 23, 38, 0.8);
-  color: var(--text-main);
-  font-size: 12.5px;
-  font-weight: 600;
+  color: var(--text-muted);
+  font-size: 12px;
+  font-weight: 500;
+  padding: 5px 10px;
+  border-radius: var(--radius-sm);
   cursor: pointer;
   text-decoration: none;
   white-space: nowrap;
-  transition: all 0.2s ease;
-}
-
-.action-btn:hover {
-  background: var(--surface-hover);
-  border-color: rgba(255, 255, 255, 0.2);
-  transform: translateY(-1px);
-}
-
-.action-btn-primary {
-  background: var(--accent-gradient);
-  color: #ffffff;
-  border-color: transparent;
-  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
-}
-
-.action-btn-primary:hover {
-  box-shadow: 0 6px 18px rgba(99, 102, 241, 0.5);
-}
-
-/* Pagination Bar */
-.pagination-shelf {
-  display: flex;
-  justify-content: center;
+  display: inline-flex;
   align-items: center;
-  gap: 16px;
-  margin-top: 40px;
-  padding-top: 24px;
-  border-top: 1px solid var(--border);
+  gap: 4px;
+  transition: all 0.15s;
 }
 
-.page-nav-btn {
-  padding: 10px 20px;
-  border-radius: var(--radius-sm);
-  background: var(--surface-card);
-  border: 1px solid var(--border);
+.btn-quiet:hover {
+  color: var(--text);
+  border-color: #3b4250;
+  background: var(--surface);
+}
+
+.btn-open {
+  background: var(--surface);
+  color: var(--text);
+  border-color: #2b3340;
+}
+
+.btn-open:hover {
+  border-color: var(--border-focus);
   color: #ffffff;
-  font-size: 13.5px;
-  font-weight: 600;
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 32px 0 16px;
+  border-top: 1px solid var(--border);
+  margin-top: 32px;
+}
+
+.pager-btn {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  color: var(--text);
+  font-size: 13px;
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: var(--radius-sm);
   cursor: pointer;
-  transition: all 0.2s ease;
 }
 
-.page-nav-btn:hover:not(:disabled) {
-  background: var(--accent-gradient);
-  border-color: transparent;
-  box-shadow: 0 4px 16px rgba(99, 102, 241, 0.35);
-}
-
-.page-nav-btn:disabled {
+.pager-btn:disabled {
   opacity: 0.3;
   cursor: not-allowed;
 }
 
-.page-indicator-text {
-  font-size: 14px;
-  color: var(--text-muted);
-  font-feature-settings: "tnum";
+.pager-btn:not(:disabled):hover {
+  border-color: #3b4250;
+  background: var(--surface);
 }
 
-/* Floating Toast Feedback */
-.toast-notice {
+.pager-info {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+/* Minimalist Toast */
+.toast {
   position: fixed;
   bottom: 24px;
   right: 24px;
-  background: rgba(16, 23, 38, 0.95);
-  backdrop-filter: blur(16px);
-  border: 1px solid var(--accent);
-  color: #ffffff;
-  padding: 12px 20px;
-  border-radius: var(--radius-md);
-  font-size: 14px;
-  font-weight: 600;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-  display: flex;
-  align-items: center;
-  gap: 10px;
+  background: #1c2128;
+  border: 1px solid #30363d;
+  color: #f0f6fc;
+  padding: 10px 16px;
+  border-radius: var(--radius-sm);
+  font-size: 13px;
+  font-weight: 500;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+  display: none;
   z-index: 1000;
-  transform: translateY(100px);
-  opacity: 0;
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.toast-notice.show {
-  transform: translateY(0);
-  opacity: 1;
+.toast.visible {
+  display: block;
 }
 
 @media (max-width: 768px) {
-  body { padding: 16px 12px 60px; }
-  .vault-header { padding: 20px; flex-direction: column; align-items: flex-start; }
-  .stats-widget { width: 100%; justify-content: space-between; }
-  .vault-card { flex-direction: column; padding: 16px; }
-  .card-actions-col { flex-direction: row; width: 100%; margin-top: 8px; }
-  .action-btn { flex: 1; }
-  .date-text { margin-left: 0; width: 100%; margin-top: 4px; }
+  .shell { padding: 16px 12px 60px; }
+  .topbar { flex-direction: column; align-items: flex-start; }
+  .entry-card { flex-direction: column; padding: 14px; }
+  .entry-actions { width: 100%; margin-top: 8px; }
+  .btn-quiet { flex: 1; justify-content: center; }
+  .date-tag { margin-left: 0; width: 100%; margin-top: 2px; }
 }
 </style>
 </head>
 <body>
 
-<div class="app-wrapper">
-  <!-- Header -->
-  <header class="vault-header">
-    <div class="brand-section">
-      <div class="brand-icon-box">⚡</div>
-      <div class="brand-text">
-        <h1>Telegram Link Vault <span class="live-indicator"><span class="live-dot"></span> Live Channel Sync</span></h1>
-        <p class="brand-subtitle">Автоматический архив полезных ссылок и полных постов из Telegram (@whackdoor)</p>
-      </div>
+<div class="shell">
+  <!-- Minimalist Top Bar -->
+  <header class="topbar">
+    <div class="brand">
+      <h1 class="brand-title">Telegram Link Vault</h1>
+      <span class="status-badge"><span class="status-dot"></span> Sync Active (@whackdoor)</span>
     </div>
 
-    <div class="stats-widget">
-      <div class="stat-pill">
-        <span class="stat-num" id="stat-total">${items.length.toLocaleString()}</span>
-        <span class="stat-label">Всего ссылок</span>
-      </div>
-      <div class="stat-pill">
-        <span class="stat-num" id="stat-read" style="color:#10b981">0</span>
-        <span class="stat-label">Прочитано</span>
-      </div>
-      <div>
-        <div class="stat-label">Прогресс <span id="stat-pct">0%</span></div>
-        <div class="progress-track">
-          <div class="progress-fill" id="progress-bar"></div>
-        </div>
-      </div>
+    <div class="meta-stats">
+      <span>Total: <strong id="stat-total">${items.length.toLocaleString()}</strong></span>
+      <span>Read: <strong id="stat-read" style="color:#3fb950">0</strong></span>
+      <span>Progress: <strong id="stat-pct">0%</strong>
+        <span class="progress-strip"><span class="progress-strip-fill" id="stat-bar"></span></span>
+      </span>
     </div>
   </header>
 
-  <!-- Sticky Controls Center -->
-  <div class="control-center">
-    <div class="search-bar-row">
-      <div class="search-box">
-        <span class="search-icon">🔍</span>
-        <input type="text" id="vault-search" class="search-input" placeholder="Поиск среди всех ${items.length.toLocaleString()} ссылок, заголовков, тегов и полных постов...">
-        <button id="search-clear" class="search-clear-btn" title="Очистить поиск">✕</button>
+  <!-- Controls Toolbar -->
+  <div class="toolbar">
+    <div class="search-row">
+      <div class="search-field">
+        <svg class="search-icon-svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+        <input type="text" id="search-box" placeholder="Search across all ${items.length.toLocaleString()} links, titles, and full guide contents...">
+        <span class="kbd-shortcut">/</span>
       </div>
     </div>
 
-    <div class="category-strip" id="category-strip"></div>
+    <nav class="category-nav" id="category-nav"></nav>
   </div>
 
-  <!-- Secondary Bar -->
-  <div class="filter-subbar">
-    <div class="status-pill-group">
-      <button class="status-btn active" onclick="setStatusFilter('all', this)">Все</button>
-      <button class="status-btn" onclick="setStatusFilter('unread', this)">Непрочитанные</button>
-      <button class="status-btn" onclick="setStatusFilter('read', this)">Прочитанные</button>
+  <!-- Sub-bar (Status + Counters) -->
+  <div class="sub-bar">
+    <div class="segmented-status">
+      <button class="seg-btn active" onclick="setStatus('all', this)">All</button>
+      <button class="seg-btn" onclick="setStatus('unread', this)">Unread</button>
+      <button class="seg-btn" onclick="setStatus('read', this)">Read</button>
     </div>
 
     <div style="display:flex; align-items:center; gap:12px;">
-      <span id="counter-summary">Загрузка...</span>
-      <button class="action-btn" onclick="copyCurrentPageLinks()">📋 Скопировать страницу</button>
+      <span id="result-summary">Loading...</span>
+      <button class="btn-quiet" onclick="copyPageLinks()">Copy Page</button>
     </div>
   </div>
 
-  <!-- Links Grid / Stream -->
-  <main class="cards-stream" id="cards-stream"></main>
+  <!-- Feed -->
+  <main class="feed" id="feed"></main>
 
   <!-- Pagination -->
-  <footer class="pagination-shelf">
-    <button class="page-nav-btn" id="btn-prev" onclick="goToPage(-1)">← Назад</button>
-    <span class="page-indicator-text" id="page-display">Страница 1</span>
-    <button class="page-nav-btn" id="btn-next" onclick="goToPage(1)">Вперед →</button>
+  <footer class="pagination">
+    <button class="pager-btn" id="btn-prev" onclick="paginate(-1)">Previous</button>
+    <span class="pager-info" id="pager-info">Page 1</span>
+    <button class="pager-btn" id="btn-next" onclick="paginate(1)">Next</button>
   </footer>
 </div>
 
-<!-- Floating Toast -->
-<div id="toast" class="toast-notice">
-  <span>✓</span> <span id="toast-msg">Ссылка скопирована в буфер!</span>
-</div>
+<div id="toast" class="toast">Link copied to clipboard</div>
 
 <script>
-const DATA = ${JSON.stringify(items)};
-let activeCategory = 'all';
-let activeStatus = 'all'; // all | unread | read
-let searchTerm = '';
-let currentPage = 1;
+const ITEMS = ${JSON.stringify(items)};
+let currentCategory = 'all';
+let currentStatus = 'all';
+let query = '';
+let page = 1;
 const PER_PAGE = 50;
 
 let filtered = [];
 
-const CATEGORY_META = {
-  'all':        { label: 'Все категории', icon: '✨' },
-  'ai-models':  { label: 'Нейросети & AI', icon: '🤖' },
-  'dev-tools':  { label: 'Разработка & Git', icon: '💻' },
-  'gaming':     { label: 'Игры & Steam', icon: '🎮' },
-  'media':      { label: 'Видео & Стримы', icon: '🎬' },
-  'articles':   { label: 'Статьи & Чтиво', icon: '📖' },
-  'apps':       { label: 'Приложения', icon: '📱' },
-  'telegram':   { label: 'Телеграм', icon: '💬' },
-  'social':     { label: 'Соцсети', icon: '🌐' },
-  'utilities':  { label: 'Инструменты & Web', icon: '🛠' }
-};
-
-const readStorageKey = 'vault_read_v1';
-const readItems = new Set(JSON.parse(localStorage.getItem(readStorageKey) || '[]'));
+const readKey = 'vault_read_v1';
+const readSet = new Set(JSON.parse(localStorage.getItem(readKey) || '[]'));
 
 function showToast(text) {
-  const t = document.getElementById('toast');
-  const msg = document.getElementById('toast-msg');
-  msg.innerText = text;
-  t.classList.add('show');
+  const el = document.getElementById('toast');
+  el.innerText = text;
+  el.classList.add('visible');
   clearTimeout(window.__toastTimer);
   window.__toastTimer = setTimeout(() => {
-    t.classList.remove('show');
-  }, 2200);
+    el.classList.remove('visible');
+  }, 2000);
 }
 
-function updateStats() {
-  const total = DATA.length;
-  const readCount = readItems.size;
+function updateProgress() {
+  const total = ITEMS.length;
+  const read = readSet.size;
   document.getElementById('stat-total').innerText = total.toLocaleString();
-  document.getElementById('stat-read').innerText = readCount.toLocaleString();
-  const pct = total > 0 ? ((readCount / total) * 100).toFixed(1) : '0';
+  document.getElementById('stat-read').innerText = read.toLocaleString();
+  const pct = total > 0 ? ((read / total) * 100).toFixed(1) : '0';
   document.getElementById('stat-pct').innerText = pct + '%';
-  document.getElementById('progress-bar').style.width = pct + '%';
+  document.getElementById('stat-bar').style.width = pct + '%';
 }
 
-function initCategoryChips() {
-  const counts = { all: DATA.length };
-  DATA.forEach(i => { counts[i.c] = (counts[i.c] || 0) + 1; });
+function initCategories() {
+  const counts = { all: ITEMS.length };
+  ITEMS.forEach(item => {
+    counts[item.c] = (counts[item.c] || 0) + 1;
+  });
 
-  const strip = document.getElementById('category-strip');
-  strip.innerHTML = '';
+  const nav = document.getElementById('category-nav');
+  nav.innerHTML = '';
 
-  const allMeta = CATEGORY_META['all'];
   const allBtn = document.createElement('button');
-  allBtn.className = 'chip-btn active';
-  allBtn.innerHTML = allMeta.icon + ' ' + allMeta.label + ' <span class="chip-count">' + counts.all.toLocaleString() + '</span>';
-  allBtn.onclick = () => setCategoryFilter('all', allBtn);
-  strip.appendChild(allBtn);
+  allBtn.className = 'nav-pill active';
+  allBtn.innerHTML = 'All <span class="pill-count">(' + counts.all.toLocaleString() + ')</span>';
+  allBtn.onclick = () => selectCategory('all', allBtn);
+  nav.appendChild(allBtn);
 
   Object.keys(counts).filter(k => k !== 'all').sort((a,b) => counts[b] - counts[a]).forEach(cat => {
-    const meta = CATEGORY_META[cat] || { label: cat, icon: '📌' };
     const btn = document.createElement('button');
-    btn.className = 'chip-btn';
-    btn.innerHTML = meta.icon + ' ' + meta.label + ' <span class="chip-count">' + counts[cat].toLocaleString() + '</span>';
-    btn.onclick = () => setCategoryFilter(cat, btn);
-    strip.appendChild(btn);
+    btn.className = 'nav-pill';
+    btn.innerHTML = formatCategory(cat) + ' <span class="pill-count">(' + counts[cat].toLocaleString() + ')</span>';
+    btn.onclick = () => selectCategory(cat, btn);
+    nav.appendChild(btn);
   });
 }
 
-function setCategoryFilter(cat, btn) {
-  activeCategory = cat;
-  document.querySelectorAll('.chip-btn').forEach(b => b.classList.remove('active'));
-  btn.classList.add('active');
-  currentPage = 1;
-  applyFilters();
+function formatCategory(c) {
+  const map = {
+    'ai-models': 'AI Models',
+    'dev-tools': 'Dev Tools',
+    'articles': 'Articles',
+    'gaming': 'Gaming',
+    'media': 'Media',
+    'apps': 'Apps',
+    'telegram': 'Telegram',
+    'social': 'Social',
+    'utilities': 'Utilities'
+  };
+  return map[c] || c;
 }
 
-function setStatusFilter(status, btn) {
-  activeStatus = status;
-  document.querySelectorAll('.status-btn').forEach(b => b.classList.remove('active'));
+function selectCategory(cat, btn) {
+  currentCategory = cat;
+  document.querySelectorAll('.nav-pill').forEach(b => b.classList.remove('active'));
   btn.classList.add('active');
-  currentPage = 1;
-  applyFilters();
+  page = 1;
+  filterData();
 }
 
-function applyFilters() {
-  const q = searchTerm.toLowerCase().trim();
+function setStatus(status, btn) {
+  currentStatus = status;
+  document.querySelectorAll('.seg-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  page = 1;
+  filterData();
+}
 
-  filtered = DATA.filter(item => {
-    if (activeCategory !== 'all' && item.c !== activeCategory) {
-      return false;
-    }
-    const isRead = readItems.has(item.u);
-    if (activeStatus === 'read' && !isRead) return false;
-    if (activeStatus === 'unread' && isRead) return false;
+function filterData() {
+  const q = query.toLowerCase().trim();
+
+  filtered = ITEMS.filter(item => {
+    if (currentCategory !== 'all' && item.c !== currentCategory) return false;
+    const isRead = readSet.has(item.u);
+    if (currentStatus === 'read' && !isRead) return false;
+    if (currentStatus === 'unread' && isRead) return false;
 
     if (!q) return true;
 
@@ -920,131 +763,122 @@ function applyFilters() {
       item.u.toLowerCase().includes(q) ||
       (item.t && item.t.toLowerCase().includes(q)) ||
       (item.s && item.s.toLowerCase().includes(q)) ||
-      (item.tags && item.tags.some(tag => tag.toLowerCase().includes(q)))
+      (item.tags && item.tags.some(t => t.toLowerCase().includes(q))) ||
+      (item.host && item.host.toLowerCase().includes(q))
     );
   });
 
-  renderCards();
-  updateStats();
+  render();
+  updateProgress();
 }
 
-function renderCards() {
+function render() {
   const total = filtered.length;
   const totalPages = Math.max(1, Math.ceil(total / PER_PAGE));
-  if (currentPage > totalPages) currentPage = totalPages;
+  if (page > totalPages) page = totalPages;
 
-  const start = (currentPage - 1) * PER_PAGE;
+  const start = (page - 1) * PER_PAGE;
   const end = Math.min(start + PER_PAGE, total);
-  const pageItems = filtered.slice(start, end);
+  const slice = filtered.slice(start, end);
 
-  document.getElementById('counter-summary').innerText = total === 0
-    ? 'Ничего не найдено'
-    : 'Показано ' + (start + 1).toLocaleString() + '–' + end.toLocaleString() + ' из ' + total.toLocaleString() + ' ссылок';
+  document.getElementById('result-summary').innerText = total === 0
+    ? 'No results'
+    : 'Showing ' + (start + 1).toLocaleString() + '–' + end.toLocaleString() + ' of ' + total.toLocaleString();
 
-  document.getElementById('page-display').innerText = 'Страница ' + currentPage + ' из ' + totalPages;
-  document.getElementById('btn-prev').disabled = currentPage <= 1;
-  document.getElementById('btn-next').disabled = currentPage >= totalPages;
+  document.getElementById('pager-info').innerText = 'Page ' + page + ' of ' + totalPages;
+  document.getElementById('btn-prev').disabled = page <= 1;
+  document.getElementById('btn-next').disabled = page >= totalPages;
 
-  const container = document.getElementById('cards-stream');
+  const feed = document.getElementById('feed');
 
-  if (pageItems.length === 0) {
-    container.innerHTML = '<div style="text-align:center; padding:72px 0; color:var(--text-muted); background:var(--surface-card); border-radius:var(--radius-md); border:1px solid var(--border)">' +
-      '<div style="font-size:40px; margin-bottom:12px;">🔍</div>' +
-      '<h3 style="color:#ffffff; margin-bottom:6px;">По вашему запросу ничего не найдено</h3>' +
-      '<p>Попробуйте изменить поисковый запрос или выбрать другую категорию.</p>' +
-    '</div>';
+  if (slice.length === 0) {
+    feed.innerHTML = '<div style="text-align:center; padding:56px 0; color:var(--text-dim); background:var(--panel); border-radius:var(--radius-md); border:1px solid var(--border)">No matching items found.</div>';
     return;
   }
 
-  container.innerHTML = pageItems.map(item => {
-    const isChecked = readItems.has(item.u);
-    const catClass = 'cat-' + item.c;
-    const catMeta = CATEGORY_META[item.c] || { label: item.c, icon: '📌' };
-    const dateFormatted = item.d || '';
-    const tagsHtml = (item.tags || []).map(t => '<span class="tag-pill">#' + escapeHtml(t) + '</span>').join(' ');
-
+  feed.innerHTML = slice.map(item => {
+    const isRead = readSet.has(item.u);
+    const domainHtml = item.host ? '<span class="domain-tag">' + escapeHtml(item.host) + '</span>' : '';
+    const dateHtml = item.d ? '<span class="date-tag">' + escapeHtml(item.d) + '</span>' : '';
     const titleText = item.t && item.t !== item.u ? escapeHtml(item.t) : '';
-    const isLong = item.s && item.s.length > 320;
-    const snippetPreview = isLong ? item.s.substring(0, 320) + '...' : item.s;
+    
+    const isLong = item.s && item.s.length > 280;
+    const shortSnippet = isLong ? item.s.substring(0, 280) + '...' : item.s;
 
-    return '<article class="vault-card ' + (isChecked ? 'is-read' : '') + '">' +
-      '<div class="check-col">' +
-        '<input type="checkbox" class="custom-checkbox" ' + (isChecked ? 'checked' : '') + ' onchange="toggleRead(this, \\'' + escapeJs(item.u) + '\\')" title="Отметить как прочитанное">' +
-      '</div>' +
-      '<div class="card-main">' +
-        '<div class="card-meta-row">' +
-          '<span class="cat-badge ' + catClass + '">' + catMeta.icon + ' ' + escapeHtml(catMeta.label) + '</span> ' +
-          tagsHtml +
-          (dateFormatted ? '<span class="date-text">📅 ' + dateFormatted + '</span>' : '') +
+    return '<article class="entry-card ' + (isRead ? 'is-read' : '') + '">' +
+      '<input type="checkbox" class="entry-checkbox" ' + (isRead ? 'checked' : '') + ' onchange="toggleItemRead(this, \\'' + escapeJs(item.u) + '\\')" title="Toggle read status">' +
+      '<div class="entry-body">' +
+        '<div class="entry-meta-top">' +
+          '<span class="cat-tag">' + formatCategory(item.c) + '</span>' +
+          domainHtml +
+          dateHtml +
         '</div>' +
-        (titleText ? '<h2 class="card-title">' + titleText + '</h2>' : '') +
-        '<a href="' + escapeHtml(item.u) + '" target="_blank" rel="noopener noreferrer" class="card-url-link">🔗 ' + escapeHtml(item.u) + '</a>' +
-        (item.s ? '<div class="full-post-body" id="post-' + item.id + '">' +
-          '<span class="text-content">' + escapeHtml(snippetPreview) + '</span>' +
-          (isLong ? '<br><button class="expand-toggle-btn" onclick="toggleExpand(' + item.id + ')">▼ Читать полный пост целиком</button>' : '') +
+        (titleText ? '<h2 class="entry-title">' + titleText + '</h2>' : '') +
+        '<a href="' + escapeHtml(item.u) + '" target="_blank" rel="noopener noreferrer" class="entry-url">' + escapeHtml(item.u) + '</a>' +
+        (item.s ? '<div class="entry-snippet" id="snippet-' + item.id + '">' +
+          '<span>' + escapeHtml(shortSnippet) + '</span>' +
+          (isLong ? '<br><button class="expand-btn" onclick="toggleSnippet(' + item.id + ')">Show full text (' + item.s.length + ' chars)</button>' : '') +
         '</div>' : '') +
       '</div>' +
-      '<div class="card-actions-col">' +
-        '<button class="action-btn" onclick="copyLinkUrl(\\'' + escapeJs(item.u) + '\\')">📋 Копировать</button>' +
-        '<a href="' + escapeHtml(item.u) + '" target="_blank" rel="noopener noreferrer" class="action-btn action-btn-primary">↗ Открыть</a>' +
+      '<div class="entry-actions">' +
+        '<button class="btn-quiet" onclick="copyLink(\\'' + escapeJs(item.u) + '\\')">Copy</button>' +
+        '<a href="' + escapeHtml(item.u) + '" target="_blank" rel="noopener noreferrer" class="btn-quiet btn-open">Open ↗</a>' +
       '</div>' +
     '</article>';
   }).join('');
 }
 
-function toggleExpand(id) {
-  const item = DATA.find(i => i.id === id);
+function toggleSnippet(id) {
+  const item = ITEMS.find(i => i.id === id);
   if (!item) return;
-  const box = document.getElementById('post-' + id);
+  const box = document.getElementById('snippet-' + id);
   if (!box) return;
 
   if (box.getAttribute('data-expanded') === 'true') {
     box.setAttribute('data-expanded', 'false');
-    box.innerHTML = '<span class="text-content">' + escapeHtml(item.s.substring(0, 320) + '...') + '</span>' +
-      '<br><button class="expand-toggle-btn" onclick="toggleExpand(' + id + ')">▼ Читать полный пост целиком</button>';
+    box.innerHTML = '<span>' + escapeHtml(item.s.substring(0, 280) + '...') + '</span>' +
+      '<br><button class="expand-btn" onclick="toggleSnippet(' + id + ')">Show full text (' + item.s.length + ' chars)</button>';
   } else {
     box.setAttribute('data-expanded', 'true');
-    box.innerHTML = '<span class="text-content">' + escapeHtml(item.s) + '</span>' +
-      '<br><button class="expand-toggle-btn" onclick="toggleExpand(' + id + ')">▲ Свернуть текст</button>';
+    box.innerHTML = '<span>' + escapeHtml(item.s) + '</span>' +
+      '<br><button class="expand-btn" onclick="toggleSnippet(' + id + ')">Collapse</button>';
   }
 }
 
-function toggleRead(cb, url) {
-  const card = cb.closest('.vault-card');
+function toggleItemRead(cb, url) {
+  const card = cb.closest('.entry-card');
   if (cb.checked) {
-    readItems.add(url);
+    readSet.add(url);
     card.classList.add('is-read');
-    showToast('Отмечено как прочитанное');
+    showToast('Marked as read');
   } else {
-    readItems.delete(url);
+    readSet.delete(url);
     card.classList.remove('is-read');
-    showToast('Снята отметка о прочтении');
+    showToast('Marked as unread');
   }
-  localStorage.setItem(readStorageKey, JSON.stringify(Array.from(readItems)));
-  updateStats();
+  localStorage.setItem(readKey, JSON.stringify(Array.from(readSet)));
+  updateProgress();
 }
 
-function copyLinkUrl(url) {
+function copyLink(url) {
   navigator.clipboard.writeText(url).then(() => {
-    showToast('✓ Ссылка скопирована в буфер обмена!');
-  }).catch(() => {
-    showToast('Ошибка при копировании');
+    showToast('Link copied to clipboard');
   });
 }
 
-function copyCurrentPageLinks() {
-  const start = (currentPage - 1) * PER_PAGE;
-  const pageItems = filtered.slice(start, start + PER_PAGE);
-  const text = pageItems.map(i => i.u + (i.t ? ' — ' + i.t : '')).join('\\n');
+function copyPageLinks() {
+  const start = (page - 1) * PER_PAGE;
+  const slice = filtered.slice(start, start + PER_PAGE);
+  const text = slice.map(i => i.u + (i.t ? ' — ' + i.t : '')).join('\\n');
   navigator.clipboard.writeText(text).then(() => {
-    showToast('✓ Скопировано ' + pageItems.length + ' ссылок со страницы!');
+    showToast('Copied ' + slice.length + ' links to clipboard');
   });
 }
 
-function goToPage(delta) {
-  currentPage += delta;
-  renderCards();
-  window.scrollTo({ top: 120, behavior: 'smooth' });
+function paginate(delta) {
+  page += delta;
+  render();
+  window.scrollTo({ top: 80, behavior: 'smooth' });
 }
 
 function escapeHtml(str) {
@@ -1055,26 +889,13 @@ function escapeJs(str) {
   return str.replace(/'/g, "\\\\'");
 }
 
-const searchInput = document.getElementById('vault-search');
-const clearBtn = document.getElementById('search-clear');
-
+const searchInput = document.getElementById('search-box');
 searchInput.addEventListener('input', (e) => {
-  searchTerm = e.target.value;
-  clearBtn.style.display = searchTerm.length > 0 ? 'block' : 'none';
-  currentPage = 1;
-  applyFilters();
+  query = e.target.value;
+  page = 1;
+  filterData();
 });
 
-clearBtn.addEventListener('click', () => {
-  searchInput.value = '';
-  searchTerm = '';
-  clearBtn.style.display = 'none';
-  currentPage = 1;
-  applyFilters();
-  searchInput.focus();
-});
-
-// Keyboard shortcut '/' to search
 window.addEventListener('keydown', (e) => {
   if (e.key === '/' && document.activeElement !== searchInput) {
     e.preventDefault();
@@ -1082,14 +903,14 @@ window.addEventListener('keydown', (e) => {
   }
 });
 
-initCategoryChips();
-applyFilters();
+initCategories();
+filterData();
 </script>
 </body>
 </html>`;
 
   fs.writeFileSync(path.join(distDir, 'index.html'), html, 'utf-8');
-  console.log(`✅ Generated refined GitHub Pages release: ${distDir}/index.html (${(Buffer.byteLength(html) / 1024 / 1024).toFixed(2)} MB)`);
+  console.log(`✅ Generated professional minimalist release: ${distDir}/index.html (${(Buffer.byteLength(html) / 1024 / 1024).toFixed(2)} MB)`);
 }
 
 main().catch((err) => {

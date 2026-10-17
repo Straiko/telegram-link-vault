@@ -1,29 +1,26 @@
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
 
 :root {
-  --bg-primary: #080c15;
-  --bg-secondary: rgba(16, 23, 38, 0.78);
-  --bg-tertiary: #162035;
-  --border-color: rgba(255, 255, 255, 0.08);
-  --text-main: #f8fafc;
-  --text-secondary: #cbd5e1;
-  --text-muted: #8492a6;
-  --accent-color: #6366f1;
-  --accent-cyan: #38bdf8;
-  --accent-hover: #4f46e5;
-  --accent-light: rgba(99, 102, 241, 0.15);
-  --accent-gradient: linear-gradient(135deg, #6366f1 0%, #38bdf8 100%);
-  --success-color: #10b981;
-  --danger-color: #ef4444;
-  --tag-bg: rgba(255, 255, 255, 0.05);
-  --tag-text: #94a3b8;
-  --radius-sm: 8px;
-  --radius-md: 14px;
-  --radius-lg: 20px;
-  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.25);
-  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.45);
-  --shadow-glow: 0 0 20px rgba(99, 102, 241, 0.25);
-  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --bg-primary: #090a0d;
+  --bg-panel: #0f1115;
+  --bg-surface: #14171d;
+  --bg-hover: #1a1e26;
+  --border-color: #1e222b;
+  --border-subtle: #181b22;
+  --border-focus: #3b82f6;
+  --text-main: #ededed;
+  --text-muted: #848d97;
+  --text-dim: #545d68;
+  --accent-color: #2563eb;
+  --accent-text: #60a5fa;
+  --tag-bg: #141820;
+  --tag-border: #232936;
+  --tag-text: #9da7b3;
+  --success-color: #238636;
+  --danger-color: #da3633;
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   --font-mono: 'JetBrains Mono', monospace;
 }
 
@@ -36,13 +33,8 @@
 body {
   font-family: var(--font-sans);
   background-color: var(--bg-primary);
-  background-image: 
-    radial-gradient(circle at 10% 10%, rgba(99, 102, 241, 0.12) 0%, transparent 45%),
-    radial-gradient(circle at 90% 70%, rgba(56, 189, 248, 0.08) 0%, transparent 50%),
-    linear-gradient(180deg, #090e18 0%, #060911 100%);
-  background-attachment: fixed;
   color: var(--text-main);
-  line-height: 1.6;
+  line-height: 1.5;
   min-height: 100vh;
   -webkit-font-smoothing: antialiased;
 }
@@ -58,7 +50,7 @@ button {
 }
 
 .container {
-  max-width: 1160px;
+  max-width: 1280px;
   margin: 0 auto;
-  padding: 32px 20px 80px;
+  padding: 24px 24px 80px;
 }

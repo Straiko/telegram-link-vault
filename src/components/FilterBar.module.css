@@ -2,54 +2,52 @@
   display: flex;
   flex-direction: column;
   gap: 14px;
-  margin-bottom: 24px;
+  margin-bottom: 20px;
 }
 
 .categoryTabs {
   display: flex;
-  gap: 8px;
+  align-items: center;
+  gap: 6px;
   overflow-x: auto;
   padding-bottom: 4px;
   scrollbar-width: thin;
-  scrollbar-color: rgba(255, 255, 255, 0.1) transparent;
 }
 
 .categoryTabs::-webkit-scrollbar {
-  height: 5px;
+  height: 4px;
 }
 
 .categoryTabs::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.12);
-  border-radius: 4px;
+  background: var(--border-color);
 }
 
 .tabButton {
-  background: rgba(16, 23, 38, 0.7);
-  border: 1px solid var(--border-color);
-  color: var(--text-secondary);
-  padding: 8px 16px;
-  border-radius: 24px;
+  background: transparent;
+  border: 1px solid transparent;
+  color: var(--text-muted);
   font-size: 13px;
-  font-weight: 600;
+  font-weight: 500;
+  padding: 6px 12px;
+  border-radius: var(--radius-sm);
   cursor: pointer;
   white-space: nowrap;
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  transition: all 0.2s ease;
+  gap: 6px;
+  transition: all 0.15s;
 }
 
 .tabButton:hover {
-  background: var(--bg-tertiary);
-  color: #ffffff;
-  border-color: rgba(255, 255, 255, 0.2);
+  background: var(--bg-surface);
+  color: var(--text-main);
 }
 
 .activeTab {
-  background: var(--accent-gradient);
+  background: var(--bg-surface);
   color: #ffffff;
-  border-color: transparent;
-  box-shadow: 0 4px 16px rgba(99, 102, 241, 0.35);
+  border-color: var(--border-color);
+  font-weight: 600;
 }
 
 .activeTab:hover {
@@ -58,45 +56,51 @@
 
 .tabCount {
   font-size: 11px;
-  opacity: 0.85;
-  font-weight: 700;
-  background: rgba(0, 0, 0, 0.25);
-  padding: 2px 7px;
-  border-radius: 12px;
+  font-feature-settings: "tnum";
+  color: var(--text-dim);
 }
 
-.statusFilter {
+.activeTab .tabCount {
+  color: var(--text-muted);
+}
+
+.subBar {
   display: flex;
-  gap: 12px;
   align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+  font-size: 13px;
+  color: var(--text-muted);
+  border-bottom: 1px solid var(--border-color);
 }
 
-.statusGroup {
+.segmentedStatus {
   display: flex;
-  background: rgba(16, 23, 38, 0.6);
+  background: var(--bg-panel);
   border: 1px solid var(--border-color);
-  border-radius: 10px;
-  padding: 3px;
-  gap: 4px;
+  border-radius: var(--radius-sm);
+  padding: 2px;
+  gap: 2px;
 }
 
 .statusButton {
   background: transparent;
   border: none;
   color: var(--text-muted);
-  padding: 5px 12px;
-  border-radius: 7px;
+  padding: 4px 10px;
+  border-radius: 4px;
   font-size: 12px;
-  font-weight: 600;
+  font-weight: 500;
   cursor: pointer;
-  transition: all 0.2s;
+  transition: all 0.15s;
 }
 
 .statusButton:hover {
-  color: #ffffff;
+  color: var(--text-main);
 }
 
 .activeStatus {
-  background: rgba(255, 255, 255, 0.1);
+  background: var(--bg-surface);
   color: #ffffff;
+  font-weight: 600;
 }

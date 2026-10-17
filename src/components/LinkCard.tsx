@@ -9,11 +9,12 @@ interface LinkCardProps {
   item: LinkItem;
 }
 
-const LONG_TEXT_THRESHOLD = 300;
+const LONG_TEXT_THRESHOLD = 280;
 
 export function LinkCard({ item }: LinkCardProps): React.JSX.Element {
   const [isPending, startTransition] = useTransition();
   const [isExpanded, setIsExpanded] = useState<boolean>(false);
+  const [copied, setCopied] = useState<boolean>(false);
 
   const handleToggle = (): void => {
     startTransition(async () => {
@@ -37,8 +38,18 @@ export function LinkCard({ item }: LinkCardProps): React.JSX.Element {
   };
 
   const handleCopy = (): void => {
-    navigator.clipboard.writeText(item.url);
+    navigator.clipboard.writeText(item.url).then(() => {
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    });
   };
+
+  let hostname = '';
+  try {
+    hostname = new URL(item.url).hostname.replace(/^www\./, '');
+  } catch {
+    hostname = '';
+  }
 
   const displayDate = item.originalDate ? item.originalDate.substring(0, 10) : '';
 
@@ -64,11 +75,7 @@ export function LinkCard({ item }: LinkCardProps): React.JSX.Element {
       <div className={styles.body}>
         <div className={styles.metaRow}>
           <span className={styles.categoryBadge}>{item.category}</span>
-          {item.tags.map((tag) => (
-            <span key={tag} className={styles.tagBadge}>
-              #{tag}
-            </span>
-          ))}
+          {hostname && <span className={styles.domainText}>{hostname}</span>}
           {displayDate && <span className={styles.dateText}>{displayDate}</span>}
         </div>
 
@@ -87,7 +94,7 @@ export function LinkCard({ item }: LinkCardProps): React.JSX.Element {
 
         {fullText && (
           <div className={styles.fullContent}>
-            {displayedContent}
+            <span>{displayedContent}</span>
             {isLong && (
               <div>
                 <button
@@ -95,7 +102,7 @@ export function LinkCard({ item }: LinkCardProps): React.JSX.Element {
                   className={styles.expandBtn}
                   onClick={() => setIsExpanded(!isExpanded)}
                 >
-                  {isExpanded ? '▲ Show less' : '▼ Read full unabbreviated post'}
+                  {isExpanded ? 'Collapse' : `Show full text (${fullText.length} chars)`}
                 </button>
               </div>
             )}
@@ -110,7 +117,7 @@ export function LinkCard({ item }: LinkCardProps): React.JSX.Element {
           onClick={handleCopy}
           title="Copy link to clipboard"
         >
-          📋 Copy
+          {copied ? 'Copied' : 'Copy'}
         </button>
         <a
           href={item.url}
@@ -118,7 +125,7 @@ export function LinkCard({ item }: LinkCardProps): React.JSX.Element {
           rel="noopener noreferrer"
           className={`${styles.actionBtn} ${styles.primaryBtn}`}
         >
-          ↗ Open
+          Open ↗
         </a>
         <button
           type="button"
@@ -126,7 +133,7 @@ export function LinkCard({ item }: LinkCardProps): React.JSX.Element {
           onClick={handleDelete}
           title="Delete link"
         >
-          🗑
+          Delete
         </button>
       </div>
     </article>
