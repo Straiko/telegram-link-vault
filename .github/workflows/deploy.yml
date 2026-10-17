@@ -32,6 +32,8 @@ jobs:
       - run: npm ci
 
       - name: Sync latest Telegram posts from channels
+        env:
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
         run: npx tsx scripts/sync-once.ts
 
       - name: Commit updated seed data if new posts found
