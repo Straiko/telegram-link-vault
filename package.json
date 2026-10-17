@@ -9,7 +9,8 @@
     "start": "next start",
     "seed": "tsx scripts/import-backdoor-links.ts",
     "bot": "tsx scripts/telegram-polling.ts",
-    "sync": "tsx scripts/auto-sync-channels.ts"
+    "sync": "tsx scripts/auto-sync-channels.ts",
+    "test": "next build"
   },
   "dependencies": {
     "better-sqlite3": "^11.8.1",

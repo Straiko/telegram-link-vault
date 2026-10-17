@@ -1,7 +1,7 @@
 .filterSection {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 14px;
   margin-bottom: 24px;
 }
 
@@ -10,75 +10,93 @@
   gap: 8px;
   overflow-x: auto;
   padding-bottom: 4px;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.1) transparent;
 }
 
 .categoryTabs::-webkit-scrollbar {
-  height: 4px;
+  height: 5px;
 }
 
 .categoryTabs::-webkit-scrollbar-thumb {
-  background: var(--border-color);
-  border-radius: 2px;
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 4px;
 }
 
 .tabButton {
-  background: var(--bg-secondary);
+  background: rgba(16, 23, 38, 0.7);
   border: 1px solid var(--border-color);
-  color: var(--text-muted);
+  color: var(--text-secondary);
   padding: 8px 16px;
-  border-radius: 20px;
+  border-radius: 24px;
   font-size: 13px;
   font-weight: 600;
+  cursor: pointer;
   white-space: nowrap;
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  gap: 6px;
+  gap: 8px;
   transition: all 0.2s ease;
 }
 
 .tabButton:hover {
-  border-color: var(--accent-color);
-  color: var(--text-main);
+  background: var(--bg-tertiary);
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.2);
 }
 
 .activeTab {
-  background: var(--accent-color);
-  color: #0b0f19;
-  border-color: var(--accent-color);
+  background: var(--accent-gradient);
+  color: #ffffff;
+  border-color: transparent;
+  box-shadow: 0 4px 16px rgba(99, 102, 241, 0.35);
 }
 
 .activeTab:hover {
-  color: #0b0f19;
+  color: #ffffff;
 }
 
 .tabCount {
   font-size: 11px;
   opacity: 0.85;
+  font-weight: 700;
+  background: rgba(0, 0, 0, 0.25);
+  padding: 2px 7px;
+  border-radius: 12px;
 }
 
 .statusFilter {
   display: flex;
-  gap: 8px;
+  gap: 12px;
   align-items: center;
+}
+
+.statusGroup {
+  display: flex;
+  background: rgba(16, 23, 38, 0.6);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  padding: 3px;
+  gap: 4px;
 }
 
 .statusButton {
   background: transparent;
-  border: 1px solid var(--border-color);
+  border: none;
   color: var(--text-muted);
-  padding: 4px 12px;
-  border-radius: var(--radius-sm);
+  padding: 5px 12px;
+  border-radius: 7px;
   font-size: 12px;
-  transition: all 0.2s ease;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
 }
 
 .statusButton:hover {
-  color: var(--text-main);
+  color: #ffffff;
 }
 
 .activeStatus {
-  background: var(--bg-tertiary);
-  color: var(--accent-color);
-  border-color: var(--accent-color);
-  font-weight: 600;
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
 }

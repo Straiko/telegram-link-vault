@@ -73,16 +73,18 @@ export function FilterBar({ categoryCounts, totalCount }: FilterBarProps): React
 
       <div className={styles.statusFilter}>
         <span style={{ fontSize: '12px', color: 'var(--text-muted)' }}>Status:</span>
-        {(['all', 'unread', 'read'] as const).map((status) => (
-          <button
-            key={status}
-            type="button"
-            className={`${styles.statusButton} ${selectedStatus === status ? styles.activeStatus : ''}`}
-            onClick={() => setFilter('status', status)}
-          >
-            {status.charAt(0).toUpperCase() + status.slice(1)}
-          </button>
-        ))}
+        <div className={styles.statusGroup}>
+          {(['all', 'unread', 'read'] as const).map((status) => (
+            <button
+              key={status}
+              type="button"
+              className={`${styles.statusButton} ${selectedStatus === status ? styles.activeStatus : ''}`}
+              onClick={() => setFilter('status', status)}
+            >
+              {status.charAt(0).toUpperCase() + status.slice(1)}
+            </button>
+          ))}
+        </div>
       </div>
     </div>
   );

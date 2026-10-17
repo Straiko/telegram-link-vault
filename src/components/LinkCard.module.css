@@ -1,38 +1,69 @@
 .card {
   background-color: var(--bg-secondary);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   border: 1px solid var(--border-color);
   border-radius: var(--radius-md);
-  padding: 18px 22px;
+  padding: 22px 26px;
   display: flex;
   align-items: flex-start;
-  gap: 16px;
-  transition: all 0.2s ease;
+  gap: 18px;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: var(--shadow-sm);
   margin-bottom: 14px;
 }
 
 .card:hover {
-  border-color: #3b5078;
-  transform: translateY(-1px);
+  border-color: rgba(99, 102, 241, 0.4);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md), 0 0 20px -2px rgba(99, 102, 241, 0.15);
+  background: rgba(20, 28, 46, 0.82);
 }
 
 .isRead {
-  opacity: 0.55;
+  opacity: 0.62;
+  filter: grayscale(0.2);
 }
 
-.isRead .postTitle {
+.isRead .postTitle,
+.isRead .linkUrl {
   text-decoration: line-through;
   color: var(--text-muted);
 }
 
 .checkboxContainer {
-  margin-top: 4px;
+  padding-top: 4px;
 }
 
 .checkbox {
-  width: 18px;
-  height: 18px;
-  accent-color: var(--success-color);
+  appearance: none;
+  -webkit-appearance: none;
+  width: 22px;
+  height: 22px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+  background: rgba(10, 15, 28, 0.8);
   cursor: pointer;
+  display: grid;
+  place-content: center;
+  transition: all 0.2s ease;
+}
+
+.checkbox:hover {
+  border-color: var(--success-color);
+}
+
+.checkbox:checked {
+  background: var(--success-color);
+  border-color: var(--success-color);
+  box-shadow: 0 0 12px rgba(16, 185, 129, 0.3);
+}
+
+.checkbox:checked::before {
+  content: "✓";
+  color: #0b0f19;
+  font-size: 13px;
+  font-weight: 900;
 }
 
 .body {
@@ -44,7 +75,7 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
   flex-wrap: wrap;
 }
 
@@ -52,116 +83,162 @@
   font-size: 11px;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
-  padding: 2px 8px;
-  background-color: var(--bg-tertiary);
-  color: var(--accent-color);
-  border-radius: var(--radius-sm);
+  letter-spacing: 0.6px;
+  padding: 3px 10px;
+  border-radius: 6px;
+  background-color: rgba(99, 102, 241, 0.15);
+  color: #c4b5fd;
+  border: 1px solid rgba(99, 102, 241, 0.3);
 }
 
 .tagBadge {
   font-size: 11px;
-  padding: 2px 6px;
-  background-color: var(--tag-bg);
-  color: var(--tag-text);
-  border-radius: var(--radius-sm);
+  font-family: var(--font-mono);
+  color: var(--text-muted);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 2px 7px;
+  border-radius: 6px;
 }
 
 .dateText {
-  font-size: 11px;
+  font-size: 12px;
   color: var(--text-muted);
   margin-left: auto;
+  font-feature-settings: "tnum";
 }
 
 .postTitle {
-  font-size: 17px;
+  font-size: 18px;
   font-weight: 700;
   color: #ffffff;
-  margin-bottom: 6px;
-  line-height: 1.4;
+  margin-bottom: 8px;
+  line-height: 1.45;
+  letter-spacing: -0.2px;
 }
 
 .linkUrl {
-  color: var(--accent-color);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--accent-cyan);
   font-size: 14px;
   font-weight: 500;
   word-break: break-all;
-  display: inline-block;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
+  transition: color 0.15s;
 }
 
 .linkUrl:hover {
+  color: #7dd3fc;
   text-decoration: underline;
 }
 
 .fullContent {
-  font-size: 14px;
-  color: #cbd5e1;
-  line-height: 1.65;
+  background: rgba(8, 12, 22, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-left: 4px solid var(--accent-color);
+  border-radius: var(--radius-sm);
+  padding: 14px 18px;
+  font-size: 14.5px;
+  color: var(--text-secondary);
+  line-height: 1.7;
   white-space: pre-wrap;
   word-break: break-word;
-  background-color: rgba(11, 15, 25, 0.4);
-  padding: 12px 16px;
-  border-radius: var(--radius-sm);
-  border-left: 3px solid var(--accent-color);
-  margin-top: 6px;
+  margin-top: 8px;
 }
 
 .expandBtn {
-  background: transparent;
+  background: none;
   border: none;
-  color: var(--accent-color);
+  color: var(--accent-cyan);
   font-size: 13px;
   font-weight: 600;
-  padding: 6px 0 0 0;
+  font-family: inherit;
   cursor: pointer;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 8px;
+  padding: 0;
+  transition: color 0.2s;
 }
 
 .expandBtn:hover {
+  color: #ffffff;
   text-decoration: underline;
 }
 
 .actions {
   display: flex;
+  flex-direction: column;
   gap: 8px;
   align-self: flex-start;
-  margin-top: 2px;
+  padding-top: 2px;
 }
 
 .actionBtn {
-  background: var(--bg-tertiary);
-  border: 1px solid var(--border-color);
-  color: var(--text-main);
-  padding: 6px 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 7px 14px;
   border-radius: var(--radius-sm);
-  font-size: 12px;
+  border: 1px solid var(--border-color);
+  background: rgba(16, 23, 38, 0.8);
+  color: var(--text-main);
+  font-size: 12.5px;
   font-weight: 600;
-  transition: all 0.2s ease;
+  cursor: pointer;
+  text-decoration: none;
   white-space: nowrap;
+  transition: all 0.2s ease;
 }
 
 .actionBtn:hover {
-  background: #2b395b;
+  background: var(--bg-tertiary);
+  border-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-1px);
 }
 
 .primaryBtn {
-  background: var(--accent-color);
-  color: #0b0f19;
-  border-color: var(--accent-color);
+  background: var(--accent-gradient);
+  color: #ffffff;
+  border-color: transparent;
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
 }
 
 .primaryBtn:hover {
-  background: var(--accent-hover);
+  box-shadow: 0 6px 18px rgba(99, 102, 241, 0.5);
 }
 
 .deleteBtn {
   background: transparent;
-  border: 1px solid transparent;
+  border-color: transparent;
   color: var(--text-muted);
 }
 
 .deleteBtn:hover {
   color: var(--danger-color);
   border-color: rgba(239, 68, 68, 0.3);
+}
+
+@media (max-width: 768px) {
+  .card {
+    flex-direction: column;
+    padding: 16px;
+  }
+  .actions {
+    flex-direction: row;
+    width: 100%;
+    margin-top: 8px;
+  }
+  .actionBtn {
+    flex: 1;
+  }
+  .dateText {
+    margin-left: 0;
+    width: 100%;
+    margin-top: 4px;
+  }
 }
