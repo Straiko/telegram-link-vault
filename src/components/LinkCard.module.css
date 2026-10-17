@@ -1,0 +1,136 @@
+.card {
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 16px 20px;
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  transition: all 0.2s ease;
+  margin-bottom: 12px;
+}
+
+.card:hover {
+  border-color: #3b5078;
+  transform: translateY(-1px);
+}
+
+.isRead {
+  opacity: 0.5;
+}
+
+.isRead .linkUrl {
+  text-decoration: line-through;
+  color: var(--text-muted);
+}
+
+.checkboxContainer {
+  margin-top: 3px;
+}
+
+.checkbox {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--success-color);
+  cursor: pointer;
+}
+
+.body {
+  flex: 1;
+  min-width: 0;
+}
+
+.metaRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+  flex-wrap: wrap;
+}
+
+.categoryBadge {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 2px 8px;
+  background-color: var(--bg-tertiary);
+  color: var(--accent-color);
+  border-radius: var(--radius-sm);
+}
+
+.tagBadge {
+  font-size: 11px;
+  padding: 2px 6px;
+  background-color: var(--tag-bg);
+  color: var(--tag-text);
+  border-radius: var(--radius-sm);
+}
+
+.dateText {
+  font-size: 11px;
+  color: var(--text-muted);
+  margin-left: auto;
+}
+
+.linkUrl {
+  color: var(--accent-color);
+  font-size: 16px;
+  font-weight: 600;
+  word-break: break-all;
+  display: inline-block;
+  margin-bottom: 4px;
+}
+
+.linkUrl:hover {
+  text-decoration: underline;
+}
+
+.snippet {
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+  align-self: center;
+}
+
+.actionBtn {
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-color);
+  color: var(--text-main);
+  padding: 6px 12px;
+  border-radius: var(--radius-sm);
+  font-size: 12px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.actionBtn:hover {
+  background: #2b395b;
+}
+
+.primaryBtn {
+  background: var(--accent-color);
+  color: #0b0f19;
+  border-color: var(--accent-color);
+}
+
+.primaryBtn:hover {
+  background: var(--accent-hover);
+}
+
+.deleteBtn {
+  background: transparent;
+  border: 1px solid transparent;
+  color: var(--text-muted);
+}
+
+.deleteBtn:hover {
+  color: var(--danger-color);
+  border-color: rgba(239, 68, 68, 0.3);
+}

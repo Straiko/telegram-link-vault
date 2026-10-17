@@ -1,0 +1,27 @@
+{
+  "name": "telegram-link-vault",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Orchestrated Telegram to Web Vault with Groq AI Categorization",
+  "scripts": {
+    "dev": "next dev -p 3000",
+    "build": "next build",
+    "start": "next start",
+    "seed": "tsx scripts/import-backdoor-links.ts"
+  },
+  "dependencies": {
+    "better-sqlite3": "^11.8.1",
+    "next": "^14.2.24",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.12",
+    "@types/node": "^22.13.9",
+    "@types/react": "^18.3.18",
+    "@types/react-dom": "^18.3.5",
+    "tsx": "^4.23.15",
+    "typescript": "^5.8.2"
+  }
+}

@@ -1,0 +1,84 @@
+.filterSection {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.categoryTabs {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding-bottom: 4px;
+}
+
+.categoryTabs::-webkit-scrollbar {
+  height: 4px;
+}
+
+.categoryTabs::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 2px;
+}
+
+.tabButton {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  color: var(--text-muted);
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s ease;
+}
+
+.tabButton:hover {
+  border-color: var(--accent-color);
+  color: var(--text-main);
+}
+
+.activeTab {
+  background: var(--accent-color);
+  color: #0b0f19;
+  border-color: var(--accent-color);
+}
+
+.activeTab:hover {
+  color: #0b0f19;
+}
+
+.tabCount {
+  font-size: 11px;
+  opacity: 0.85;
+}
+
+.statusFilter {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.statusButton {
+  background: transparent;
+  border: 1px solid var(--border-color);
+  color: var(--text-muted);
+  padding: 4px 12px;
+  border-radius: var(--radius-sm);
+  font-size: 12px;
+  transition: all 0.2s ease;
+}
+
+.statusButton:hover {
+  color: var(--text-main);
+}
+
+.activeStatus {
+  background: var(--bg-tertiary);
+  color: var(--accent-color);
+  border-color: var(--accent-color);
+  font-weight: 600;
+}
