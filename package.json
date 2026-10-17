@@ -8,7 +8,8 @@
     "build": "next build",
     "start": "next start",
     "seed": "tsx scripts/import-backdoor-links.ts",
-    "bot": "tsx scripts/telegram-polling.ts"
+    "bot": "tsx scripts/telegram-polling.ts",
+    "sync": "tsx scripts/auto-sync-channels.ts"
   },
   "dependencies": {
     "better-sqlite3": "^11.8.1",
