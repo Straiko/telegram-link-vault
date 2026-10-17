@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useTransition } from 'react';
+import React, { useState, useTransition } from 'react';
 import styles from './LinkCard.module.css';
 import { LinkItem } from '@/domain/link.types';
 import { toggleReadAction, deleteLinkAction } from '@/actions/link.actions';
@@ -9,8 +9,11 @@ interface LinkCardProps {
   item: LinkItem;
 }
 
+const LONG_TEXT_THRESHOLD = 300;
+
 export function LinkCard({ item }: LinkCardProps): React.JSX.Element {
   const [isPending, startTransition] = useTransition();
+  const [isExpanded, setIsExpanded] = useState<boolean>(false);
 
   const handleToggle = (): void => {
     startTransition(async () => {
@@ -39,6 +42,12 @@ export function LinkCard({ item }: LinkCardProps): React.JSX.Element {
 
   const displayDate = item.originalDate ? item.originalDate.substring(0, 10) : '';
 
+  const fullText = item.snippet;
+  const isLong = fullText.length > LONG_TEXT_THRESHOLD;
+  const displayedContent = isLong && !isExpanded
+    ? `${fullText.substring(0, LONG_TEXT_THRESHOLD)}...`
+    : fullText;
+
   return (
     <article className={`${styles.card} ${item.isRead ? styles.isRead : ''}`}>
       <div className={styles.checkboxContainer}>
@@ -63,6 +72,10 @@ export function LinkCard({ item }: LinkCardProps): React.JSX.Element {
           {displayDate && <span className={styles.dateText}>{displayDate}</span>}
         </div>
 
+        {item.title && item.title !== item.url && (
+          <h2 className={styles.postTitle}>{item.title}</h2>
+        )}
+
         <a
           href={item.url}
           target="_blank"
@@ -72,7 +85,22 @@ export function LinkCard({ item }: LinkCardProps): React.JSX.Element {
           {item.url}
         </a>
 
-        {item.snippet && <p className={styles.snippet}>{item.snippet}</p>}
+        {fullText && (
+          <div className={styles.fullContent}>
+            {displayedContent}
+            {isLong && (
+              <div>
+                <button
+                  type="button"
+                  className={styles.expandBtn}
+                  onClick={() => setIsExpanded(!isExpanded)}
+                >
+                  {isExpanded ? '▲ Show less' : '▼ Read full unabbreviated post'}
+                </button>
+              </div>
+            )}
+          </div>
+        )}
       </div>
 
       <div className={styles.actions}>

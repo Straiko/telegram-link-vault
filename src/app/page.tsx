@@ -2,6 +2,7 @@ import React from 'react';
 import { LinkRepository } from '@/data/link.repository';
 import { LinkQuerySchema } from '@/domain/link.schema';
 import { StatsHeader } from '@/components/StatsHeader';
+import { CreatePostForm } from '@/components/CreatePostForm';
 import { SearchInput } from '@/components/SearchInput';
 import { FilterBar } from '@/components/FilterBar';
 import { LinkCard } from '@/components/LinkCard';
@@ -55,6 +56,7 @@ export default async function HomePage({ searchParams }: PageProps): Promise<Rea
   return (
     <div>
       <StatsHeader stats={stats} />
+      <CreatePostForm />
       <SearchInput />
       <FilterBar categoryCounts={categoryCounts} totalCount={stats.total} />
 
