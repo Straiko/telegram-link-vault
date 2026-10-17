@@ -168,7 +168,7 @@ async function run(): Promise<void> {
   if (totalAdded > 0 && process.env.AUTO_PUSH === 'true') {
     try {
       console.log('[Sync] Pulling rebase and auto-pushing to GitHub...');
-      execSync('git pull --rebase origin main && git add data/seed-links.json && git commit -m "chore(sync): auto-sync new posts from Telegram" && git push origin main', {
+      execSync('git add data/seed-links.json && git commit -m "chore(sync): auto-sync new posts from Telegram" && git pull --rebase origin main && git push origin main', {
         stdio: 'inherit'
       });
       console.log('[Sync] Successfully pushed to GitHub!');

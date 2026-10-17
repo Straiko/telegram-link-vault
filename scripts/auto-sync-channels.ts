@@ -26,7 +26,7 @@ async function syncAndDeploy(): Promise<void> {
   if (totalAdded > 0) {
     console.log(`[AutoSync] 🚀 Found ${totalAdded} new post(s)! Auto-pushing to GitHub to update live website...`);
     try {
-      execSync('git pull --rebase origin main && git add data/seed-links.json && git commit -m "chore(sync): auto-sync new posts from Telegram channel" && git push origin main', {
+      execSync('git add data/seed-links.json && git commit -m "chore(sync): auto-sync new posts from Telegram channel" && git pull --rebase origin main && git push origin main', {
         stdio: 'inherit'
       });
       console.log(`[AutoSync] ✅ Changes pushed to GitHub! GitHub Pages deployment triggered automatically.`);
