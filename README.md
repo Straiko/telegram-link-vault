@@ -64,15 +64,42 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 ---
 
-## 📡 Webhook Setup (Telegram to Site)
+## 🔄 Channel Synchronization Options
 
-Set your Telegram bot webhook to your deployed endpoint:
+There are two primary ways to ingest and sync posts from Telegram channels:
 
-```bash
-curl -F "url=https://your-domain.com/api/telegram/webhook" \
-     -F "secret_token=your_secure_random_webhook_secret_here" \
-     https://api.telegram.org/bot<YOUR_BOT_TOKEN>/setWebhook
-```
+### Option A: Automated Public Channel Scraper (No Bot Needed)
+Scrapes public Telegram channel previews (`https://t.me/s/<channel>`), extracts external links, classifies them with Groq AI, and updates the vault.
+
+- **One-off sync:**
+  ```bash
+  TELEGRAM_CHANNELS="whackdoor,mychannel" npm run sync
+  ```
+- **Continuous sync daemon:**
+  ```bash
+  npm run sync
+  ```
+- **Cloud sync (GitHub Actions):**
+  The `.github/workflows/deploy.yml` runs every 30 minutes via GitHub Actions cron, automatically syncing new posts, committing to `data/seed-links.json`, and rebuilding GitHub Pages. Set `TELEGRAM_CHANNELS` in repository Variables/Secrets to monitor your own channels.
+
+> [!NOTE]
+> Web scraping via `t.me/s/` works strictly for **public** channels with public usernames. For private channels, use Option B.
+
+### Option B: Telegram Bot (Real-time Ingestion & Private Channels)
+Add your bot to a channel or chat to ingest links in real-time.
+
+1. **Required Channel Setup:**
+   In Telegram, bots cannot read messages as regular members. You **must** add the bot to your channel as an **Administrator** with at least "Post messages" or "Edit messages" permissions.
+2. **Local Long Polling:**
+   ```bash
+   npm run bot
+   ```
+3. **Webhooks (Production):**
+   ```bash
+   curl -F "url=https://your-domain.com/api/telegram/webhook" \
+        -F "secret_token=your_secure_random_webhook_secret_here" \
+        https://api.telegram.org/bot<YOUR_BOT_TOKEN>/setWebhook
+   ```
 
 ---
 

@@ -5,18 +5,32 @@ import { LinkRepository } from '../src/data/link.repository';
 import { AiClassifierService } from '../src/services/ai-classifier.service';
 import { TelegramService } from '../src/services/telegram.service';
 
+export function cleanChannelName(raw: string): string {
+  return raw
+    .trim()
+    .replace(/^https?:\/\/t\.me\/(s\/)?/, '')
+    .replace(/^@/, '')
+    .replace(/\/.*$/, '')
+    .trim();
+}
+
 const CHANNELS = (process.env.TELEGRAM_CHANNELS || 'whackdoor')
   .split(',')
-  .map((c) => c.trim().replace(/^@/, ''))
+  .map(cleanChannelName)
   .filter(Boolean);
 
 const jsonPath = path.resolve(process.cwd(), 'data/seed-links.json');
 
-const urlPattern = /href=["'](https?:\/\/[^"']+)["']/gi;
 const tagStripRegex = /<[^>]+>/g;
 const brRegex = /<br\s*\/?>/gi;
 
-export async function syncTelegramChannel(channelName: string): Promise<number> {
+export async function syncTelegramChannel(rawChannelName: string): Promise<number> {
+  const channelName = cleanChannelName(rawChannelName);
+  if (!channelName) {
+    console.warn(`[Sync] Invalid channel name passed: "${rawChannelName}"`);
+    return 0;
+  }
+
   const channelUrl = `https://t.me/s/${channelName}`;
   console.log(`[Sync] Checking ${channelUrl}...`);
 
@@ -28,7 +42,7 @@ export async function syncTelegramChannel(channelName: string): Promise<number> 
       }
     });
     if (!res.ok) {
-      console.warn(`[Sync] HTTP ${res.status} for ${channelUrl}`);
+      console.warn(`[Sync] HTTP ${res.status} for ${channelUrl} (check if channel is public and exists)`);
       return 0;
     }
     html = await res.text();
@@ -72,11 +86,25 @@ export async function syncTelegramChannel(channelName: string): Promise<number> 
       continue;
     }
 
-    // Extract links inside the message
+    // Extract links inside the message (stateless matchAll prevents regex state bleeding across iterations)
     const linksInMsg = new Set<string>();
-    let urlMatch: RegExpExecArray | null;
-    while ((urlMatch = urlPattern.exec(rawHtml)) !== null) {
-      const u = urlMatch[1];
+
+    const hrefMatches = rawHtml.matchAll(/href=["'](https?:\/\/[^"']+)["']/gi);
+    for (const match of hrefMatches) {
+      const u = match[1];
+      if (
+        u.startsWith('http') &&
+        !u.includes(`t.me/${channelName}`) &&
+        !u.includes('t.me/s/') &&
+        !u.includes('telegra.ph/file')
+      ) {
+        linksInMsg.add(u);
+      }
+    }
+
+    const rawTextMatches = fullText.matchAll(/(https?:\/\/[^\s<>"]+)/gi);
+    for (const match of rawTextMatches) {
+      const u = match[1];
       if (
         u.startsWith('http') &&
         !u.includes(`t.me/${channelName}`) &&

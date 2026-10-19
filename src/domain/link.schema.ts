@@ -45,7 +45,9 @@ export const TelegramMessageSchema = z.object({
 export const TelegramUpdateSchema = z.object({
   update_id: z.number(),
   message: TelegramMessageSchema.optional(),
-  channel_post: TelegramMessageSchema.optional()
+  channel_post: TelegramMessageSchema.optional(),
+  edited_message: TelegramMessageSchema.optional(),
+  edited_channel_post: TelegramMessageSchema.optional()
 });
 
 export const LinkQuerySchema = z.object({

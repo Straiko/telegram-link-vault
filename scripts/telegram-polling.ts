@@ -17,13 +17,27 @@ console.log('Listening for new Telegram posts and links in real-time...');
 
 let offset = 0;
 
+async function initPolling(): Promise<void> {
+  try {
+    const res = await fetch(`https://api.telegram.org/bot${token}/deleteWebhook?drop_pending_updates=false`);
+    const data = await res.json();
+    if (data.ok) {
+      console.log('✅ Telegram webhook cleared (ensuring getUpdates works without 409 Conflict).');
+    }
+  } catch (err) {
+    console.warn('⚠️ Could not verify/clear webhook status:', err);
+  }
+}
+
 async function pollUpdates(): Promise<void> {
-  const url = `https://api.telegram.org/bot${token}/getUpdates?offset=${offset}&timeout=25`;
+  const allowed = encodeURIComponent(JSON.stringify(['message', 'channel_post', 'edited_message', 'edited_channel_post']));
+  const url = `https://api.telegram.org/bot${token}/getUpdates?offset=${offset}&timeout=25&allowed_updates=${allowed}`;
 
   try {
     const res = await fetch(url);
     if (!res.ok) {
-      console.error(`Telegram API error: ${res.statusText}`);
+      const errBody = await res.text().catch(() => '');
+      console.error(`Telegram API error: ${res.statusText} (${res.status}): ${errBody}`);
       await new Promise((r) => setTimeout(r, 5000));
       return;
     }
@@ -38,6 +52,7 @@ async function pollUpdates(): Promise<void> {
 
       const validated = TelegramUpdateSchema.safeParse(update);
       if (!validated.success) {
+        console.warn(`[Bot] Update #${update.update_id} did not match schema:`, validated.error.issues);
         continue;
       }
 
@@ -62,6 +77,7 @@ async function pollUpdates(): Promise<void> {
 }
 
 async function loop(): Promise<void> {
+  await initPolling();
   while (true) {
     await pollUpdates();
   }

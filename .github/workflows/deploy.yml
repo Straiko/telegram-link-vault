@@ -34,6 +34,7 @@ jobs:
       - name: Sync latest Telegram posts from channels
         env:
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          TELEGRAM_CHANNELS: ${{ vars.TELEGRAM_CHANNELS || secrets.TELEGRAM_CHANNELS || 'whackdoor' }}
         run: npx tsx scripts/sync-once.ts
 
       - name: Commit updated seed data if new posts found

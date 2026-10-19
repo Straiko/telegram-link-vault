@@ -35,8 +35,8 @@ export class LinkOrchestratorService {
 
       savedItems.push(created);
 
-      // Notify Telegram user if applicable
-      if (link.chatId) {
+      // Notify Telegram user only in private chats (chatId > 0) to avoid spamming broadcast channels or failing on 403 Forbidden
+      if (link.chatId && link.chatId > 0) {
         const msg = `✅ <b>Saved to Vault</b>\n📂 <b>Category:</b> #${classification.category}\n🏷️ <b>Tags:</b> ${classification.tags.map(t => `#${t}`).join(' ')}\n🔗 <a href="${link.url}">${link.url}</a>`;
         await TelegramService.sendTelegramMessage(link.chatId, msg);
       }

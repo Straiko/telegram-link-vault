@@ -27,11 +27,12 @@ async function main(): Promise<void> {
     }
   };
 
+  let dbItems: typeof items = [];
   if (fs.existsSync(dbPath)) {
     try {
       const db = new Database(dbPath);
       const rows = db.prepare('SELECT id, url, title, snippet, category, tags, original_date FROM links ORDER BY id DESC').all() as any[];
-      items = rows.map((r) => {
+      dbItems = rows.map((r) => {
         let tags: string[] = [];
         try {
           tags = JSON.parse(r.tags);
@@ -49,27 +50,53 @@ async function main(): Promise<void> {
           host: extractHost(r.url)
         };
       });
-      console.log(`Loaded ${items.length} links from SQLite database.`);
+      console.log(`Loaded ${dbItems.length} links from SQLite database.`);
     } catch (err) {
-      console.warn('Could not read from SQLite, falling back to seed-links.json:', err);
+      console.warn('Could not read from SQLite:', err);
     }
   }
 
-  if (items.length === 0 && fs.existsSync(jsonPath)) {
-    const raw = fs.readFileSync(jsonPath, 'utf-8');
-    const records = JSON.parse(raw) as LinkItemRecord[];
-    items = records.map((r) => ({
-      id: r.id,
-      u: r.url,
-      t: r.title,
-      s: r.snippet,
-      c: r.category,
-      tags: r.tags || [],
-      d: r.original_date ? r.original_date.slice(0, 10) : '',
-      host: extractHost(r.url)
-    }));
-    console.log(`Loaded ${items.length} links from seed-links.json.`);
+  let jsonItems: typeof items = [];
+  if (fs.existsSync(jsonPath)) {
+    try {
+      const raw = fs.readFileSync(jsonPath, 'utf-8');
+      const records = JSON.parse(raw) as LinkItemRecord[];
+      jsonItems = records.map((r) => ({
+        id: r.id,
+        u: r.url,
+        t: r.title,
+        s: r.snippet,
+        c: r.category,
+        tags: r.tags || [],
+        d: r.original_date ? r.original_date.slice(0, 10) : '',
+        host: extractHost(r.url)
+      }));
+      console.log(`Loaded ${jsonItems.length} links from seed-links.json.`);
+    } catch (err) {
+      console.warn('Could not read from seed-links.json:', err);
+    }
   }
+
+  // Merge items by URL to avoid losing historical seed data when SQLite is fresh in CI
+  const seenUrls = new Set<string>();
+  const merged: typeof items = [];
+
+  for (const item of dbItems) {
+    if (!seenUrls.has(item.u)) {
+      seenUrls.add(item.u);
+      merged.push(item);
+    }
+  }
+
+  for (const item of jsonItems) {
+    if (!seenUrls.has(item.u)) {
+      seenUrls.add(item.u);
+      merged.push(item);
+    }
+  }
+
+  items = merged;
+  console.log(`Total merged links ready for static release: ${items.length}.`);
 
   console.log(`Building professional minimalist release with ${items.length} total links...`);
 

@@ -1,9 +1,9 @@
 import { execSync } from 'child_process';
-import { syncTelegramChannel } from './sync-once';
+import { syncTelegramChannel, cleanChannelName } from './sync-once';
 
 const CHANNELS = (process.env.TELEGRAM_CHANNELS || 'whackdoor')
   .split(',')
-  .map((c) => c.trim().replace(/^@/, ''))
+  .map(cleanChannelName)
   .filter(Boolean);
 
 const POLL_INTERVAL_MS = parseInt(process.env.POLL_INTERVAL_MS || '30000', 10); // 30 seconds

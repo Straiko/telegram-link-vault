@@ -39,7 +39,7 @@ export class TelegramService {
   }
 
   public static extractLinksFromUpdate(update: TelegramUpdateDto): ExtractedTelegramLink[] {
-    const msg = update.message || update.channel_post;
+    const msg = update.message || update.channel_post || update.edited_channel_post || update.edited_message;
     if (!msg) {
       return [];
     }
