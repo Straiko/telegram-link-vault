@@ -1,5 +1,593 @@
 [
   {
+    "id": 42,
+    "url": "https://mas.owasp.org/",
+    "title": "⚡️ Огромный гайд по REA для вайбкодеров собрали в сети — это самое подробное пособие с десятками мат",
+    "snippet": "⚡️ Огромный гайд по REA для вайбкодеров собрали в сети — это самое подробное пособие с десятками материалов, статей, репозиториев, промптов и инструкций в мире. Авторы — гении, дропнули настоящий сундук с сокровищами.\n\nСобирали сами разрабы Reverse Engineer Anything: от первых шагов и реальных разборов софта до GitHub-репозиториев, научных работ и БЕСПЛАТНЫХ курсов.\n\n• Всё для начала работы с REA, установки и подключения агентов.\n\nОфициальный GitHub REA\nОфициальный сайт REA\nУстановка и настройка агентов\nПервое исследование с REA\nРуководства REA\nГотовые MCP-промпты\n\n• Разборы, которые помогут изучить REA.\n\nКак клонировать программы с помощью REA\nREA + Pi Coding Agent\nGhidra для начинающих\nFrida для анализа Android\npwn.college: Reverse Engineering\nMalware Unicorn RE101\n\n• Кейсы по изучению приложений и их внутренней логики.\n\nNotes Export\nNotion Clipboard\nDX-Ball Reconstruction\nAegis APK\nTH04 Bullet Patterns\n\n• Декомпиляция, анализ программ и игр.\n\nREA\nAwesome Reverse Engineering\nREA Gems\nAwesome Reverse-Engineered\nGhidra\nJADX\nFrida\nILSpy\nx64dbg\n\n• Более глубокие разборы машинного кода, архитектуры программ и анализ вредоносного ПО.\n\nThe Ghidra Book, 2nd Edition\nReverse Engineering for Beginners\nPractical Binary Analysis\nPractical Malware Analysis\nThe Android Malware Handbook\nReversing: Secrets of Reverse Engineering\n\n• Декомпиляция кода, восстановление структуры программ и автоматизированный реверс-инжиниринг.\n\nLLM4Decompile\nAutoDecompiler\nSALT4Decompile\nDecomperson\nDIRTY\nAutomatically Attacking Software RE Agents\nDoes Reverse Engineering Need a Bigger Model?\n\n• тест полученных навыков на реальных задачах.\n\nOpenSecurityTraining2\npwn.college: Reverse Engineering\npwn.college: Reversing Hell\nMalware Unicorn RE101\nNightmare\nRPISEC Modern Binary Exploitation\nOWASP Mobile Application Security\n\nЗабираем полноценный гайд по ревёрс-инжинирингу&#33;\n\n👍 Бэкдор",
+    "category": "ai-models",
+    "tags": [
+      "ai",
+      "neural-network",
+      "machine-learning"
+    ],
+    "original_date": "2026-11-01T21:51:12+00:00",
+    "created_at": "2026-11-01T22:56:20.259Z"
+  },
+  {
+    "id": 41,
+    "url": "https://github.com/RPISEC/MBE",
+    "title": "⚡️ Огромный гайд по REA для вайбкодеров собрали в сети — это самое подробное пособие с десятками мат",
+    "snippet": "⚡️ Огромный гайд по REA для вайбкодеров собрали в сети — это самое подробное пособие с десятками материалов, статей, репозиториев, промптов и инструкций в мире. Авторы — гении, дропнули настоящий сундук с сокровищами.\n\nСобирали сами разрабы Reverse Engineer Anything: от первых шагов и реальных разборов софта до GitHub-репозиториев, научных работ и БЕСПЛАТНЫХ курсов.\n\n• Всё для начала работы с REA, установки и подключения агентов.\n\nОфициальный GitHub REA\nОфициальный сайт REA\nУстановка и настройка агентов\nПервое исследование с REA\nРуководства REA\nГотовые MCP-промпты\n\n• Разборы, которые помогут изучить REA.\n\nКак клонировать программы с помощью REA\nREA + Pi Coding Agent\nGhidra для начинающих\nFrida для анализа Android\npwn.college: Reverse Engineering\nMalware Unicorn RE101\n\n• Кейсы по изучению приложений и их внутренней логики.\n\nNotes Export\nNotion Clipboard\nDX-Ball Reconstruction\nAegis APK\nTH04 Bullet Patterns\n\n• Декомпиляция, анализ программ и игр.\n\nREA\nAwesome Reverse Engineering\nREA Gems\nAwesome Reverse-Engineered\nGhidra\nJADX\nFrida\nILSpy\nx64dbg\n\n• Более глубокие разборы машинного кода, архитектуры программ и анализ вредоносного ПО.\n\nThe Ghidra Book, 2nd Edition\nReverse Engineering for Beginners\nPractical Binary Analysis\nPractical Malware Analysis\nThe Android Malware Handbook\nReversing: Secrets of Reverse Engineering\n\n• Декомпиляция кода, восстановление структуры программ и автоматизированный реверс-инжиниринг.\n\nLLM4Decompile\nAutoDecompiler\nSALT4Decompile\nDecomperson\nDIRTY\nAutomatically Attacking Software RE Agents\nDoes Reverse Engineering Need a Bigger Model?\n\n• тест полученных навыков на реальных задачах.\n\nOpenSecurityTraining2\npwn.college: Reverse Engineering\npwn.college: Reversing Hell\nMalware Unicorn RE101\nNightmare\nRPISEC Modern Binary Exploitation\nOWASP Mobile Application Security\n\nЗабираем полноценный гайд по ревёрс-инжинирингу&#33;\n\n👍 Бэкдор",
+    "category": "ai-models",
+    "tags": [
+      "ai",
+      "neural-network",
+      "machine-learning"
+    ],
+    "original_date": "2026-11-01T21:51:12+00:00",
+    "created_at": "2026-11-01T22:56:20.259Z"
+  },
+  {
+    "id": 40,
+    "url": "https://github.com/guyinatuxedo/nightmare",
+    "title": "⚡️ Огромный гайд по REA для вайбкодеров собрали в сети — это самое подробное пособие с десятками мат",
+    "snippet": "⚡️ Огромный гайд по REA для вайбкодеров собрали в сети — это самое подробное пособие с десятками материалов, статей, репозиториев, промптов и инструкций в мире. Авторы — гении, дропнули настоящий сундук с сокровищами.\n\nСобирали сами разрабы Reverse Engineer Anything: от первых шагов и реальных разборов софта до GitHub-репозиториев, научных работ и БЕСПЛАТНЫХ курсов.\n\n• Всё для начала работы с REA, установки и подключения агентов.\n\nОфициальный GitHub REA\nОфициальный сайт REA\nУстановка и настройка агентов\nПервое исследование с REA\nРуководства REA\nГотовые MCP-промпты\n\n• Разборы, которые помогут изучить REA.\n\nКак клонировать программы с помощью REA\nREA + Pi Coding Agent\nGhidra для начинающих\nFrida для анализа Android\npwn.college: Reverse Engineering\nMalware Unicorn RE101\n\n• Кейсы по изучению приложений и их внутренней логики.\n\nNotes Export\nNotion Clipboard\nDX-Ball Reconstruction\nAegis APK\nTH04 Bullet Patterns\n\n• Декомпиляция, анализ программ и игр.\n\nREA\nAwesome Reverse Engineering\nREA Gems\nAwesome Reverse-Engineered\nGhidra\nJADX\nFrida\nILSpy\nx64dbg\n\n• Более глубокие разборы машинного кода, архитектуры программ и анализ вредоносного ПО.\n\nThe Ghidra Book, 2nd Edition\nReverse Engineering for Beginners\nPractical Binary Analysis\nPractical Malware Analysis\nThe Android Malware Handbook\nReversing: Secrets of Reverse Engineering\n\n• Декомпиляция кода, восстановление структуры программ и автоматизированный реверс-инжиниринг.\n\nLLM4Decompile\nAutoDecompiler\nSALT4Decompile\nDecomperson\nDIRTY\nAutomatically Attacking Software RE Agents\nDoes Reverse Engineering Need a Bigger Model?\n\n• тест полученных навыков на реальных задачах.\n\nOpenSecurityTraining2\npwn.college: Reverse Engineering\npwn.college: Reversing Hell\nMalware Unicorn RE101\nNightmare\nRPISEC Modern Binary Exploitation\nOWASP Mobile Application Security\n\nЗабираем полноценный гайд по ревёрс-инжинирингу&#33;\n\n👍 Бэкдор",
+    "category": "ai-models",
+    "tags": [
+      "ai",
+      "neural-network",
+      "machine-learning"
+    ],
+    "original_date": "2026-11-01T21:51:12+00:00",
+    "created_at": "2026-11-01T22:56:20.259Z"
+  },
+  {
+    "id": 39,
+    "url": "https://pwn.college/reversing-hell/",
+    "title": "⚡️ Огромный гайд по REA для вайбкодеров собрали в сети — это самое подробное пособие с десятками мат",
+    "snippet": "⚡️ Огромный гайд по REA для вайбкодеров собрали в сети — это самое подробное пособие с десятками материалов, статей, репозиториев, промптов и инструкций в мире. Авторы — гении, дропнули настоящий сундук с сокровищами.\n\nСобирали сами разрабы Reverse Engineer Anything: от первых шагов и реальных разборов софта до GitHub-репозиториев, научных работ и БЕСПЛАТНЫХ курсов.\n\n• Всё для начала работы с REA, установки и подключения агентов.\n\nОфициальный GitHub REA\nОфициальный сайт REA\nУстановка и настройка агентов\nПервое исследование с REA\nРуководства REA\nГотовые MCP-промпты\n\n• Разборы, которые помогут изучить REA.\n\nКак клонировать программы с помощью REA\nREA + Pi Coding Agent\nGhidra для начинающих\nFrida для анализа Android\npwn.college: Reverse Engineering\nMalware Unicorn RE101\n\n• Кейсы по изучению приложений и их внутренней логики.\n\nNotes Export\nNotion Clipboard\nDX-Ball Reconstruction\nAegis APK\nTH04 Bullet Patterns\n\n• Декомпиляция, анализ программ и игр.\n\nREA\nAwesome Reverse Engineering\nREA Gems\nAwesome Reverse-Engineered\nGhidra\nJADX\nFrida\nILSpy\nx64dbg\n\n• Более глубокие разборы машинного кода, архитектуры программ и анализ вредоносного ПО.\n\nThe Ghidra Book, 2nd Edition\nReverse Engineering for Beginners\nPractical Binary Analysis\nPractical Malware Analysis\nThe Android Malware Handbook\nReversing: Secrets of Reverse Engineering\n\n• Декомпиляция кода, восстановление структуры программ и автоматизированный реверс-инжиниринг.\n\nLLM4Decompile\nAutoDecompiler\nSALT4Decompile\nDecomperson\nDIRTY\nAutomatically Attacking Software RE Agents\nDoes Reverse Engineering Need a Bigger Model?\n\n• тест полученных навыков на реальных задачах.\n\nOpenSecurityTraining2\npwn.college: Reverse Engineering\npwn.college: Reversing Hell\nMalware Unicorn RE101\nNightmare\nRPISEC Modern Binary Exploitation\nOWASP Mobile Application Security\n\nЗабираем полноценный гайд по ревёрс-инжинирингу&#33;\n\n👍 Бэкдор",
+    "category": "ai-models",
+    "tags": [
+      "ai",
+      "neural-network",
+      "machine-learning"
+    ],
+    "original_date": "2026-11-01T21:51:12+00:00",
+    "created_at": "2026-11-01T22:56:20.258Z"
+  },
+  {
+    "id": 38,
+    "url": "https://ost2.fyi/",
+    "title": "⚡️ Огромный гайд по REA для вайбкодеров собрали в сети — это самое подробное пособие с десятками мат",
+    "snippet": "⚡️ Огромный гайд по REA для вайбкодеров собрали в сети — это самое подробное пособие с десятками материалов, статей, репозиториев, промптов и инструкций в мире. Авторы — гении, дропнули настоящий сундук с сокровищами.\n\nСобирали сами разрабы Reverse Engineer Anything: от первых шагов и реальных разборов софта до GitHub-репозиториев, научных работ и БЕСПЛАТНЫХ курсов.\n\n• Всё для начала работы с REA, установки и подключения агентов.\n\nОфициальный GitHub REA\nОфициальный сайт REA\nУстановка и настройка агентов\nПервое исследование с REA\nРуководства REA\nГотовые MCP-промпты\n\n• Разборы, которые помогут изучить REA.\n\nКак клонировать программы с помощью REA\nREA + Pi Coding Agent\nGhidra для начинающих\nFrida для анализа Android\npwn.college: Reverse Engineering\nMalware Unicorn RE101\n\n• Кейсы по изучению приложений и их внутренней логики.\n\nNotes Export\nNotion Clipboard\nDX-Ball Reconstruction\nAegis APK\nTH04 Bullet Patterns\n\n• Декомпиляция, анализ программ и игр.\n\nREA\nAwesome Reverse Engineering\nREA Gems\nAwesome Reverse-Engineered\nGhidra\nJADX\nFrida\nILSpy\nx64dbg\n\n• Более глубокие разборы машинного кода, архитектуры программ и анализ вредоносного ПО.\n\nThe Ghidra Book, 2nd Edition\nReverse Engineering for Beginners\nPractical Binary Analysis\nPractical Malware Analysis\nThe Android Malware Handbook\nReversing: Secrets of Reverse Engineering\n\n• Декомпиляция кода, восстановление структуры программ и автоматизированный реверс-инжиниринг.\n\nLLM4Decompile\nAutoDecompiler\nSALT4Decompile\nDecomperson\nDIRTY\nAutomatically Attacking Software RE Agents\nDoes Reverse Engineering Need a Bigger Model?\n\n• тест полученных навыков на реальных задачах.\n\nOpenSecurityTraining2\npwn.college: Reverse Engineering\npwn.college: Reversing Hell\nMalware Unicorn RE101\nNightmare\nRPISEC Modern Binary Exploitation\nOWASP Mobile Application Security\n\nЗабираем полноценный гайд по ревёрс-инжинирингу&#33;\n\n👍 Бэкдор",
+    "category": "ai-models",
+    "tags": [
+      "ai",
+      "neural-network",
+      "machine-learning"
+    ],
+    "original_date": "2026-11-01T21:51:12+00:00",
+    "created_at": "2026-11-01T22:56:20.258Z"
+  },
+  {
+    "id": 37,
+    "url": "https://rea.tools/blog/reverse-engineering-need-bigger-model/",
+    "title": "⚡️ Огромный гайд по REA для вайбкодеров собрали в сети — это самое подробное пособие с десятками мат",
+    "snippet": "⚡️ Огромный гайд по REA для вайбкодеров собрали в сети — это самое подробное пособие с десятками материалов, статей, репозиториев, промптов и инструкций в мире. Авторы — гении, дропнули настоящий сундук с сокровищами.\n\nСобирали сами разрабы Reverse Engineer Anything: от первых шагов и реальных разборов софта до GitHub-репозиториев, научных работ и БЕСПЛАТНЫХ курсов.\n\n• Всё для начала работы с REA, установки и подключения агентов.\n\nОфициальный GitHub REA\nОфициальный сайт REA\nУстановка и настройка агентов\nПервое исследование с REA\nРуководства REA\nГотовые MCP-промпты\n\n• Разборы, которые помогут изучить REA.\n\nКак клонировать программы с помощью REA\nREA + Pi Coding Agent\nGhidra для начинающих\nFrida для анализа Android\npwn.college: Reverse Engineering\nMalware Unicorn RE101\n\n• Кейсы по изучению приложений и их внутренней логики.\n\nNotes Export\nNotion Clipboard\nDX-Ball Reconstruction\nAegis APK\nTH04 Bullet Patterns\n\n• Декомпиляция, анализ программ и игр.\n\nREA\nAwesome Reverse Engineering\nREA Gems\nAwesome Reverse-Engineered\nGhidra\nJADX\nFrida\nILSpy\nx64dbg\n\n• Более глубокие разборы машинного кода, архитектуры программ и анализ вредоносного ПО.\n\nThe Ghidra Book, 2nd Edition\nReverse Engineering for Beginners\nPractical Binary Analysis\nPractical Malware Analysis\nThe Android Malware Handbook\nReversing: Secrets of Reverse Engineering\n\n• Декомпиляция кода, восстановление структуры программ и автоматизированный реверс-инжиниринг.\n\nLLM4Decompile\nAutoDecompiler\nSALT4Decompile\nDecomperson\nDIRTY\nAutomatically Attacking Software RE Agents\nDoes Reverse Engineering Need a Bigger Model?\n\n• тест полученных навыков на реальных задачах.\n\nOpenSecurityTraining2\npwn.college: Reverse Engineering\npwn.college: Reversing Hell\nMalware Unicorn RE101\nNightmare\nRPISEC Modern Binary Exploitation\nOWASP Mobile Application Security\n\nЗабираем полноценный гайд по ревёрс-инжинирингу&#33;\n\n👍 Бэкдор",
+    "category": "ai-models",
+    "tags": [
+      "ai",
+      "neural-network",
+      "machine-learning"
+    ],
+    "original_date": "2026-11-01T21:51:12+00:00",
+    "created_at": "2026-11-01T22:56:20.258Z"
+  },
+  {
+    "id": 36,
+    "url": "https://arxiv.org/abs/2605.30667",
+    "title": "⚡️ Огромный гайд по REA для вайбкодеров собрали в сети — это самое подробное пособие с десятками мат",
+    "snippet": "⚡️ Огромный гайд по REA для вайбкодеров собрали в сети — это самое подробное пособие с десятками материалов, статей, репозиториев, промптов и инструкций в мире. Авторы — гении, дропнули настоящий сундук с сокровищами.\n\nСобирали сами разрабы Reverse Engineer Anything: от первых шагов и реальных разборов софта до GitHub-репозиториев, научных работ и БЕСПЛАТНЫХ курсов.\n\n• Всё для начала работы с REA, установки и подключения агентов.\n\nОфициальный GitHub REA\nОфициальный сайт REA\nУстановка и настройка агентов\nПервое исследование с REA\nРуководства REA\nГотовые MCP-промпты\n\n• Разборы, которые помогут изучить REA.\n\nКак клонировать программы с помощью REA\nREA + Pi Coding Agent\nGhidra для начинающих\nFrida для анализа Android\npwn.college: Reverse Engineering\nMalware Unicorn RE101\n\n• Кейсы по изучению приложений и их внутренней логики.\n\nNotes Export\nNotion Clipboard\nDX-Ball Reconstruction\nAegis APK\nTH04 Bullet Patterns\n\n• Декомпиляция, анализ программ и игр.\n\nREA\nAwesome Reverse Engineering\nREA Gems\nAwesome Reverse-Engineered\nGhidra\nJADX\nFrida\nILSpy\nx64dbg\n\n• Более глубокие разборы машинного кода, архитектуры программ и анализ вредоносного ПО.\n\nThe Ghidra Book, 2nd Edition\nReverse Engineering for Beginners\nPractical Binary Analysis\nPractical Malware Analysis\nThe Android Malware Handbook\nReversing: Secrets of Reverse Engineering\n\n• Декомпиляция кода, восстановление структуры программ и автоматизированный реверс-инжиниринг.\n\nLLM4Decompile\nAutoDecompiler\nSALT4Decompile\nDecomperson\nDIRTY\nAutomatically Attacking Software RE Agents\nDoes Reverse Engineering Need a Bigger Model?\n\n• тест полученных навыков на реальных задачах.\n\nOpenSecurityTraining2\npwn.college: Reverse Engineering\npwn.college: Reversing Hell\nMalware Unicorn RE101\nNightmare\nRPISEC Modern Binary Exploitation\nOWASP Mobile Application Security\n\nЗабираем полноценный гайд по ревёрс-инжинирингу&#33;\n\n👍 Бэкдор",
+    "category": "ai-models",
+    "tags": [
+      "ai",
+      "neural-network",
+      "machine-learning"
+    ],
+    "original_date": "2026-11-01T21:51:12+00:00",
+    "created_at": "2026-11-01T22:56:20.257Z"
+  },
+  {
+    "id": 35,
+    "url": "https://www.usenix.org/search/site/DIRTY",
+    "title": "⚡️ Огромный гайд по REA для вайбкодеров собрали в сети — это самое подробное пособие с десятками мат",
+    "snippet": "⚡️ Огромный гайд по REA для вайбкодеров собрали в сети — это самое подробное пособие с десятками материалов, статей, репозиториев, промптов и инструкций в мире. Авторы — гении, дропнули настоящий сундук с сокровищами.\n\nСобирали сами разрабы Reverse Engineer Anything: от первых шагов и реальных разборов софта до GitHub-репозиториев, научных работ и БЕСПЛАТНЫХ курсов.\n\n• Всё для начала работы с REA, установки и подключения агентов.\n\nОфициальный GitHub REA\nОфициальный сайт REA\nУстановка и настройка агентов\nПервое исследование с REA\nРуководства REA\nГотовые MCP-промпты\n\n• Разборы, которые помогут изучить REA.\n\nКак клонировать программы с помощью REA\nREA + Pi Coding Agent\nGhidra для начинающих\nFrida для анализа Android\npwn.college: Reverse Engineering\nMalware Unicorn RE101\n\n• Кейсы по изучению приложений и их внутренней логики.\n\nNotes Export\nNotion Clipboard\nDX-Ball Reconstruction\nAegis APK\nTH04 Bullet Patterns\n\n• Декомпиляция, анализ программ и игр.\n\nREA\nAwesome Reverse Engineering\nREA Gems\nAwesome Reverse-Engineered\nGhidra\nJADX\nFrida\nILSpy\nx64dbg\n\n• Более глубокие разборы машинного кода, архитектуры программ и анализ вредоносного ПО.\n\nThe Ghidra Book, 2nd Edition\nReverse Engineering for Beginners\nPractical Binary Analysis\nPractical Malware Analysis\nThe Android Malware Handbook\nReversing: Secrets of Reverse Engineering\n\n• Декомпиляция кода, восстановление структуры программ и автоматизированный реверс-инжиниринг.\n\nLLM4Decompile\nAutoDecompiler\nSALT4Decompile\nDecomperson\nDIRTY\nAutomatically Attacking Software RE Agents\nDoes Reverse Engineering Need a Bigger Model?\n\n• тест полученных навыков на реальных задачах.\n\nOpenSecurityTraining2\npwn.college: Reverse Engineering\npwn.college: Reversing Hell\nMalware Unicorn RE101\nNightmare\nRPISEC Modern Binary Exploitation\nOWASP Mobile Application Security\n\nЗабираем полноценный гайд по ревёрс-инжинирингу&#33;\n\n👍 Бэкдор",
+    "category": "ai-models",
+    "tags": [
+      "ai",
+      "neural-network",
+      "machine-learning"
+    ],
+    "original_date": "2026-11-01T21:51:12+00:00",
+    "created_at": "2026-11-01T22:56:20.257Z"
+  },
+  {
+    "id": 34,
+    "url": "https://www.usenix.org/search/site/Decomperson",
+    "title": "⚡️ Огромный гайд по REA для вайбкодеров собрали в сети — это самое подробное пособие с десятками мат",
+    "snippet": "⚡️ Огромный гайд по REA для вайбкодеров собрали в сети — это самое подробное пособие с десятками материалов, статей, репозиториев, промптов и инструкций в мире. Авторы — гении, дропнули настоящий сундук с сокровищами.\n\nСобирали сами разрабы Reverse Engineer Anything: от первых шагов и реальных разборов софта до GitHub-репозиториев, научных работ и БЕСПЛАТНЫХ курсов.\n\n• Всё для начала работы с REA, установки и подключения агентов.\n\nОфициальный GitHub REA\nОфициальный сайт REA\nУстановка и настройка агентов\nПервое исследование с REA\nРуководства REA\nГотовые MCP-промпты\n\n• Разборы, которые помогут изучить REA.\n\nКак клонировать программы с помощью REA\nREA + Pi Coding Agent\nGhidra для начинающих\nFrida для анализа Android\npwn.college: Reverse Engineering\nMalware Unicorn RE101\n\n• Кейсы по изучению приложений и их внутренней логики.\n\nNotes Export\nNotion Clipboard\nDX-Ball Reconstruction\nAegis APK\nTH04 Bullet Patterns\n\n• Декомпиляция, анализ программ и игр.\n\nREA\nAwesome Reverse Engineering\nREA Gems\nAwesome Reverse-Engineered\nGhidra\nJADX\nFrida\nILSpy\nx64dbg\n\n• Более глубокие разборы машинного кода, архитектуры программ и анализ вредоносного ПО.\n\nThe Ghidra Book, 2nd Edition\nReverse Engineering for Beginners\nPractical Binary Analysis\nPractical Malware Analysis\nThe Android Malware Handbook\nReversing: Secrets of Reverse Engineering\n\n• Декомпиляция кода, восстановление структуры программ и автоматизированный реверс-инжиниринг.\n\nLLM4Decompile\nAutoDecompiler\nSALT4Decompile\nDecomperson\nDIRTY\nAutomatically Attacking Software RE Agents\nDoes Reverse Engineering Need a Bigger Model?\n\n• тест полученных навыков на реальных задачах.\n\nOpenSecurityTraining2\npwn.college: Reverse Engineering\npwn.college: Reversing Hell\nMalware Unicorn RE101\nNightmare\nRPISEC Modern Binary Exploitation\nOWASP Mobile Application Security\n\nЗабираем полноценный гайд по ревёрс-инжинирингу&#33;\n\n👍 Бэкдор",
+    "category": "ai-models",
+    "tags": [
+      "ai",
+      "neural-network",
+      "machine-learning"
+    ],
+    "original_date": "2026-11-01T21:51:12+00:00",
+    "created_at": "2026-11-01T22:56:20.257Z"
+  },
+  {
+    "id": 33,
+    "url": "https://arxiv.org/abs/2509.14646",
+    "title": "⚡️ Огромный гайд по REA для вайбкодеров собрали в сети — это самое подробное пособие с десятками мат",
+    "snippet": "⚡️ Огромный гайд по REA для вайбкодеров собрали в сети — это самое подробное пособие с десятками материалов, статей, репозиториев, промптов и инструкций в мире. Авторы — гении, дропнули настоящий сундук с сокровищами.\n\nСобирали сами разрабы Reverse Engineer Anything: от первых шагов и реальных разборов софта до GitHub-репозиториев, научных работ и БЕСПЛАТНЫХ курсов.\n\n• Всё для начала работы с REA, установки и подключения агентов.\n\nОфициальный GitHub REA\nОфициальный сайт REA\nУстановка и настройка агентов\nПервое исследование с REA\nРуководства REA\nГотовые MCP-промпты\n\n• Разборы, которые помогут изучить REA.\n\nКак клонировать программы с помощью REA\nREA + Pi Coding Agent\nGhidra для начинающих\nFrida для анализа Android\npwn.college: Reverse Engineering\nMalware Unicorn RE101\n\n• Кейсы по изучению приложений и их внутренней логики.\n\nNotes Export\nNotion Clipboard\nDX-Ball Reconstruction\nAegis APK\nTH04 Bullet Patterns\n\n• Декомпиляция, анализ программ и игр.\n\nREA\nAwesome Reverse Engineering\nREA Gems\nAwesome Reverse-Engineered\nGhidra\nJADX\nFrida\nILSpy\nx64dbg\n\n• Более глубокие разборы машинного кода, архитектуры программ и анализ вредоносного ПО.\n\nThe Ghidra Book, 2nd Edition\nReverse Engineering for Beginners\nPractical Binary Analysis\nPractical Malware Analysis\nThe Android Malware Handbook\nReversing: Secrets of Reverse Engineering\n\n• Декомпиляция кода, восстановление структуры программ и автоматизированный реверс-инжиниринг.\n\nLLM4Decompile\nAutoDecompiler\nSALT4Decompile\nDecomperson\nDIRTY\nAutomatically Attacking Software RE Agents\nDoes Reverse Engineering Need a Bigger Model?\n\n• тест полученных навыков на реальных задачах.\n\nOpenSecurityTraining2\npwn.college: Reverse Engineering\npwn.college: Reversing Hell\nMalware Unicorn RE101\nNightmare\nRPISEC Modern Binary Exploitation\nOWASP Mobile Application Security\n\nЗабираем полноценный гайд по ревёрс-инжинирингу&#33;\n\n👍 Бэкдор",
+    "category": "ai-models",
+    "tags": [
+      "ai",
+      "neural-network",
+      "machine-learning"
+    ],
+    "original_date": "2026-11-01T21:51:12+00:00",
+    "created_at": "2026-11-01T22:56:20.257Z"
+  },
+  {
+    "id": 32,
+    "url": "https://arxiv.org/abs/2606.16162",
+    "title": "⚡️ Огромный гайд по REA для вайбкодеров собрали в сети — это самое подробное пособие с десятками мат",
+    "snippet": "⚡️ Огромный гайд по REA для вайбкодеров собрали в сети — это самое подробное пособие с десятками материалов, статей, репозиториев, промптов и инструкций в мире. Авторы — гении, дропнули настоящий сундук с сокровищами.\n\nСобирали сами разрабы Reverse Engineer Anything: от первых шагов и реальных разборов софта до GitHub-репозиториев, научных работ и БЕСПЛАТНЫХ курсов.\n\n• Всё для начала работы с REA, установки и подключения агентов.\n\nОфициальный GitHub REA\nОфициальный сайт REA\nУстановка и настройка агентов\nПервое исследование с REA\nРуководства REA\nГотовые MCP-промпты\n\n• Разборы, которые помогут изучить REA.\n\nКак клонировать программы с помощью REA\nREA + Pi Coding Agent\nGhidra для начинающих\nFrida для анализа Android\npwn.college: Reverse Engineering\nMalware Unicorn RE101\n\n• Кейсы по изучению приложений и их внутренней логики.\n\nNotes Export\nNotion Clipboard\nDX-Ball Reconstruction\nAegis APK\nTH04 Bullet Patterns\n\n• Декомпиляция, анализ программ и игр.\n\nREA\nAwesome Reverse Engineering\nREA Gems\nAwesome Reverse-Engineered\nGhidra\nJADX\nFrida\nILSpy\nx64dbg\n\n• Более глубокие разборы машинного кода, архитектуры программ и анализ вредоносного ПО.\n\nThe Ghidra Book, 2nd Edition\nReverse Engineering for Beginners\nPractical Binary Analysis\nPractical Malware Analysis\nThe Android Malware Handbook\nReversing: Secrets of Reverse Engineering\n\n• Декомпиляция кода, восстановление структуры программ и автоматизированный реверс-инжиниринг.\n\nLLM4Decompile\nAutoDecompiler\nSALT4Decompile\nDecomperson\nDIRTY\nAutomatically Attacking Software RE Agents\nDoes Reverse Engineering Need a Bigger Model?\n\n• тест полученных навыков на реальных задачах.\n\nOpenSecurityTraining2\npwn.college: Reverse Engineering\npwn.college: Reversing Hell\nMalware Unicorn RE101\nNightmare\nRPISEC Modern Binary Exploitation\nOWASP Mobile Application Security\n\nЗабираем полноценный гайд по ревёрс-инжинирингу&#33;\n\n👍 Бэкдор",
+    "category": "ai-models",
+    "tags": [
+      "ai",
+      "neural-network",
+      "machine-learning"
+    ],
+    "original_date": "2026-11-01T21:51:12+00:00",
+    "created_at": "2026-11-01T22:56:20.256Z"
+  },
+  {
+    "id": 31,
+    "url": "https://arxiv.org/abs/2403.05286",
+    "title": "⚡️ Огромный гайд по REA для вайбкодеров собрали в сети — это самое подробное пособие с десятками мат",
+    "snippet": "⚡️ Огромный гайд по REA для вайбкодеров собрали в сети — это самое подробное пособие с десятками материалов, статей, репозиториев, промптов и инструкций в мире. Авторы — гении, дропнули настоящий сундук с сокровищами.\n\nСобирали сами разрабы Reverse Engineer Anything: от первых шагов и реальных разборов софта до GitHub-репозиториев, научных работ и БЕСПЛАТНЫХ курсов.\n\n• Всё для начала работы с REA, установки и подключения агентов.\n\nОфициальный GitHub REA\nОфициальный сайт REA\nУстановка и настройка агентов\nПервое исследование с REA\nРуководства REA\nГотовые MCP-промпты\n\n• Разборы, которые помогут изучить REA.\n\nКак клонировать программы с помощью REA\nREA + Pi Coding Agent\nGhidra для начинающих\nFrida для анализа Android\npwn.college: Reverse Engineering\nMalware Unicorn RE101\n\n• Кейсы по изучению приложений и их внутренней логики.\n\nNotes Export\nNotion Clipboard\nDX-Ball Reconstruction\nAegis APK\nTH04 Bullet Patterns\n\n• Декомпиляция, анализ программ и игр.\n\nREA\nAwesome Reverse Engineering\nREA Gems\nAwesome Reverse-Engineered\nGhidra\nJADX\nFrida\nILSpy\nx64dbg\n\n• Более глубокие разборы машинного кода, архитектуры программ и анализ вредоносного ПО.\n\nThe Ghidra Book, 2nd Edition\nReverse Engineering for Beginners\nPractical Binary Analysis\nPractical Malware Analysis\nThe Android Malware Handbook\nReversing: Secrets of Reverse Engineering\n\n• Декомпиляция кода, восстановление структуры программ и автоматизированный реверс-инжиниринг.\n\nLLM4Decompile\nAutoDecompiler\nSALT4Decompile\nDecomperson\nDIRTY\nAutomatically Attacking Software RE Agents\nDoes Reverse Engineering Need a Bigger Model?\n\n• тест полученных навыков на реальных задачах.\n\nOpenSecurityTraining2\npwn.college: Reverse Engineering\npwn.college: Reversing Hell\nMalware Unicorn RE101\nNightmare\nRPISEC Modern Binary Exploitation\nOWASP Mobile Application Security\n\nЗабираем полноценный гайд по ревёрс-инжинирингу&#33;\n\n👍 Бэкдор",
+    "category": "ai-models",
+    "tags": [
+      "ai",
+      "neural-network",
+      "machine-learning"
+    ],
+    "original_date": "2026-11-01T21:51:12+00:00",
+    "created_at": "2026-11-01T22:56:20.256Z"
+  },
+  {
+    "id": 30,
+    "url": "https://www.wiley.com/en-us/Reversing%3A+Secrets+of+Reverse+Engineering-p-9780764574818",
+    "title": "⚡️ Огромный гайд по REA для вайбкодеров собрали в сети — это самое подробное пособие с десятками мат",
+    "snippet": "⚡️ Огромный гайд по REA для вайбкодеров собрали в сети — это самое подробное пособие с десятками материалов, статей, репозиториев, промптов и инструкций в мире. Авторы — гении, дропнули настоящий сундук с сокровищами.\n\nСобирали сами разрабы Reverse Engineer Anything: от первых шагов и реальных разборов софта до GitHub-репозиториев, научных работ и БЕСПЛАТНЫХ курсов.\n\n• Всё для начала работы с REA, установки и подключения агентов.\n\nОфициальный GitHub REA\nОфициальный сайт REA\nУстановка и настройка агентов\nПервое исследование с REA\nРуководства REA\nГотовые MCP-промпты\n\n• Разборы, которые помогут изучить REA.\n\nКак клонировать программы с помощью REA\nREA + Pi Coding Agent\nGhidra для начинающих\nFrida для анализа Android\npwn.college: Reverse Engineering\nMalware Unicorn RE101\n\n• Кейсы по изучению приложений и их внутренней логики.\n\nNotes Export\nNotion Clipboard\nDX-Ball Reconstruction\nAegis APK\nTH04 Bullet Patterns\n\n• Декомпиляция, анализ программ и игр.\n\nREA\nAwesome Reverse Engineering\nREA Gems\nAwesome Reverse-Engineered\nGhidra\nJADX\nFrida\nILSpy\nx64dbg\n\n• Более глубокие разборы машинного кода, архитектуры программ и анализ вредоносного ПО.\n\nThe Ghidra Book, 2nd Edition\nReverse Engineering for Beginners\nPractical Binary Analysis\nPractical Malware Analysis\nThe Android Malware Handbook\nReversing: Secrets of Reverse Engineering\n\n• Декомпиляция кода, восстановление структуры программ и автоматизированный реверс-инжиниринг.\n\nLLM4Decompile\nAutoDecompiler\nSALT4Decompile\nDecomperson\nDIRTY\nAutomatically Attacking Software RE Agents\nDoes Reverse Engineering Need a Bigger Model?\n\n• тест полученных навыков на реальных задачах.\n\nOpenSecurityTraining2\npwn.college: Reverse Engineering\npwn.college: Reversing Hell\nMalware Unicorn RE101\nNightmare\nRPISEC Modern Binary Exploitation\nOWASP Mobile Application Security\n\nЗабираем полноценный гайд по ревёрс-инжинирингу&#33;\n\n👍 Бэкдор",
+    "category": "ai-models",
+    "tags": [
+      "ai",
+      "neural-network",
+      "machine-learning"
+    ],
+    "original_date": "2026-11-01T21:51:12+00:00",
+    "created_at": "2026-11-01T22:56:20.256Z"
+  },
+  {
+    "id": 29,
+    "url": "https://nostarch.com/androidmalware",
+    "title": "⚡️ Огромный гайд по REA для вайбкодеров собрали в сети — это самое подробное пособие с десятками мат",
+    "snippet": "⚡️ Огромный гайд по REA для вайбкодеров собрали в сети — это самое подробное пособие с десятками материалов, статей, репозиториев, промптов и инструкций в мире. Авторы — гении, дропнули настоящий сундук с сокровищами.\n\nСобирали сами разрабы Reverse Engineer Anything: от первых шагов и реальных разборов софта до GitHub-репозиториев, научных работ и БЕСПЛАТНЫХ курсов.\n\n• Всё для начала работы с REA, установки и подключения агентов.\n\nОфициальный GitHub REA\nОфициальный сайт REA\nУстановка и настройка агентов\nПервое исследование с REA\nРуководства REA\nГотовые MCP-промпты\n\n• Разборы, которые помогут изучить REA.\n\nКак клонировать программы с помощью REA\nREA + Pi Coding Agent\nGhidra для начинающих\nFrida для анализа Android\npwn.college: Reverse Engineering\nMalware Unicorn RE101\n\n• Кейсы по изучению приложений и их внутренней логики.\n\nNotes Export\nNotion Clipboard\nDX-Ball Reconstruction\nAegis APK\nTH04 Bullet Patterns\n\n• Декомпиляция, анализ программ и игр.\n\nREA\nAwesome Reverse Engineering\nREA Gems\nAwesome Reverse-Engineered\nGhidra\nJADX\nFrida\nILSpy\nx64dbg\n\n• Более глубокие разборы машинного кода, архитектуры программ и анализ вредоносного ПО.\n\nThe Ghidra Book, 2nd Edition\nReverse Engineering for Beginners\nPractical Binary Analysis\nPractical Malware Analysis\nThe Android Malware Handbook\nReversing: Secrets of Reverse Engineering\n\n• Декомпиляция кода, восстановление структуры программ и автоматизированный реверс-инжиниринг.\n\nLLM4Decompile\nAutoDecompiler\nSALT4Decompile\nDecomperson\nDIRTY\nAutomatically Attacking Software RE Agents\nDoes Reverse Engineering Need a Bigger Model?\n\n• тест полученных навыков на реальных задачах.\n\nOpenSecurityTraining2\npwn.college: Reverse Engineering\npwn.college: Reversing Hell\nMalware Unicorn RE101\nNightmare\nRPISEC Modern Binary Exploitation\nOWASP Mobile Application Security\n\nЗабираем полноценный гайд по ревёрс-инжинирингу&#33;\n\n👍 Бэкдор",
+    "category": "ai-models",
+    "tags": [
+      "ai",
+      "neural-network",
+      "machine-learning"
+    ],
+    "original_date": "2026-11-01T21:51:12+00:00",
+    "created_at": "2026-11-01T22:56:20.256Z"
+  },
+  {
+    "id": 28,
+    "url": "https://nostarch.com/malware",
+    "title": "⚡️ Огромный гайд по REA для вайбкодеров собрали в сети — это самое подробное пособие с десятками мат",
+    "snippet": "⚡️ Огромный гайд по REA для вайбкодеров собрали в сети — это самое подробное пособие с десятками материалов, статей, репозиториев, промптов и инструкций в мире. Авторы — гении, дропнули настоящий сундук с сокровищами.\n\nСобирали сами разрабы Reverse Engineer Anything: от первых шагов и реальных разборов софта до GitHub-репозиториев, научных работ и БЕСПЛАТНЫХ курсов.\n\n• Всё для начала работы с REA, установки и подключения агентов.\n\nОфициальный GitHub REA\nОфициальный сайт REA\nУстановка и настройка агентов\nПервое исследование с REA\nРуководства REA\nГотовые MCP-промпты\n\n• Разборы, которые помогут изучить REA.\n\nКак клонировать программы с помощью REA\nREA + Pi Coding Agent\nGhidra для начинающих\nFrida для анализа Android\npwn.college: Reverse Engineering\nMalware Unicorn RE101\n\n• Кейсы по изучению приложений и их внутренней логики.\n\nNotes Export\nNotion Clipboard\nDX-Ball Reconstruction\nAegis APK\nTH04 Bullet Patterns\n\n• Декомпиляция, анализ программ и игр.\n\nREA\nAwesome Reverse Engineering\nREA Gems\nAwesome Reverse-Engineered\nGhidra\nJADX\nFrida\nILSpy\nx64dbg\n\n• Более глубокие разборы машинного кода, архитектуры программ и анализ вредоносного ПО.\n\nThe Ghidra Book, 2nd Edition\nReverse Engineering for Beginners\nPractical Binary Analysis\nPractical Malware Analysis\nThe Android Malware Handbook\nReversing: Secrets of Reverse Engineering\n\n• Декомпиляция кода, восстановление структуры программ и автоматизированный реверс-инжиниринг.\n\nLLM4Decompile\nAutoDecompiler\nSALT4Decompile\nDecomperson\nDIRTY\nAutomatically Attacking Software RE Agents\nDoes Reverse Engineering Need a Bigger Model?\n\n• тест полученных навыков на реальных задачах.\n\nOpenSecurityTraining2\npwn.college: Reverse Engineering\npwn.college: Reversing Hell\nMalware Unicorn RE101\nNightmare\nRPISEC Modern Binary Exploitation\nOWASP Mobile Application Security\n\nЗабираем полноценный гайд по ревёрс-инжинирингу&#33;\n\n👍 Бэкдор",
+    "category": "ai-models",
+    "tags": [
+      "ai",
+      "neural-network",
+      "machine-learning"
+    ],
+    "original_date": "2026-11-01T21:51:12+00:00",
+    "created_at": "2026-11-01T22:56:20.255Z"
+  },
+  {
+    "id": 27,
+    "url": "https://nostarch.com/binaryanalysis",
+    "title": "⚡️ Огромный гайд по REA для вайбкодеров собрали в сети — это самое подробное пособие с десятками мат",
+    "snippet": "⚡️ Огромный гайд по REA для вайбкодеров собрали в сети — это самое подробное пособие с десятками материалов, статей, репозиториев, промптов и инструкций в мире. Авторы — гении, дропнули настоящий сундук с сокровищами.\n\nСобирали сами разрабы Reverse Engineer Anything: от первых шагов и реальных разборов софта до GitHub-репозиториев, научных работ и БЕСПЛАТНЫХ курсов.\n\n• Всё для начала работы с REA, установки и подключения агентов.\n\nОфициальный GitHub REA\nОфициальный сайт REA\nУстановка и настройка агентов\nПервое исследование с REA\nРуководства REA\nГотовые MCP-промпты\n\n• Разборы, которые помогут изучить REA.\n\nКак клонировать программы с помощью REA\nREA + Pi Coding Agent\nGhidra для начинающих\nFrida для анализа Android\npwn.college: Reverse Engineering\nMalware Unicorn RE101\n\n• Кейсы по изучению приложений и их внутренней логики.\n\nNotes Export\nNotion Clipboard\nDX-Ball Reconstruction\nAegis APK\nTH04 Bullet Patterns\n\n• Декомпиляция, анализ программ и игр.\n\nREA\nAwesome Reverse Engineering\nREA Gems\nAwesome Reverse-Engineered\nGhidra\nJADX\nFrida\nILSpy\nx64dbg\n\n• Более глубокие разборы машинного кода, архитектуры программ и анализ вредоносного ПО.\n\nThe Ghidra Book, 2nd Edition\nReverse Engineering for Beginners\nPractical Binary Analysis\nPractical Malware Analysis\nThe Android Malware Handbook\nReversing: Secrets of Reverse Engineering\n\n• Декомпиляция кода, восстановление структуры программ и автоматизированный реверс-инжиниринг.\n\nLLM4Decompile\nAutoDecompiler\nSALT4Decompile\nDecomperson\nDIRTY\nAutomatically Attacking Software RE Agents\nDoes Reverse Engineering Need a Bigger Model?\n\n• тест полученных навыков на реальных задачах.\n\nOpenSecurityTraining2\npwn.college: Reverse Engineering\npwn.college: Reversing Hell\nMalware Unicorn RE101\nNightmare\nRPISEC Modern Binary Exploitation\nOWASP Mobile Application Security\n\nЗабираем полноценный гайд по ревёрс-инжинирингу&#33;\n\n👍 Бэкдор",
+    "category": "ai-models",
+    "tags": [
+      "ai",
+      "neural-network",
+      "machine-learning"
+    ],
+    "original_date": "2026-11-01T21:51:12+00:00",
+    "created_at": "2026-11-01T22:56:20.255Z"
+  },
+  {
+    "id": 26,
+    "url": "https://go.yurichev.com/",
+    "title": "⚡️ Огромный гайд по REA для вайбкодеров собрали в сети — это самое подробное пособие с десятками мат",
+    "snippet": "⚡️ Огромный гайд по REA для вайбкодеров собрали в сети — это самое подробное пособие с десятками материалов, статей, репозиториев, промптов и инструкций в мире. Авторы — гении, дропнули настоящий сундук с сокровищами.\n\nСобирали сами разрабы Reverse Engineer Anything: от первых шагов и реальных разборов софта до GitHub-репозиториев, научных работ и БЕСПЛАТНЫХ курсов.\n\n• Всё для начала работы с REA, установки и подключения агентов.\n\nОфициальный GitHub REA\nОфициальный сайт REA\nУстановка и настройка агентов\nПервое исследование с REA\nРуководства REA\nГотовые MCP-промпты\n\n• Разборы, которые помогут изучить REA.\n\nКак клонировать программы с помощью REA\nREA + Pi Coding Agent\nGhidra для начинающих\nFrida для анализа Android\npwn.college: Reverse Engineering\nMalware Unicorn RE101\n\n• Кейсы по изучению приложений и их внутренней логики.\n\nNotes Export\nNotion Clipboard\nDX-Ball Reconstruction\nAegis APK\nTH04 Bullet Patterns\n\n• Декомпиляция, анализ программ и игр.\n\nREA\nAwesome Reverse Engineering\nREA Gems\nAwesome Reverse-Engineered\nGhidra\nJADX\nFrida\nILSpy\nx64dbg\n\n• Более глубокие разборы машинного кода, архитектуры программ и анализ вредоносного ПО.\n\nThe Ghidra Book, 2nd Edition\nReverse Engineering for Beginners\nPractical Binary Analysis\nPractical Malware Analysis\nThe Android Malware Handbook\nReversing: Secrets of Reverse Engineering\n\n• Декомпиляция кода, восстановление структуры программ и автоматизированный реверс-инжиниринг.\n\nLLM4Decompile\nAutoDecompiler\nSALT4Decompile\nDecomperson\nDIRTY\nAutomatically Attacking Software RE Agents\nDoes Reverse Engineering Need a Bigger Model?\n\n• тест полученных навыков на реальных задачах.\n\nOpenSecurityTraining2\npwn.college: Reverse Engineering\npwn.college: Reversing Hell\nMalware Unicorn RE101\nNightmare\nRPISEC Modern Binary Exploitation\nOWASP Mobile Application Security\n\nЗабираем полноценный гайд по ревёрс-инжинирингу&#33;\n\n👍 Бэкдор",
+    "category": "ai-models",
+    "tags": [
+      "ai",
+      "neural-network",
+      "machine-learning"
+    ],
+    "original_date": "2026-11-01T21:51:12+00:00",
+    "created_at": "2026-11-01T22:56:20.255Z"
+  },
+  {
+    "id": 25,
+    "url": "https://nostarch.com/ghidra-book-2e",
+    "title": "⚡️ Огромный гайд по REA для вайбкодеров собрали в сети — это самое подробное пособие с десятками мат",
+    "snippet": "⚡️ Огромный гайд по REA для вайбкодеров собрали в сети — это самое подробное пособие с десятками материалов, статей, репозиториев, промптов и инструкций в мире. Авторы — гении, дропнули настоящий сундук с сокровищами.\n\nСобирали сами разрабы Reverse Engineer Anything: от первых шагов и реальных разборов софта до GitHub-репозиториев, научных работ и БЕСПЛАТНЫХ курсов.\n\n• Всё для начала работы с REA, установки и подключения агентов.\n\nОфициальный GitHub REA\nОфициальный сайт REA\nУстановка и настройка агентов\nПервое исследование с REA\nРуководства REA\nГотовые MCP-промпты\n\n• Разборы, которые помогут изучить REA.\n\nКак клонировать программы с помощью REA\nREA + Pi Coding Agent\nGhidra для начинающих\nFrida для анализа Android\npwn.college: Reverse Engineering\nMalware Unicorn RE101\n\n• Кейсы по изучению приложений и их внутренней логики.\n\nNotes Export\nNotion Clipboard\nDX-Ball Reconstruction\nAegis APK\nTH04 Bullet Patterns\n\n• Декомпиляция, анализ программ и игр.\n\nREA\nAwesome Reverse Engineering\nREA Gems\nAwesome Reverse-Engineered\nGhidra\nJADX\nFrida\nILSpy\nx64dbg\n\n• Более глубокие разборы машинного кода, архитектуры программ и анализ вредоносного ПО.\n\nThe Ghidra Book, 2nd Edition\nReverse Engineering for Beginners\nPractical Binary Analysis\nPractical Malware Analysis\nThe Android Malware Handbook\nReversing: Secrets of Reverse Engineering\n\n• Декомпиляция кода, восстановление структуры программ и автоматизированный реверс-инжиниринг.\n\nLLM4Decompile\nAutoDecompiler\nSALT4Decompile\nDecomperson\nDIRTY\nAutomatically Attacking Software RE Agents\nDoes Reverse Engineering Need a Bigger Model?\n\n• тест полученных навыков на реальных задачах.\n\nOpenSecurityTraining2\npwn.college: Reverse Engineering\npwn.college: Reversing Hell\nMalware Unicorn RE101\nNightmare\nRPISEC Modern Binary Exploitation\nOWASP Mobile Application Security\n\nЗабираем полноценный гайд по ревёрс-инжинирингу&#33;\n\n👍 Бэкдор",
+    "category": "ai-models",
+    "tags": [
+      "ai",
+      "neural-network",
+      "machine-learning"
+    ],
+    "original_date": "2026-11-01T21:51:12+00:00",
+    "created_at": "2026-11-01T22:56:20.254Z"
+  },
+  {
+    "id": 24,
+    "url": "https://github.com/x64dbg/x64dbg",
+    "title": "⚡️ Огромный гайд по REA для вайбкодеров собрали в сети — это самое подробное пособие с десятками мат",
+    "snippet": "⚡️ Огромный гайд по REA для вайбкодеров собрали в сети — это самое подробное пособие с десятками материалов, статей, репозиториев, промптов и инструкций в мире. Авторы — гении, дропнули настоящий сундук с сокровищами.\n\nСобирали сами разрабы Reverse Engineer Anything: от первых шагов и реальных разборов софта до GitHub-репозиториев, научных работ и БЕСПЛАТНЫХ курсов.\n\n• Всё для начала работы с REA, установки и подключения агентов.\n\nОфициальный GitHub REA\nОфициальный сайт REA\nУстановка и настройка агентов\nПервое исследование с REA\nРуководства REA\nГотовые MCP-промпты\n\n• Разборы, которые помогут изучить REA.\n\nКак клонировать программы с помощью REA\nREA + Pi Coding Agent\nGhidra для начинающих\nFrida для анализа Android\npwn.college: Reverse Engineering\nMalware Unicorn RE101\n\n• Кейсы по изучению приложений и их внутренней логики.\n\nNotes Export\nNotion Clipboard\nDX-Ball Reconstruction\nAegis APK\nTH04 Bullet Patterns\n\n• Декомпиляция, анализ программ и игр.\n\nREA\nAwesome Reverse Engineering\nREA Gems\nAwesome Reverse-Engineered\nGhidra\nJADX\nFrida\nILSpy\nx64dbg\n\n• Более глубокие разборы машинного кода, архитектуры программ и анализ вредоносного ПО.\n\nThe Ghidra Book, 2nd Edition\nReverse Engineering for Beginners\nPractical Binary Analysis\nPractical Malware Analysis\nThe Android Malware Handbook\nReversing: Secrets of Reverse Engineering\n\n• Декомпиляция кода, восстановление структуры программ и автоматизированный реверс-инжиниринг.\n\nLLM4Decompile\nAutoDecompiler\nSALT4Decompile\nDecomperson\nDIRTY\nAutomatically Attacking Software RE Agents\nDoes Reverse Engineering Need a Bigger Model?\n\n• тест полученных навыков на реальных задачах.\n\nOpenSecurityTraining2\npwn.college: Reverse Engineering\npwn.college: Reversing Hell\nMalware Unicorn RE101\nNightmare\nRPISEC Modern Binary Exploitation\nOWASP Mobile Application Security\n\nЗабираем полноценный гайд по ревёрс-инжинирингу&#33;\n\n👍 Бэкдор",
+    "category": "ai-models",
+    "tags": [
+      "ai",
+      "neural-network",
+      "machine-learning"
+    ],
+    "original_date": "2026-11-01T21:51:12+00:00",
+    "created_at": "2026-11-01T22:56:20.254Z"
+  },
+  {
+    "id": 23,
+    "url": "https://github.com/icsharpcode/ILSpy",
+    "title": "⚡️ Огромный гайд по REA для вайбкодеров собрали в сети — это самое подробное пособие с десятками мат",
+    "snippet": "⚡️ Огромный гайд по REA для вайбкодеров собрали в сети — это самое подробное пособие с десятками материалов, статей, репозиториев, промптов и инструкций в мире. Авторы — гении, дропнули настоящий сундук с сокровищами.\n\nСобирали сами разрабы Reverse Engineer Anything: от первых шагов и реальных разборов софта до GitHub-репозиториев, научных работ и БЕСПЛАТНЫХ курсов.\n\n• Всё для начала работы с REA, установки и подключения агентов.\n\nОфициальный GitHub REA\nОфициальный сайт REA\nУстановка и настройка агентов\nПервое исследование с REA\nРуководства REA\nГотовые MCP-промпты\n\n• Разборы, которые помогут изучить REA.\n\nКак клонировать программы с помощью REA\nREA + Pi Coding Agent\nGhidra для начинающих\nFrida для анализа Android\npwn.college: Reverse Engineering\nMalware Unicorn RE101\n\n• Кейсы по изучению приложений и их внутренней логики.\n\nNotes Export\nNotion Clipboard\nDX-Ball Reconstruction\nAegis APK\nTH04 Bullet Patterns\n\n• Декомпиляция, анализ программ и игр.\n\nREA\nAwesome Reverse Engineering\nREA Gems\nAwesome Reverse-Engineered\nGhidra\nJADX\nFrida\nILSpy\nx64dbg\n\n• Более глубокие разборы машинного кода, архитектуры программ и анализ вредоносного ПО.\n\nThe Ghidra Book, 2nd Edition\nReverse Engineering for Beginners\nPractical Binary Analysis\nPractical Malware Analysis\nThe Android Malware Handbook\nReversing: Secrets of Reverse Engineering\n\n• Декомпиляция кода, восстановление структуры программ и автоматизированный реверс-инжиниринг.\n\nLLM4Decompile\nAutoDecompiler\nSALT4Decompile\nDecomperson\nDIRTY\nAutomatically Attacking Software RE Agents\nDoes Reverse Engineering Need a Bigger Model?\n\n• тест полученных навыков на реальных задачах.\n\nOpenSecurityTraining2\npwn.college: Reverse Engineering\npwn.college: Reversing Hell\nMalware Unicorn RE101\nNightmare\nRPISEC Modern Binary Exploitation\nOWASP Mobile Application Security\n\nЗабираем полноценный гайд по ревёрс-инжинирингу&#33;\n\n👍 Бэкдор",
+    "category": "ai-models",
+    "tags": [
+      "ai",
+      "neural-network",
+      "machine-learning"
+    ],
+    "original_date": "2026-11-01T21:51:12+00:00",
+    "created_at": "2026-11-01T22:56:20.254Z"
+  },
+  {
+    "id": 22,
+    "url": "https://github.com/frida/frida",
+    "title": "⚡️ Огромный гайд по REA для вайбкодеров собрали в сети — это самое подробное пособие с десятками мат",
+    "snippet": "⚡️ Огромный гайд по REA для вайбкодеров собрали в сети — это самое подробное пособие с десятками материалов, статей, репозиториев, промптов и инструкций в мире. Авторы — гении, дропнули настоящий сундук с сокровищами.\n\nСобирали сами разрабы Reverse Engineer Anything: от первых шагов и реальных разборов софта до GitHub-репозиториев, научных работ и БЕСПЛАТНЫХ курсов.\n\n• Всё для начала работы с REA, установки и подключения агентов.\n\nОфициальный GitHub REA\nОфициальный сайт REA\nУстановка и настройка агентов\nПервое исследование с REA\nРуководства REA\nГотовые MCP-промпты\n\n• Разборы, которые помогут изучить REA.\n\nКак клонировать программы с помощью REA\nREA + Pi Coding Agent\nGhidra для начинающих\nFrida для анализа Android\npwn.college: Reverse Engineering\nMalware Unicorn RE101\n\n• Кейсы по изучению приложений и их внутренней логики.\n\nNotes Export\nNotion Clipboard\nDX-Ball Reconstruction\nAegis APK\nTH04 Bullet Patterns\n\n• Декомпиляция, анализ программ и игр.\n\nREA\nAwesome Reverse Engineering\nREA Gems\nAwesome Reverse-Engineered\nGhidra\nJADX\nFrida\nILSpy\nx64dbg\n\n• Более глубокие разборы машинного кода, архитектуры программ и анализ вредоносного ПО.\n\nThe Ghidra Book, 2nd Edition\nReverse Engineering for Beginners\nPractical Binary Analysis\nPractical Malware Analysis\nThe Android Malware Handbook\nReversing: Secrets of Reverse Engineering\n\n• Декомпиляция кода, восстановление структуры программ и автоматизированный реверс-инжиниринг.\n\nLLM4Decompile\nAutoDecompiler\nSALT4Decompile\nDecomperson\nDIRTY\nAutomatically Attacking Software RE Agents\nDoes Reverse Engineering Need a Bigger Model?\n\n• тест полученных навыков на реальных задачах.\n\nOpenSecurityTraining2\npwn.college: Reverse Engineering\npwn.college: Reversing Hell\nMalware Unicorn RE101\nNightmare\nRPISEC Modern Binary Exploitation\nOWASP Mobile Application Security\n\nЗабираем полноценный гайд по ревёрс-инжинирингу&#33;\n\n👍 Бэкдор",
+    "category": "ai-models",
+    "tags": [
+      "ai",
+      "neural-network",
+      "machine-learning"
+    ],
+    "original_date": "2026-11-01T21:51:12+00:00",
+    "created_at": "2026-11-01T22:56:20.254Z"
+  },
+  {
+    "id": 21,
+    "url": "https://github.com/skylot/jadx",
+    "title": "⚡️ Огромный гайд по REA для вайбкодеров собрали в сети — это самое подробное пособие с десятками мат",
+    "snippet": "⚡️ Огромный гайд по REA для вайбкодеров собрали в сети — это самое подробное пособие с десятками материалов, статей, репозиториев, промптов и инструкций в мире. Авторы — гении, дропнули настоящий сундук с сокровищами.\n\nСобирали сами разрабы Reverse Engineer Anything: от первых шагов и реальных разборов софта до GitHub-репозиториев, научных работ и БЕСПЛАТНЫХ курсов.\n\n• Всё для начала работы с REA, установки и подключения агентов.\n\nОфициальный GitHub REA\nОфициальный сайт REA\nУстановка и настройка агентов\nПервое исследование с REA\nРуководства REA\nГотовые MCP-промпты\n\n• Разборы, которые помогут изучить REA.\n\nКак клонировать программы с помощью REA\nREA + Pi Coding Agent\nGhidra для начинающих\nFrida для анализа Android\npwn.college: Reverse Engineering\nMalware Unicorn RE101\n\n• Кейсы по изучению приложений и их внутренней логики.\n\nNotes Export\nNotion Clipboard\nDX-Ball Reconstruction\nAegis APK\nTH04 Bullet Patterns\n\n• Декомпиляция, анализ программ и игр.\n\nREA\nAwesome Reverse Engineering\nREA Gems\nAwesome Reverse-Engineered\nGhidra\nJADX\nFrida\nILSpy\nx64dbg\n\n• Более глубокие разборы машинного кода, архитектуры программ и анализ вредоносного ПО.\n\nThe Ghidra Book, 2nd Edition\nReverse Engineering for Beginners\nPractical Binary Analysis\nPractical Malware Analysis\nThe Android Malware Handbook\nReversing: Secrets of Reverse Engineering\n\n• Декомпиляция кода, восстановление структуры программ и автоматизированный реверс-инжиниринг.\n\nLLM4Decompile\nAutoDecompiler\nSALT4Decompile\nDecomperson\nDIRTY\nAutomatically Attacking Software RE Agents\nDoes Reverse Engineering Need a Bigger Model?\n\n• тест полученных навыков на реальных задачах.\n\nOpenSecurityTraining2\npwn.college: Reverse Engineering\npwn.college: Reversing Hell\nMalware Unicorn RE101\nNightmare\nRPISEC Modern Binary Exploitation\nOWASP Mobile Application Security\n\nЗабираем полноценный гайд по ревёрс-инжинирингу&#33;\n\n👍 Бэкдор",
+    "category": "ai-models",
+    "tags": [
+      "ai",
+      "neural-network",
+      "machine-learning"
+    ],
+    "original_date": "2026-11-01T21:51:12+00:00",
+    "created_at": "2026-11-01T22:56:20.253Z"
+  },
+  {
+    "id": 20,
+    "url": "https://github.com/NationalSecurityAgency/ghidra",
+    "title": "⚡️ Огромный гайд по REA для вайбкодеров собрали в сети — это самое подробное пособие с десятками мат",
+    "snippet": "⚡️ Огромный гайд по REA для вайбкодеров собрали в сети — это самое подробное пособие с десятками материалов, статей, репозиториев, промптов и инструкций в мире. Авторы — гении, дропнули настоящий сундук с сокровищами.\n\nСобирали сами разрабы Reverse Engineer Anything: от первых шагов и реальных разборов софта до GitHub-репозиториев, научных работ и БЕСПЛАТНЫХ курсов.\n\n• Всё для начала работы с REA, установки и подключения агентов.\n\nОфициальный GitHub REA\nОфициальный сайт REA\nУстановка и настройка агентов\nПервое исследование с REA\nРуководства REA\nГотовые MCP-промпты\n\n• Разборы, которые помогут изучить REA.\n\nКак клонировать программы с помощью REA\nREA + Pi Coding Agent\nGhidra для начинающих\nFrida для анализа Android\npwn.college: Reverse Engineering\nMalware Unicorn RE101\n\n• Кейсы по изучению приложений и их внутренней логики.\n\nNotes Export\nNotion Clipboard\nDX-Ball Reconstruction\nAegis APK\nTH04 Bullet Patterns\n\n• Декомпиляция, анализ программ и игр.\n\nREA\nAwesome Reverse Engineering\nREA Gems\nAwesome Reverse-Engineered\nGhidra\nJADX\nFrida\nILSpy\nx64dbg\n\n• Более глубокие разборы машинного кода, архитектуры программ и анализ вредоносного ПО.\n\nThe Ghidra Book, 2nd Edition\nReverse Engineering for Beginners\nPractical Binary Analysis\nPractical Malware Analysis\nThe Android Malware Handbook\nReversing: Secrets of Reverse Engineering\n\n• Декомпиляция кода, восстановление структуры программ и автоматизированный реверс-инжиниринг.\n\nLLM4Decompile\nAutoDecompiler\nSALT4Decompile\nDecomperson\nDIRTY\nAutomatically Attacking Software RE Agents\nDoes Reverse Engineering Need a Bigger Model?\n\n• тест полученных навыков на реальных задачах.\n\nOpenSecurityTraining2\npwn.college: Reverse Engineering\npwn.college: Reversing Hell\nMalware Unicorn RE101\nNightmare\nRPISEC Modern Binary Exploitation\nOWASP Mobile Application Security\n\nЗабираем полноценный гайд по ревёрс-инжинирингу&#33;\n\n👍 Бэкдор",
+    "category": "ai-models",
+    "tags": [
+      "ai",
+      "neural-network",
+      "machine-learning"
+    ],
+    "original_date": "2026-11-01T21:51:12+00:00",
+    "created_at": "2026-11-01T22:56:20.253Z"
+  },
+  {
+    "id": 19,
+    "url": "https://github.com/alexgaoth/awesome-reverse-engineered",
+    "title": "⚡️ Огромный гайд по REA для вайбкодеров собрали в сети — это самое подробное пособие с десятками мат",
+    "snippet": "⚡️ Огромный гайд по REA для вайбкодеров собрали в сети — это самое подробное пособие с десятками материалов, статей, репозиториев, промптов и инструкций в мире. Авторы — гении, дропнули настоящий сундук с сокровищами.\n\nСобирали сами разрабы Reverse Engineer Anything: от первых шагов и реальных разборов софта до GitHub-репозиториев, научных работ и БЕСПЛАТНЫХ курсов.\n\n• Всё для начала работы с REA, установки и подключения агентов.\n\nОфициальный GitHub REA\nОфициальный сайт REA\nУстановка и настройка агентов\nПервое исследование с REA\nРуководства REA\nГотовые MCP-промпты\n\n• Разборы, которые помогут изучить REA.\n\nКак клонировать программы с помощью REA\nREA + Pi Coding Agent\nGhidra для начинающих\nFrida для анализа Android\npwn.college: Reverse Engineering\nMalware Unicorn RE101\n\n• Кейсы по изучению приложений и их внутренней логики.\n\nNotes Export\nNotion Clipboard\nDX-Ball Reconstruction\nAegis APK\nTH04 Bullet Patterns\n\n• Декомпиляция, анализ программ и игр.\n\nREA\nAwesome Reverse Engineering\nREA Gems\nAwesome Reverse-Engineered\nGhidra\nJADX\nFrida\nILSpy\nx64dbg\n\n• Более глубокие разборы машинного кода, архитектуры программ и анализ вредоносного ПО.\n\nThe Ghidra Book, 2nd Edition\nReverse Engineering for Beginners\nPractical Binary Analysis\nPractical Malware Analysis\nThe Android Malware Handbook\nReversing: Secrets of Reverse Engineering\n\n• Декомпиляция кода, восстановление структуры программ и автоматизированный реверс-инжиниринг.\n\nLLM4Decompile\nAutoDecompiler\nSALT4Decompile\nDecomperson\nDIRTY\nAutomatically Attacking Software RE Agents\nDoes Reverse Engineering Need a Bigger Model?\n\n• тест полученных навыков на реальных задачах.\n\nOpenSecurityTraining2\npwn.college: Reverse Engineering\npwn.college: Reversing Hell\nMalware Unicorn RE101\nNightmare\nRPISEC Modern Binary Exploitation\nOWASP Mobile Application Security\n\nЗабираем полноценный гайд по ревёрс-инжинирингу&#33;\n\n👍 Бэкдор",
+    "category": "ai-models",
+    "tags": [
+      "ai",
+      "neural-network",
+      "machine-learning"
+    ],
+    "original_date": "2026-11-01T21:51:12+00:00",
+    "created_at": "2026-11-01T22:56:20.253Z"
+  },
+  {
+    "id": 18,
+    "url": "https://github.com/sqwu/rea-gems",
+    "title": "⚡️ Огромный гайд по REA для вайбкодеров собрали в сети — это самое подробное пособие с десятками мат",
+    "snippet": "⚡️ Огромный гайд по REA для вайбкодеров собрали в сети — это самое подробное пособие с десятками материалов, статей, репозиториев, промптов и инструкций в мире. Авторы — гении, дропнули настоящий сундук с сокровищами.\n\nСобирали сами разрабы Reverse Engineer Anything: от первых шагов и реальных разборов софта до GitHub-репозиториев, научных работ и БЕСПЛАТНЫХ курсов.\n\n• Всё для начала работы с REA, установки и подключения агентов.\n\nОфициальный GitHub REA\nОфициальный сайт REA\nУстановка и настройка агентов\nПервое исследование с REA\nРуководства REA\nГотовые MCP-промпты\n\n• Разборы, которые помогут изучить REA.\n\nКак клонировать программы с помощью REA\nREA + Pi Coding Agent\nGhidra для начинающих\nFrida для анализа Android\npwn.college: Reverse Engineering\nMalware Unicorn RE101\n\n• Кейсы по изучению приложений и их внутренней логики.\n\nNotes Export\nNotion Clipboard\nDX-Ball Reconstruction\nAegis APK\nTH04 Bullet Patterns\n\n• Декомпиляция, анализ программ и игр.\n\nREA\nAwesome Reverse Engineering\nREA Gems\nAwesome Reverse-Engineered\nGhidra\nJADX\nFrida\nILSpy\nx64dbg\n\n• Более глубокие разборы машинного кода, архитектуры программ и анализ вредоносного ПО.\n\nThe Ghidra Book, 2nd Edition\nReverse Engineering for Beginners\nPractical Binary Analysis\nPractical Malware Analysis\nThe Android Malware Handbook\nReversing: Secrets of Reverse Engineering\n\n• Декомпиляция кода, восстановление структуры программ и автоматизированный реверс-инжиниринг.\n\nLLM4Decompile\nAutoDecompiler\nSALT4Decompile\nDecomperson\nDIRTY\nAutomatically Attacking Software RE Agents\nDoes Reverse Engineering Need a Bigger Model?\n\n• тест полученных навыков на реальных задачах.\n\nOpenSecurityTraining2\npwn.college: Reverse Engineering\npwn.college: Reversing Hell\nMalware Unicorn RE101\nNightmare\nRPISEC Modern Binary Exploitation\nOWASP Mobile Application Security\n\nЗабираем полноценный гайд по ревёрс-инжинирингу&#33;\n\n👍 Бэкдор",
+    "category": "ai-models",
+    "tags": [
+      "ai",
+      "neural-network",
+      "machine-learning"
+    ],
+    "original_date": "2026-11-01T21:51:12+00:00",
+    "created_at": "2026-11-01T22:56:20.253Z"
+  },
+  {
+    "id": 17,
+    "url": "https://github.com/morluto/awesome-reverse-engineering",
+    "title": "⚡️ Огромный гайд по REA для вайбкодеров собрали в сети — это самое подробное пособие с десятками мат",
+    "snippet": "⚡️ Огромный гайд по REA для вайбкодеров собрали в сети — это самое подробное пособие с десятками материалов, статей, репозиториев, промптов и инструкций в мире. Авторы — гении, дропнули настоящий сундук с сокровищами.\n\nСобирали сами разрабы Reverse Engineer Anything: от первых шагов и реальных разборов софта до GitHub-репозиториев, научных работ и БЕСПЛАТНЫХ курсов.\n\n• Всё для начала работы с REA, установки и подключения агентов.\n\nОфициальный GitHub REA\nОфициальный сайт REA\nУстановка и настройка агентов\nПервое исследование с REA\nРуководства REA\nГотовые MCP-промпты\n\n• Разборы, которые помогут изучить REA.\n\nКак клонировать программы с помощью REA\nREA + Pi Coding Agent\nGhidra для начинающих\nFrida для анализа Android\npwn.college: Reverse Engineering\nMalware Unicorn RE101\n\n• Кейсы по изучению приложений и их внутренней логики.\n\nNotes Export\nNotion Clipboard\nDX-Ball Reconstruction\nAegis APK\nTH04 Bullet Patterns\n\n• Декомпиляция, анализ программ и игр.\n\nREA\nAwesome Reverse Engineering\nREA Gems\nAwesome Reverse-Engineered\nGhidra\nJADX\nFrida\nILSpy\nx64dbg\n\n• Более глубокие разборы машинного кода, архитектуры программ и анализ вредоносного ПО.\n\nThe Ghidra Book, 2nd Edition\nReverse Engineering for Beginners\nPractical Binary Analysis\nPractical Malware Analysis\nThe Android Malware Handbook\nReversing: Secrets of Reverse Engineering\n\n• Декомпиляция кода, восстановление структуры программ и автоматизированный реверс-инжиниринг.\n\nLLM4Decompile\nAutoDecompiler\nSALT4Decompile\nDecomperson\nDIRTY\nAutomatically Attacking Software RE Agents\nDoes Reverse Engineering Need a Bigger Model?\n\n• тест полученных навыков на реальных задачах.\n\nOpenSecurityTraining2\npwn.college: Reverse Engineering\npwn.college: Reversing Hell\nMalware Unicorn RE101\nNightmare\nRPISEC Modern Binary Exploitation\nOWASP Mobile Application Security\n\nЗабираем полноценный гайд по ревёрс-инжинирингу&#33;\n\n👍 Бэкдор",
+    "category": "ai-models",
+    "tags": [
+      "ai",
+      "neural-network",
+      "machine-learning"
+    ],
+    "original_date": "2026-11-01T21:51:12+00:00",
+    "created_at": "2026-11-01T22:56:20.252Z"
+  },
+  {
+    "id": 16,
+    "url": "https://rea.tools/showcase/th04/",
+    "title": "⚡️ Огромный гайд по REA для вайбкодеров собрали в сети — это самое подробное пособие с десятками мат",
+    "snippet": "⚡️ Огромный гайд по REA для вайбкодеров собрали в сети — это самое подробное пособие с десятками материалов, статей, репозиториев, промптов и инструкций в мире. Авторы — гении, дропнули настоящий сундук с сокровищами.\n\nСобирали сами разрабы Reverse Engineer Anything: от первых шагов и реальных разборов софта до GitHub-репозиториев, научных работ и БЕСПЛАТНЫХ курсов.\n\n• Всё для начала работы с REA, установки и подключения агентов.\n\nОфициальный GitHub REA\nОфициальный сайт REA\nУстановка и настройка агентов\nПервое исследование с REA\nРуководства REA\nГотовые MCP-промпты\n\n• Разборы, которые помогут изучить REA.\n\nКак клонировать программы с помощью REA\nREA + Pi Coding Agent\nGhidra для начинающих\nFrida для анализа Android\npwn.college: Reverse Engineering\nMalware Unicorn RE101\n\n• Кейсы по изучению приложений и их внутренней логики.\n\nNotes Export\nNotion Clipboard\nDX-Ball Reconstruction\nAegis APK\nTH04 Bullet Patterns\n\n• Декомпиляция, анализ программ и игр.\n\nREA\nAwesome Reverse Engineering\nREA Gems\nAwesome Reverse-Engineered\nGhidra\nJADX\nFrida\nILSpy\nx64dbg\n\n• Более глубокие разборы машинного кода, архитектуры программ и анализ вредоносного ПО.\n\nThe Ghidra Book, 2nd Edition\nReverse Engineering for Beginners\nPractical Binary Analysis\nPractical Malware Analysis\nThe Android Malware Handbook\nReversing: Secrets of Reverse Engineering\n\n• Декомпиляция кода, восстановление структуры программ и автоматизированный реверс-инжиниринг.\n\nLLM4Decompile\nAutoDecompiler\nSALT4Decompile\nDecomperson\nDIRTY\nAutomatically Attacking Software RE Agents\nDoes Reverse Engineering Need a Bigger Model?\n\n• тест полученных навыков на реальных задачах.\n\nOpenSecurityTraining2\npwn.college: Reverse Engineering\npwn.college: Reversing Hell\nMalware Unicorn RE101\nNightmare\nRPISEC Modern Binary Exploitation\nOWASP Mobile Application Security\n\nЗабираем полноценный гайд по ревёрс-инжинирингу&#33;\n\n👍 Бэкдор",
+    "category": "ai-models",
+    "tags": [
+      "ai",
+      "neural-network",
+      "machine-learning"
+    ],
+    "original_date": "2026-11-01T21:51:12+00:00",
+    "created_at": "2026-11-01T22:56:20.252Z"
+  },
+  {
+    "id": 15,
+    "url": "https://rea.tools/showcase/aegis/",
+    "title": "⚡️ Огромный гайд по REA для вайбкодеров собрали в сети — это самое подробное пособие с десятками мат",
+    "snippet": "⚡️ Огромный гайд по REA для вайбкодеров собрали в сети — это самое подробное пособие с десятками материалов, статей, репозиториев, промптов и инструкций в мире. Авторы — гении, дропнули настоящий сундук с сокровищами.\n\nСобирали сами разрабы Reverse Engineer Anything: от первых шагов и реальных разборов софта до GitHub-репозиториев, научных работ и БЕСПЛАТНЫХ курсов.\n\n• Всё для начала работы с REA, установки и подключения агентов.\n\nОфициальный GitHub REA\nОфициальный сайт REA\nУстановка и настройка агентов\nПервое исследование с REA\nРуководства REA\nГотовые MCP-промпты\n\n• Разборы, которые помогут изучить REA.\n\nКак клонировать программы с помощью REA\nREA + Pi Coding Agent\nGhidra для начинающих\nFrida для анализа Android\npwn.college: Reverse Engineering\nMalware Unicorn RE101\n\n• Кейсы по изучению приложений и их внутренней логики.\n\nNotes Export\nNotion Clipboard\nDX-Ball Reconstruction\nAegis APK\nTH04 Bullet Patterns\n\n• Декомпиляция, анализ программ и игр.\n\nREA\nAwesome Reverse Engineering\nREA Gems\nAwesome Reverse-Engineered\nGhidra\nJADX\nFrida\nILSpy\nx64dbg\n\n• Более глубокие разборы машинного кода, архитектуры программ и анализ вредоносного ПО.\n\nThe Ghidra Book, 2nd Edition\nReverse Engineering for Beginners\nPractical Binary Analysis\nPractical Malware Analysis\nThe Android Malware Handbook\nReversing: Secrets of Reverse Engineering\n\n• Декомпиляция кода, восстановление структуры программ и автоматизированный реверс-инжиниринг.\n\nLLM4Decompile\nAutoDecompiler\nSALT4Decompile\nDecomperson\nDIRTY\nAutomatically Attacking Software RE Agents\nDoes Reverse Engineering Need a Bigger Model?\n\n• тест полученных навыков на реальных задачах.\n\nOpenSecurityTraining2\npwn.college: Reverse Engineering\npwn.college: Reversing Hell\nMalware Unicorn RE101\nNightmare\nRPISEC Modern Binary Exploitation\nOWASP Mobile Application Security\n\nЗабираем полноценный гайд по ревёрс-инжинирингу&#33;\n\n👍 Бэкдор",
+    "category": "ai-models",
+    "tags": [
+      "ai",
+      "neural-network",
+      "machine-learning"
+    ],
+    "original_date": "2026-11-01T21:51:12+00:00",
+    "created_at": "2026-11-01T22:56:20.252Z"
+  },
+  {
+    "id": 14,
+    "url": "https://rea.tools/showcase/dx-ball/",
+    "title": "⚡️ Огромный гайд по REA для вайбкодеров собрали в сети — это самое подробное пособие с десятками мат",
+    "snippet": "⚡️ Огромный гайд по REA для вайбкодеров собрали в сети — это самое подробное пособие с десятками материалов, статей, репозиториев, промптов и инструкций в мире. Авторы — гении, дропнули настоящий сундук с сокровищами.\n\nСобирали сами разрабы Reverse Engineer Anything: от первых шагов и реальных разборов софта до GitHub-репозиториев, научных работ и БЕСПЛАТНЫХ курсов.\n\n• Всё для начала работы с REA, установки и подключения агентов.\n\nОфициальный GitHub REA\nОфициальный сайт REA\nУстановка и настройка агентов\nПервое исследование с REA\nРуководства REA\nГотовые MCP-промпты\n\n• Разборы, которые помогут изучить REA.\n\nКак клонировать программы с помощью REA\nREA + Pi Coding Agent\nGhidra для начинающих\nFrida для анализа Android\npwn.college: Reverse Engineering\nMalware Unicorn RE101\n\n• Кейсы по изучению приложений и их внутренней логики.\n\nNotes Export\nNotion Clipboard\nDX-Ball Reconstruction\nAegis APK\nTH04 Bullet Patterns\n\n• Декомпиляция, анализ программ и игр.\n\nREA\nAwesome Reverse Engineering\nREA Gems\nAwesome Reverse-Engineered\nGhidra\nJADX\nFrida\nILSpy\nx64dbg\n\n• Более глубокие разборы машинного кода, архитектуры программ и анализ вредоносного ПО.\n\nThe Ghidra Book, 2nd Edition\nReverse Engineering for Beginners\nPractical Binary Analysis\nPractical Malware Analysis\nThe Android Malware Handbook\nReversing: Secrets of Reverse Engineering\n\n• Декомпиляция кода, восстановление структуры программ и автоматизированный реверс-инжиниринг.\n\nLLM4Decompile\nAutoDecompiler\nSALT4Decompile\nDecomperson\nDIRTY\nAutomatically Attacking Software RE Agents\nDoes Reverse Engineering Need a Bigger Model?\n\n• тест полученных навыков на реальных задачах.\n\nOpenSecurityTraining2\npwn.college: Reverse Engineering\npwn.college: Reversing Hell\nMalware Unicorn RE101\nNightmare\nRPISEC Modern Binary Exploitation\nOWASP Mobile Application Security\n\nЗабираем полноценный гайд по ревёрс-инжинирингу&#33;\n\n👍 Бэкдор",
+    "category": "ai-models",
+    "tags": [
+      "ai",
+      "neural-network",
+      "machine-learning"
+    ],
+    "original_date": "2026-11-01T21:51:12+00:00",
+    "created_at": "2026-11-01T22:56:20.252Z"
+  },
+  {
+    "id": 13,
+    "url": "https://rea.tools/showcase/notion/",
+    "title": "⚡️ Огромный гайд по REA для вайбкодеров собрали в сети — это самое подробное пособие с десятками мат",
+    "snippet": "⚡️ Огромный гайд по REA для вайбкодеров собрали в сети — это самое подробное пособие с десятками материалов, статей, репозиториев, промптов и инструкций в мире. Авторы — гении, дропнули настоящий сундук с сокровищами.\n\nСобирали сами разрабы Reverse Engineer Anything: от первых шагов и реальных разборов софта до GitHub-репозиториев, научных работ и БЕСПЛАТНЫХ курсов.\n\n• Всё для начала работы с REA, установки и подключения агентов.\n\nОфициальный GitHub REA\nОфициальный сайт REA\nУстановка и настройка агентов\nПервое исследование с REA\nРуководства REA\nГотовые MCP-промпты\n\n• Разборы, которые помогут изучить REA.\n\nКак клонировать программы с помощью REA\nREA + Pi Coding Agent\nGhidra для начинающих\nFrida для анализа Android\npwn.college: Reverse Engineering\nMalware Unicorn RE101\n\n• Кейсы по изучению приложений и их внутренней логики.\n\nNotes Export\nNotion Clipboard\nDX-Ball Reconstruction\nAegis APK\nTH04 Bullet Patterns\n\n• Декомпиляция, анализ программ и игр.\n\nREA\nAwesome Reverse Engineering\nREA Gems\nAwesome Reverse-Engineered\nGhidra\nJADX\nFrida\nILSpy\nx64dbg\n\n• Более глубокие разборы машинного кода, архитектуры программ и анализ вредоносного ПО.\n\nThe Ghidra Book, 2nd Edition\nReverse Engineering for Beginners\nPractical Binary Analysis\nPractical Malware Analysis\nThe Android Malware Handbook\nReversing: Secrets of Reverse Engineering\n\n• Декомпиляция кода, восстановление структуры программ и автоматизированный реверс-инжиниринг.\n\nLLM4Decompile\nAutoDecompiler\nSALT4Decompile\nDecomperson\nDIRTY\nAutomatically Attacking Software RE Agents\nDoes Reverse Engineering Need a Bigger Model?\n\n• тест полученных навыков на реальных задачах.\n\nOpenSecurityTraining2\npwn.college: Reverse Engineering\npwn.college: Reversing Hell\nMalware Unicorn RE101\nNightmare\nRPISEC Modern Binary Exploitation\nOWASP Mobile Application Security\n\nЗабираем полноценный гайд по ревёрс-инжинирингу&#33;\n\n👍 Бэкдор",
+    "category": "ai-models",
+    "tags": [
+      "ai",
+      "neural-network",
+      "machine-learning"
+    ],
+    "original_date": "2026-11-01T21:51:12+00:00",
+    "created_at": "2026-11-01T22:56:20.251Z"
+  },
+  {
+    "id": 12,
+    "url": "https://malwareunicorn.org/workshops/re101.html",
+    "title": "⚡️ Огромный гайд по REA для вайбкодеров собрали в сети — это самое подробное пособие с десятками мат",
+    "snippet": "⚡️ Огромный гайд по REA для вайбкодеров собрали в сети — это самое подробное пособие с десятками материалов, статей, репозиториев, промптов и инструкций в мире. Авторы — гении, дропнули настоящий сундук с сокровищами.\n\nСобирали сами разрабы Reverse Engineer Anything: от первых шагов и реальных разборов софта до GitHub-репозиториев, научных работ и БЕСПЛАТНЫХ курсов.\n\n• Всё для начала работы с REA, установки и подключения агентов.\n\nОфициальный GitHub REA\nОфициальный сайт REA\nУстановка и настройка агентов\nПервое исследование с REA\nРуководства REA\nГотовые MCP-промпты\n\n• Разборы, которые помогут изучить REA.\n\nКак клонировать программы с помощью REA\nREA + Pi Coding Agent\nGhidra для начинающих\nFrida для анализа Android\npwn.college: Reverse Engineering\nMalware Unicorn RE101\n\n• Кейсы по изучению приложений и их внутренней логики.\n\nNotes Export\nNotion Clipboard\nDX-Ball Reconstruction\nAegis APK\nTH04 Bullet Patterns\n\n• Декомпиляция, анализ программ и игр.\n\nREA\nAwesome Reverse Engineering\nREA Gems\nAwesome Reverse-Engineered\nGhidra\nJADX\nFrida\nILSpy\nx64dbg\n\n• Более глубокие разборы машинного кода, архитектуры программ и анализ вредоносного ПО.\n\nThe Ghidra Book, 2nd Edition\nReverse Engineering for Beginners\nPractical Binary Analysis\nPractical Malware Analysis\nThe Android Malware Handbook\nReversing: Secrets of Reverse Engineering\n\n• Декомпиляция кода, восстановление структуры программ и автоматизированный реверс-инжиниринг.\n\nLLM4Decompile\nAutoDecompiler\nSALT4Decompile\nDecomperson\nDIRTY\nAutomatically Attacking Software RE Agents\nDoes Reverse Engineering Need a Bigger Model?\n\n• тест полученных навыков на реальных задачах.\n\nOpenSecurityTraining2\npwn.college: Reverse Engineering\npwn.college: Reversing Hell\nMalware Unicorn RE101\nNightmare\nRPISEC Modern Binary Exploitation\nOWASP Mobile Application Security\n\nЗабираем полноценный гайд по ревёрс-инжинирингу&#33;\n\n👍 Бэкдор",
+    "category": "ai-models",
+    "tags": [
+      "ai",
+      "neural-network",
+      "machine-learning"
+    ],
+    "original_date": "2026-11-01T21:51:12+00:00",
+    "created_at": "2026-11-01T22:56:20.251Z"
+  },
+  {
+    "id": 11,
+    "url": "https://pwn.college/",
+    "title": "⚡️ Огромный гайд по REA для вайбкодеров собрали в сети — это самое подробное пособие с десятками мат",
+    "snippet": "⚡️ Огромный гайд по REA для вайбкодеров собрали в сети — это самое подробное пособие с десятками материалов, статей, репозиториев, промптов и инструкций в мире. Авторы — гении, дропнули настоящий сундук с сокровищами.\n\nСобирали сами разрабы Reverse Engineer Anything: от первых шагов и реальных разборов софта до GitHub-репозиториев, научных работ и БЕСПЛАТНЫХ курсов.\n\n• Всё для начала работы с REA, установки и подключения агентов.\n\nОфициальный GitHub REA\nОфициальный сайт REA\nУстановка и настройка агентов\nПервое исследование с REA\nРуководства REA\nГотовые MCP-промпты\n\n• Разборы, которые помогут изучить REA.\n\nКак клонировать программы с помощью REA\nREA + Pi Coding Agent\nGhidra для начинающих\nFrida для анализа Android\npwn.college: Reverse Engineering\nMalware Unicorn RE101\n\n• Кейсы по изучению приложений и их внутренней логики.\n\nNotes Export\nNotion Clipboard\nDX-Ball Reconstruction\nAegis APK\nTH04 Bullet Patterns\n\n• Декомпиляция, анализ программ и игр.\n\nREA\nAwesome Reverse Engineering\nREA Gems\nAwesome Reverse-Engineered\nGhidra\nJADX\nFrida\nILSpy\nx64dbg\n\n• Более глубокие разборы машинного кода, архитектуры программ и анализ вредоносного ПО.\n\nThe Ghidra Book, 2nd Edition\nReverse Engineering for Beginners\nPractical Binary Analysis\nPractical Malware Analysis\nThe Android Malware Handbook\nReversing: Secrets of Reverse Engineering\n\n• Декомпиляция кода, восстановление структуры программ и автоматизированный реверс-инжиниринг.\n\nLLM4Decompile\nAutoDecompiler\nSALT4Decompile\nDecomperson\nDIRTY\nAutomatically Attacking Software RE Agents\nDoes Reverse Engineering Need a Bigger Model?\n\n• тест полученных навыков на реальных задачах.\n\nOpenSecurityTraining2\npwn.college: Reverse Engineering\npwn.college: Reversing Hell\nMalware Unicorn RE101\nNightmare\nRPISEC Modern Binary Exploitation\nOWASP Mobile Application Security\n\nЗабираем полноценный гайд по ревёрс-инжинирингу&#33;\n\n👍 Бэкдор",
+    "category": "ai-models",
+    "tags": [
+      "ai",
+      "neural-network",
+      "machine-learning"
+    ],
+    "original_date": "2026-11-01T21:51:12+00:00",
+    "created_at": "2026-11-01T22:56:20.251Z"
+  },
+  {
+    "id": 10,
+    "url": "https://www.youtube.com/results?search_query=Frida+for+Android+Reverse+Engineering",
+    "title": "⚡️ Огромный гайд по REA для вайбкодеров собрали в сети — это самое подробное пособие с десятками мат",
+    "snippet": "⚡️ Огромный гайд по REA для вайбкодеров собрали в сети — это самое подробное пособие с десятками материалов, статей, репозиториев, промптов и инструкций в мире. Авторы — гении, дропнули настоящий сундук с сокровищами.\n\nСобирали сами разрабы Reverse Engineer Anything: от первых шагов и реальных разборов софта до GitHub-репозиториев, научных работ и БЕСПЛАТНЫХ курсов.\n\n• Всё для начала работы с REA, установки и подключения агентов.\n\nОфициальный GitHub REA\nОфициальный сайт REA\nУстановка и настройка агентов\nПервое исследование с REA\nРуководства REA\nГотовые MCP-промпты\n\n• Разборы, которые помогут изучить REA.\n\nКак клонировать программы с помощью REA\nREA + Pi Coding Agent\nGhidra для начинающих\nFrida для анализа Android\npwn.college: Reverse Engineering\nMalware Unicorn RE101\n\n• Кейсы по изучению приложений и их внутренней логики.\n\nNotes Export\nNotion Clipboard\nDX-Ball Reconstruction\nAegis APK\nTH04 Bullet Patterns\n\n• Декомпиляция, анализ программ и игр.\n\nREA\nAwesome Reverse Engineering\nREA Gems\nAwesome Reverse-Engineered\nGhidra\nJADX\nFrida\nILSpy\nx64dbg\n\n• Более глубокие разборы машинного кода, архитектуры программ и анализ вредоносного ПО.\n\nThe Ghidra Book, 2nd Edition\nReverse Engineering for Beginners\nPractical Binary Analysis\nPractical Malware Analysis\nThe Android Malware Handbook\nReversing: Secrets of Reverse Engineering\n\n• Декомпиляция кода, восстановление структуры программ и автоматизированный реверс-инжиниринг.\n\nLLM4Decompile\nAutoDecompiler\nSALT4Decompile\nDecomperson\nDIRTY\nAutomatically Attacking Software RE Agents\nDoes Reverse Engineering Need a Bigger Model?\n\n• тест полученных навыков на реальных задачах.\n\nOpenSecurityTraining2\npwn.college: Reverse Engineering\npwn.college: Reversing Hell\nMalware Unicorn RE101\nNightmare\nRPISEC Modern Binary Exploitation\nOWASP Mobile Application Security\n\nЗабираем полноценный гайд по ревёрс-инжинирингу&#33;\n\n👍 Бэкдор",
+    "category": "ai-models",
+    "tags": [
+      "ai",
+      "neural-network",
+      "machine-learning"
+    ],
+    "original_date": "2026-11-01T21:51:12+00:00",
+    "created_at": "2026-11-01T22:56:20.251Z"
+  },
+  {
+    "id": 9,
+    "url": "https://www.youtube.com/results?search_query=Ghidra+Tutorial+for+Beginners",
+    "title": "⚡️ Огромный гайд по REA для вайбкодеров собрали в сети — это самое подробное пособие с десятками мат",
+    "snippet": "⚡️ Огромный гайд по REA для вайбкодеров собрали в сети — это самое подробное пособие с десятками материалов, статей, репозиториев, промптов и инструкций в мире. Авторы — гении, дропнули настоящий сундук с сокровищами.\n\nСобирали сами разрабы Reverse Engineer Anything: от первых шагов и реальных разборов софта до GitHub-репозиториев, научных работ и БЕСПЛАТНЫХ курсов.\n\n• Всё для начала работы с REA, установки и подключения агентов.\n\nОфициальный GitHub REA\nОфициальный сайт REA\nУстановка и настройка агентов\nПервое исследование с REA\nРуководства REA\nГотовые MCP-промпты\n\n• Разборы, которые помогут изучить REA.\n\nКак клонировать программы с помощью REA\nREA + Pi Coding Agent\nGhidra для начинающих\nFrida для анализа Android\npwn.college: Reverse Engineering\nMalware Unicorn RE101\n\n• Кейсы по изучению приложений и их внутренней логики.\n\nNotes Export\nNotion Clipboard\nDX-Ball Reconstruction\nAegis APK\nTH04 Bullet Patterns\n\n• Декомпиляция, анализ программ и игр.\n\nREA\nAwesome Reverse Engineering\nREA Gems\nAwesome Reverse-Engineered\nGhidra\nJADX\nFrida\nILSpy\nx64dbg\n\n• Более глубокие разборы машинного кода, архитектуры программ и анализ вредоносного ПО.\n\nThe Ghidra Book, 2nd Edition\nReverse Engineering for Beginners\nPractical Binary Analysis\nPractical Malware Analysis\nThe Android Malware Handbook\nReversing: Secrets of Reverse Engineering\n\n• Декомпиляция кода, восстановление структуры программ и автоматизированный реверс-инжиниринг.\n\nLLM4Decompile\nAutoDecompiler\nSALT4Decompile\nDecomperson\nDIRTY\nAutomatically Attacking Software RE Agents\nDoes Reverse Engineering Need a Bigger Model?\n\n• тест полученных навыков на реальных задачах.\n\nOpenSecurityTraining2\npwn.college: Reverse Engineering\npwn.college: Reversing Hell\nMalware Unicorn RE101\nNightmare\nRPISEC Modern Binary Exploitation\nOWASP Mobile Application Security\n\nЗабираем полноценный гайд по ревёрс-инжинирингу&#33;\n\n👍 Бэкдор",
+    "category": "ai-models",
+    "tags": [
+      "ai",
+      "neural-network",
+      "machine-learning"
+    ],
+    "original_date": "2026-11-01T21:51:12+00:00",
+    "created_at": "2026-11-01T22:56:20.250Z"
+  },
+  {
+    "id": 8,
+    "url": "https://www.datacamp.com/tutorial/reverse-engineer-anything-rea-tutorial",
+    "title": "⚡️ Огромный гайд по REA для вайбкодеров собрали в сети — это самое подробное пособие с десятками мат",
+    "snippet": "⚡️ Огромный гайд по REA для вайбкодеров собрали в сети — это самое подробное пособие с десятками материалов, статей, репозиториев, промптов и инструкций в мире. Авторы — гении, дропнули настоящий сундук с сокровищами.\n\nСобирали сами разрабы Reverse Engineer Anything: от первых шагов и реальных разборов софта до GitHub-репозиториев, научных работ и БЕСПЛАТНЫХ курсов.\n\n• Всё для начала работы с REA, установки и подключения агентов.\n\nОфициальный GitHub REA\nОфициальный сайт REA\nУстановка и настройка агентов\nПервое исследование с REA\nРуководства REA\nГотовые MCP-промпты\n\n• Разборы, которые помогут изучить REA.\n\nКак клонировать программы с помощью REA\nREA + Pi Coding Agent\nGhidra для начинающих\nFrida для анализа Android\npwn.college: Reverse Engineering\nMalware Unicorn RE101\n\n• Кейсы по изучению приложений и их внутренней логики.\n\nNotes Export\nNotion Clipboard\nDX-Ball Reconstruction\nAegis APK\nTH04 Bullet Patterns\n\n• Декомпиляция, анализ программ и игр.\n\nREA\nAwesome Reverse Engineering\nREA Gems\nAwesome Reverse-Engineered\nGhidra\nJADX\nFrida\nILSpy\nx64dbg\n\n• Более глубокие разборы машинного кода, архитектуры программ и анализ вредоносного ПО.\n\nThe Ghidra Book, 2nd Edition\nReverse Engineering for Beginners\nPractical Binary Analysis\nPractical Malware Analysis\nThe Android Malware Handbook\nReversing: Secrets of Reverse Engineering\n\n• Декомпиляция кода, восстановление структуры программ и автоматизированный реверс-инжиниринг.\n\nLLM4Decompile\nAutoDecompiler\nSALT4Decompile\nDecomperson\nDIRTY\nAutomatically Attacking Software RE Agents\nDoes Reverse Engineering Need a Bigger Model?\n\n• тест полученных навыков на реальных задачах.\n\nOpenSecurityTraining2\npwn.college: Reverse Engineering\npwn.college: Reversing Hell\nMalware Unicorn RE101\nNightmare\nRPISEC Modern Binary Exploitation\nOWASP Mobile Application Security\n\nЗабираем полноценный гайд по ревёрс-инжинирингу&#33;\n\n👍 Бэкдор",
+    "category": "ai-models",
+    "tags": [
+      "ai",
+      "neural-network",
+      "machine-learning"
+    ],
+    "original_date": "2026-11-01T21:51:12+00:00",
+    "created_at": "2026-11-01T22:56:20.250Z"
+  },
+  {
+    "id": 7,
+    "url": "https://www.youtube.com/results?search_query=How+To+Use+REA+To+Clone+Any+Software+In+Minutes",
+    "title": "⚡️ Огромный гайд по REA для вайбкодеров собрали в сети — это самое подробное пособие с десятками мат",
+    "snippet": "⚡️ Огромный гайд по REA для вайбкодеров собрали в сети — это самое подробное пособие с десятками материалов, статей, репозиториев, промптов и инструкций в мире. Авторы — гении, дропнули настоящий сундук с сокровищами.\n\nСобирали сами разрабы Reverse Engineer Anything: от первых шагов и реальных разборов софта до GitHub-репозиториев, научных работ и БЕСПЛАТНЫХ курсов.\n\n• Всё для начала работы с REA, установки и подключения агентов.\n\nОфициальный GitHub REA\nОфициальный сайт REA\nУстановка и настройка агентов\nПервое исследование с REA\nРуководства REA\nГотовые MCP-промпты\n\n• Разборы, которые помогут изучить REA.\n\nКак клонировать программы с помощью REA\nREA + Pi Coding Agent\nGhidra для начинающих\nFrida для анализа Android\npwn.college: Reverse Engineering\nMalware Unicorn RE101\n\n• Кейсы по изучению приложений и их внутренней логики.\n\nNotes Export\nNotion Clipboard\nDX-Ball Reconstruction\nAegis APK\nTH04 Bullet Patterns\n\n• Декомпиляция, анализ программ и игр.\n\nREA\nAwesome Reverse Engineering\nREA Gems\nAwesome Reverse-Engineered\nGhidra\nJADX\nFrida\nILSpy\nx64dbg\n\n• Более глубокие разборы машинного кода, архитектуры программ и анализ вредоносного ПО.\n\nThe Ghidra Book, 2nd Edition\nReverse Engineering for Beginners\nPractical Binary Analysis\nPractical Malware Analysis\nThe Android Malware Handbook\nReversing: Secrets of Reverse Engineering\n\n• Декомпиляция кода, восстановление структуры программ и автоматизированный реверс-инжиниринг.\n\nLLM4Decompile\nAutoDecompiler\nSALT4Decompile\nDecomperson\nDIRTY\nAutomatically Attacking Software RE Agents\nDoes Reverse Engineering Need a Bigger Model?\n\n• тест полученных навыков на реальных задачах.\n\nOpenSecurityTraining2\npwn.college: Reverse Engineering\npwn.college: Reversing Hell\nMalware Unicorn RE101\nNightmare\nRPISEC Modern Binary Exploitation\nOWASP Mobile Application Security\n\nЗабираем полноценный гайд по ревёрс-инжинирингу&#33;\n\n👍 Бэкдор",
+    "category": "ai-models",
+    "tags": [
+      "ai",
+      "neural-network",
+      "machine-learning"
+    ],
+    "original_date": "2026-11-01T21:51:12+00:00",
+    "created_at": "2026-11-01T22:56:20.250Z"
+  },
+  {
+    "id": 6,
+    "url": "https://github.com/morluto/rea/blob/main/docs/mcp-prompts.md",
+    "title": "⚡️ Огромный гайд по REA для вайбкодеров собрали в сети — это самое подробное пособие с десятками мат",
+    "snippet": "⚡️ Огромный гайд по REA для вайбкодеров собрали в сети — это самое подробное пособие с десятками материалов, статей, репозиториев, промптов и инструкций в мире. Авторы — гении, дропнули настоящий сундук с сокровищами.\n\nСобирали сами разрабы Reverse Engineer Anything: от первых шагов и реальных разборов софта до GitHub-репозиториев, научных работ и БЕСПЛАТНЫХ курсов.\n\n• Всё для начала работы с REA, установки и подключения агентов.\n\nОфициальный GitHub REA\nОфициальный сайт REA\nУстановка и настройка агентов\nПервое исследование с REA\nРуководства REA\nГотовые MCP-промпты\n\n• Разборы, которые помогут изучить REA.\n\nКак клонировать программы с помощью REA\nREA + Pi Coding Agent\nGhidra для начинающих\nFrida для анализа Android\npwn.college: Reverse Engineering\nMalware Unicorn RE101\n\n• Кейсы по изучению приложений и их внутренней логики.\n\nNotes Export\nNotion Clipboard\nDX-Ball Reconstruction\nAegis APK\nTH04 Bullet Patterns\n\n• Декомпиляция, анализ программ и игр.\n\nREA\nAwesome Reverse Engineering\nREA Gems\nAwesome Reverse-Engineered\nGhidra\nJADX\nFrida\nILSpy\nx64dbg\n\n• Более глубокие разборы машинного кода, архитектуры программ и анализ вредоносного ПО.\n\nThe Ghidra Book, 2nd Edition\nReverse Engineering for Beginners\nPractical Binary Analysis\nPractical Malware Analysis\nThe Android Malware Handbook\nReversing: Secrets of Reverse Engineering\n\n• Декомпиляция кода, восстановление структуры программ и автоматизированный реверс-инжиниринг.\n\nLLM4Decompile\nAutoDecompiler\nSALT4Decompile\nDecomperson\nDIRTY\nAutomatically Attacking Software RE Agents\nDoes Reverse Engineering Need a Bigger Model?\n\n• тест полученных навыков на реальных задачах.\n\nOpenSecurityTraining2\npwn.college: Reverse Engineering\npwn.college: Reversing Hell\nMalware Unicorn RE101\nNightmare\nRPISEC Modern Binary Exploitation\nOWASP Mobile Application Security\n\nЗабираем полноценный гайд по ревёрс-инжинирингу&#33;\n\n👍 Бэкдор",
+    "category": "ai-models",
+    "tags": [
+      "ai",
+      "neural-network",
+      "machine-learning"
+    ],
+    "original_date": "2026-11-01T21:51:12+00:00",
+    "created_at": "2026-11-01T22:56:20.249Z"
+  },
+  {
+    "id": 5,
+    "url": "https://rea.tools/guides/",
+    "title": "⚡️ Огромный гайд по REA для вайбкодеров собрали в сети — это самое подробное пособие с десятками мат",
+    "snippet": "⚡️ Огромный гайд по REA для вайбкодеров собрали в сети — это самое подробное пособие с десятками материалов, статей, репозиториев, промптов и инструкций в мире. Авторы — гении, дропнули настоящий сундук с сокровищами.\n\nСобирали сами разрабы Reverse Engineer Anything: от первых шагов и реальных разборов софта до GitHub-репозиториев, научных работ и БЕСПЛАТНЫХ курсов.\n\n• Всё для начала работы с REA, установки и подключения агентов.\n\nОфициальный GitHub REA\nОфициальный сайт REA\nУстановка и настройка агентов\nПервое исследование с REA\nРуководства REA\nГотовые MCP-промпты\n\n• Разборы, которые помогут изучить REA.\n\nКак клонировать программы с помощью REA\nREA + Pi Coding Agent\nGhidra для начинающих\nFrida для анализа Android\npwn.college: Reverse Engineering\nMalware Unicorn RE101\n\n• Кейсы по изучению приложений и их внутренней логики.\n\nNotes Export\nNotion Clipboard\nDX-Ball Reconstruction\nAegis APK\nTH04 Bullet Patterns\n\n• Декомпиляция, анализ программ и игр.\n\nREA\nAwesome Reverse Engineering\nREA Gems\nAwesome Reverse-Engineered\nGhidra\nJADX\nFrida\nILSpy\nx64dbg\n\n• Более глубокие разборы машинного кода, архитектуры программ и анализ вредоносного ПО.\n\nThe Ghidra Book, 2nd Edition\nReverse Engineering for Beginners\nPractical Binary Analysis\nPractical Malware Analysis\nThe Android Malware Handbook\nReversing: Secrets of Reverse Engineering\n\n• Декомпиляция кода, восстановление структуры программ и автоматизированный реверс-инжиниринг.\n\nLLM4Decompile\nAutoDecompiler\nSALT4Decompile\nDecomperson\nDIRTY\nAutomatically Attacking Software RE Agents\nDoes Reverse Engineering Need a Bigger Model?\n\n• тест полученных навыков на реальных задачах.\n\nOpenSecurityTraining2\npwn.college: Reverse Engineering\npwn.college: Reversing Hell\nMalware Unicorn RE101\nNightmare\nRPISEC Modern Binary Exploitation\nOWASP Mobile Application Security\n\nЗабираем полноценный гайд по ревёрс-инжинирингу&#33;\n\n👍 Бэкдор",
+    "category": "ai-models",
+    "tags": [
+      "ai",
+      "neural-network",
+      "machine-learning"
+    ],
+    "original_date": "2026-11-01T21:51:12+00:00",
+    "created_at": "2026-11-01T22:56:20.249Z"
+  },
+  {
+    "id": 4,
+    "url": "https://rea.tools/first-investigation/",
+    "title": "⚡️ Огромный гайд по REA для вайбкодеров собрали в сети — это самое подробное пособие с десятками мат",
+    "snippet": "⚡️ Огромный гайд по REA для вайбкодеров собрали в сети — это самое подробное пособие с десятками материалов, статей, репозиториев, промптов и инструкций в мире. Авторы — гении, дропнули настоящий сундук с сокровищами.\n\nСобирали сами разрабы Reverse Engineer Anything: от первых шагов и реальных разборов софта до GitHub-репозиториев, научных работ и БЕСПЛАТНЫХ курсов.\n\n• Всё для начала работы с REA, установки и подключения агентов.\n\nОфициальный GitHub REA\nОфициальный сайт REA\nУстановка и настройка агентов\nПервое исследование с REA\nРуководства REA\nГотовые MCP-промпты\n\n• Разборы, которые помогут изучить REA.\n\nКак клонировать программы с помощью REA\nREA + Pi Coding Agent\nGhidra для начинающих\nFrida для анализа Android\npwn.college: Reverse Engineering\nMalware Unicorn RE101\n\n• Кейсы по изучению приложений и их внутренней логики.\n\nNotes Export\nNotion Clipboard\nDX-Ball Reconstruction\nAegis APK\nTH04 Bullet Patterns\n\n• Декомпиляция, анализ программ и игр.\n\nREA\nAwesome Reverse Engineering\nREA Gems\nAwesome Reverse-Engineered\nGhidra\nJADX\nFrida\nILSpy\nx64dbg\n\n• Более глубокие разборы машинного кода, архитектуры программ и анализ вредоносного ПО.\n\nThe Ghidra Book, 2nd Edition\nReverse Engineering for Beginners\nPractical Binary Analysis\nPractical Malware Analysis\nThe Android Malware Handbook\nReversing: Secrets of Reverse Engineering\n\n• Декомпиляция кода, восстановление структуры программ и автоматизированный реверс-инжиниринг.\n\nLLM4Decompile\nAutoDecompiler\nSALT4Decompile\nDecomperson\nDIRTY\nAutomatically Attacking Software RE Agents\nDoes Reverse Engineering Need a Bigger Model?\n\n• тест полученных навыков на реальных задачах.\n\nOpenSecurityTraining2\npwn.college: Reverse Engineering\npwn.college: Reversing Hell\nMalware Unicorn RE101\nNightmare\nRPISEC Modern Binary Exploitation\nOWASP Mobile Application Security\n\nЗабираем полноценный гайд по ревёрс-инжинирингу&#33;\n\n👍 Бэкдор",
+    "category": "ai-models",
+    "tags": [
+      "ai",
+      "neural-network",
+      "machine-learning"
+    ],
+    "original_date": "2026-11-01T21:51:12+00:00",
+    "created_at": "2026-11-01T22:56:20.249Z"
+  },
+  {
+    "id": 3,
+    "url": "https://github.com/morluto/rea/blob/main/docs/installation.md",
+    "title": "⚡️ Огромный гайд по REA для вайбкодеров собрали в сети — это самое подробное пособие с десятками мат",
+    "snippet": "⚡️ Огромный гайд по REA для вайбкодеров собрали в сети — это самое подробное пособие с десятками материалов, статей, репозиториев, промптов и инструкций в мире. Авторы — гении, дропнули настоящий сундук с сокровищами.\n\nСобирали сами разрабы Reverse Engineer Anything: от первых шагов и реальных разборов софта до GitHub-репозиториев, научных работ и БЕСПЛАТНЫХ курсов.\n\n• Всё для начала работы с REA, установки и подключения агентов.\n\nОфициальный GitHub REA\nОфициальный сайт REA\nУстановка и настройка агентов\nПервое исследование с REA\nРуководства REA\nГотовые MCP-промпты\n\n• Разборы, которые помогут изучить REA.\n\nКак клонировать программы с помощью REA\nREA + Pi Coding Agent\nGhidra для начинающих\nFrida для анализа Android\npwn.college: Reverse Engineering\nMalware Unicorn RE101\n\n• Кейсы по изучению приложений и их внутренней логики.\n\nNotes Export\nNotion Clipboard\nDX-Ball Reconstruction\nAegis APK\nTH04 Bullet Patterns\n\n• Декомпиляция, анализ программ и игр.\n\nREA\nAwesome Reverse Engineering\nREA Gems\nAwesome Reverse-Engineered\nGhidra\nJADX\nFrida\nILSpy\nx64dbg\n\n• Более глубокие разборы машинного кода, архитектуры программ и анализ вредоносного ПО.\n\nThe Ghidra Book, 2nd Edition\nReverse Engineering for Beginners\nPractical Binary Analysis\nPractical Malware Analysis\nThe Android Malware Handbook\nReversing: Secrets of Reverse Engineering\n\n• Декомпиляция кода, восстановление структуры программ и автоматизированный реверс-инжиниринг.\n\nLLM4Decompile\nAutoDecompiler\nSALT4Decompile\nDecomperson\nDIRTY\nAutomatically Attacking Software RE Agents\nDoes Reverse Engineering Need a Bigger Model?\n\n• тест полученных навыков на реальных задачах.\n\nOpenSecurityTraining2\npwn.college: Reverse Engineering\npwn.college: Reversing Hell\nMalware Unicorn RE101\nNightmare\nRPISEC Modern Binary Exploitation\nOWASP Mobile Application Security\n\nЗабираем полноценный гайд по ревёрс-инжинирингу&#33;\n\n👍 Бэкдор",
+    "category": "ai-models",
+    "tags": [
+      "ai",
+      "neural-network",
+      "machine-learning"
+    ],
+    "original_date": "2026-11-01T21:51:12+00:00",
+    "created_at": "2026-11-01T22:56:20.249Z"
+  },
+  {
+    "id": 2,
+    "url": "https://rea.tools/",
+    "title": "⚡️ Огромный гайд по REA для вайбкодеров собрали в сети — это самое подробное пособие с десятками мат",
+    "snippet": "⚡️ Огромный гайд по REA для вайбкодеров собрали в сети — это самое подробное пособие с десятками материалов, статей, репозиториев, промптов и инструкций в мире. Авторы — гении, дропнули настоящий сундук с сокровищами.\n\nСобирали сами разрабы Reverse Engineer Anything: от первых шагов и реальных разборов софта до GitHub-репозиториев, научных работ и БЕСПЛАТНЫХ курсов.\n\n• Всё для начала работы с REA, установки и подключения агентов.\n\nОфициальный GitHub REA\nОфициальный сайт REA\nУстановка и настройка агентов\nПервое исследование с REA\nРуководства REA\nГотовые MCP-промпты\n\n• Разборы, которые помогут изучить REA.\n\nКак клонировать программы с помощью REA\nREA + Pi Coding Agent\nGhidra для начинающих\nFrida для анализа Android\npwn.college: Reverse Engineering\nMalware Unicorn RE101\n\n• Кейсы по изучению приложений и их внутренней логики.\n\nNotes Export\nNotion Clipboard\nDX-Ball Reconstruction\nAegis APK\nTH04 Bullet Patterns\n\n• Декомпиляция, анализ программ и игр.\n\nREA\nAwesome Reverse Engineering\nREA Gems\nAwesome Reverse-Engineered\nGhidra\nJADX\nFrida\nILSpy\nx64dbg\n\n• Более глубокие разборы машинного кода, архитектуры программ и анализ вредоносного ПО.\n\nThe Ghidra Book, 2nd Edition\nReverse Engineering for Beginners\nPractical Binary Analysis\nPractical Malware Analysis\nThe Android Malware Handbook\nReversing: Secrets of Reverse Engineering\n\n• Декомпиляция кода, восстановление структуры программ и автоматизированный реверс-инжиниринг.\n\nLLM4Decompile\nAutoDecompiler\nSALT4Decompile\nDecomperson\nDIRTY\nAutomatically Attacking Software RE Agents\nDoes Reverse Engineering Need a Bigger Model?\n\n• тест полученных навыков на реальных задачах.\n\nOpenSecurityTraining2\npwn.college: Reverse Engineering\npwn.college: Reversing Hell\nMalware Unicorn RE101\nNightmare\nRPISEC Modern Binary Exploitation\nOWASP Mobile Application Security\n\nЗабираем полноценный гайд по ревёрс-инжинирингу&#33;\n\n👍 Бэкдор",
+    "category": "ai-models",
+    "tags": [
+      "ai",
+      "neural-network",
+      "machine-learning"
+    ],
+    "original_date": "2026-11-01T21:51:12+00:00",
+    "created_at": "2026-11-01T22:56:20.248Z"
+  },
+  {
+    "id": 1,
+    "url": "https://huggingface.co/burner22/numbat",
+    "title": "Внимание, секретную Mythos-модель Anthropic полностью слили на Hugging Face. Так утверждает сам авто",
+    "snippet": "Внимание, секретную Mythos-модель Anthropic полностью слили на Hugging Face. Так утверждает сам автор:\n\n• 14 триллионов параметров — чрезвычайно большой размер ИИ-модели.\n• 114 слоёв и 1224 эксперта — архитектура MoE, в которой для каждого запроса задействуется лишь часть системы.\n• Модель ещё не закончена — это якобы снимок процесса обучения, без финальной настройки и RLHF.\n\nРазмер этой дуры — 7,72 ТЕРАБАЙТА.\n\nАвтор не объясняет, откуда взял файлы, но в марте была утечка исходного кода Claude Code. Сейчас Hugging Face автоматически определяет 6,8 трлн параметров, хотя автор заявляет 14 трлн, а исследователи уже нашли потенциальные косяки в весах.\n\nИстория запутанная, но сейчас нам точно известно одно. Неизвестный без причины залил 7,72 терабайта на Hugging Face, а 5 тысяч человек их уже скачали — тут.\n\n👍 Бэкдор",
+    "category": "ai-models",
+    "tags": [
+      "ai",
+      "neural-network",
+      "machine-learning"
+    ],
+    "original_date": "2026-11-01T19:20:56+00:00",
+    "created_at": "2026-11-01T22:56:20.248Z"
+  },
+  {
     "id": 2,
     "url": "https://t.me/whackdoor/32631",
     "title": "⚡️ РКН по-тихому вырезает DNS-провайдеров в России — это подтвердили в NextDNS. Россиянам полностью ",
